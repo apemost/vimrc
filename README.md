@@ -2,7 +2,9 @@
 
 [![Build Status][travis-image]][travis-url]
 
-This is my Vim configuration, continually used and tweaked since 2017
+This is my Vim configuration, continually used and tweaked since 2017.
+
+![vim.png](assets/vim.png)
 
 ## Installation
 
