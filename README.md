@@ -4,7 +4,7 @@
 
 This is my Vim configuration, continually used and tweaked since 2017.
 
-![vim.png](assets/vim.png)
+![Screenshot of Vim](assets/vim.png)
 
 ## Installation
 

@@ -9,4 +9,5 @@ rsync \
   --exclude 'LICENSE' \
   --exclude 'README.md' \
   --exclude 'bootstrap.sh' \
+  --exclude 'assets' \
   -avh --no-perms . ~
