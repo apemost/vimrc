@@ -20,4 +20,7 @@ if HasFeatures() && get(g:, 'custom_lint_plugin', '') == 'ale'
   nmap <silent> <C-k> <Plug>(ale_previous_wrap)
   nmap <silent> <C-j> <Plug>(ale_next_wrap)
   nmap <silent> <C-l> <Plug>(ale_lint)
+
+  nmap <silent> ]a <Plug>(ale_previous_wrap)
+  nmap <silent> [a <Plug>(ale_next_wrap)
 endif

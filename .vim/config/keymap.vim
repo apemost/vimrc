@@ -8,6 +8,12 @@ nnoremap Y y$
 nmap <silent> <C-n> :bnext<CR>
 nmap <silent> <C-p> :bprevious<CR>
 
+nmap <silent> ]b :bnext<CR>
+nmap <silent> [b :bprevious<CR>
+
+nmap <silent> ]t :tabnext<CR>
+nmap <silent> [t :tabprevious<CR>
+
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-b> <Left>
@@ -23,7 +29,7 @@ nnoremap <Leader>bl :blast<CR>
 nnoremap <Leader>wo :copen<CR>
 nnoremap <Leader>wx :cclose<CR>
 
-function! s:search_engine(q)
+function! s:internet_search(q)
   let url = get(g:, 'custom_search_engine', 'https://www.google.com/search?q=%s')
   let q = substitute(a:q, '["\n]', ' ', 'g')
   let q = substitute(q, '[[:punct:] ]', '\=printf("%%%02X", char2nr(submatch(0)))', 'g')
@@ -31,5 +37,7 @@ function! s:search_engine(q)
   call system(printf(open . ' "' . url . '"', q))
 endfunction
 
-nnoremap <silent> <Leader>se :call <SID>search_engine(expand('<cWORD>'))<CR>
-xnoremap <silent> <Leader>se "gy:call <SID>search_engine(@g)<CR>
+nnoremap <silent> <Leader>se :call <SID>internet_search(expand('<cWORD>'))<CR>
+xnoremap <silent> <Leader>se "gy:call <SID>internet_search(@g)<CR>
+
+autocmd FileType help nnoremap <buffer> q :q<CR>

@@ -4,4 +4,4 @@
 
 Plug 'majutsushi/tagbar'
 
-nnoremap <Leader>tt :TagbarToggle<CR>
+nnoremap <Leader>tt :UndotreeHide<CR>:TagbarToggle<CR>
