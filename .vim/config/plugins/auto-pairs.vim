@@ -2,6 +2,6 @@
 " jiangmiao/auto-pairs
 "*********************************************************************
 
-Plug 'jiangmiao/auto-pairs'
+let g:AutoPairsMapSpace = get(g:, 'AutoPairsMapSpace', 0)
 
-let g:AutoPairsMapSpace = 0
+Plug 'jiangmiao/auto-pairs'

@@ -2,6 +2,6 @@
 " scrooloose/nerdcommenter
 "*********************************************************************
 
-Plug 'scrooloose/nerdcommenter'
+let g:NERDDefaultAlign = get(g:, 'NERDDefaultAlign', 'left')
 
-let g:NERDDefaultAlign = 'left'
+Plug 'scrooloose/nerdcommenter'

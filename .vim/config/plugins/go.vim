@@ -2,6 +2,6 @@
 " fatih/vim-go
 "*********************************************************************
 
-Plug 'fatih/vim-go'
+let g:go_fmt_autosave = get(g:, 'go_fmt_autosave', 0)
 
-let g:go_fmt_autosave = 0
+Plug 'fatih/vim-go'

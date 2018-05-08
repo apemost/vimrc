@@ -2,11 +2,11 @@
 " SirVer/ultisnips
 "*********************************************************************
 
-Plug 'SirVer/ultisnips'
+let g:UltiSnipsEditSplit = get(g:, 'UltiSnipsEditSplit', 'vertical')
+let g:UltiSnipsExpandTrigger = get(g:, 'UltiSnipsExpandTrigger', '<C-j>')
+let g:UltiSnipsSnippetsDir = get(g:, 'UltiSnipsSnippetsDir', '~/.vim/snips')
 
-let g:UltiSnipsEditSplit = 'vertical'
-let g:UltiSnipsExpandTrigger = '<C-j>'
-let g:UltiSnipsSnippetsDir = '~/.vim/snips'
+Plug 'SirVer/ultisnips'
 
 "*********************************************************************
 " honza/vim-snippets

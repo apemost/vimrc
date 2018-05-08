@@ -3,10 +3,8 @@
 "*********************************************************************
 
 if HasFeatures() && get(g:, 'custom_lint_plugin', '') == 'ale'
-  Plug 'w0rp/ale'
-
-  let g:ale_lint_on_text_changed = 'never'
-  let g:ale_lint_on_enter = 0
+  let g:ale_lint_on_text_changed = get(g:, 'ale_lint_on_text_changed', 'never')
+  let g:ale_lint_on_enter = get(g:, 'ale_lint_on_enter', 0)
   let g:ale_linters = {
         \   'javascript': ['eslint'],
         \   'python': ['pylint'],
@@ -16,6 +14,8 @@ if HasFeatures() && get(g:, 'custom_lint_plugin', '') == 'ale'
         \   '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
         \   '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
         \ }
+
+  Plug 'w0rp/ale'
 
   nmap <silent> <C-k> <Plug>(ale_previous_wrap)
   nmap <silent> <C-j> <Plug>(ale_next_wrap)

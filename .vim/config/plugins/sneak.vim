@@ -2,9 +2,9 @@
 " justinmk/vim-sneak
 "*********************************************************************
 
-Plug 'justinmk/vim-sneak'
+let g:sneak#label = get(g:, 'sneak#lable', 1)
 
-let g:sneak#label = 1
+Plug 'justinmk/vim-sneak'
 
 map f <Plug>Sneak_f
 map F <Plug>Sneak_F

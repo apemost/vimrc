@@ -2,6 +2,6 @@
 " elzr/vim-json
 "*********************************************************************
 
-Plug 'elzr/vim-json'
+let g:vim_json_syntax_conceal = get(g:, 'vim_json_syntax_conceal', 0)
 
-let g:vim_json_syntax_conceal = 0
+Plug 'elzr/vim-json'

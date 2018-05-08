@@ -2,6 +2,6 @@
 " 907th/vim-auto-save
 "*********************************************************************
 
-Plug '907th/vim-auto-save'
+let g:auto_save = get(g:, 'auto_save', 1)
 
-let g:auto_save = 1
+Plug '907th/vim-auto-save'
