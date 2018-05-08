@@ -54,9 +54,25 @@ let s:builtin_plugins = [
 
 let s:custom_plugins = get(g:, 'custom_plugins', [])
 let s:disabled_plugins = get(g:, 'custom_disabled_plugins', [])
+let s:enabled_builtin_plugins = []
+
+function! s:check_plugins()
+  for plugin in s:builtin_plugins
+    let need_enable = 1
+    for disabled in s:disabled_plugins
+      if plugin == disabled
+        let need_enable = 0
+        break
+      endif
+    endfor
+    if need_enable
+      call add(s:enabled_builtin_plugins, plugin)
+    endif
+  endfor
+endfunction
 
 function! s:load_builtin_plugins()
-  for plugin in s:builtin_plugins
+  for plugin in s:enabled_builtin_plugins
     if matchend(plugin, '\.vim') == len(plugin)
       call TrySource(s:dirname . '/plugins/' . plugin)
     else
@@ -67,11 +83,16 @@ endfunction
 
 function! s:load_custom_plugins()
   for plugin in s:custom_plugins
-    Plug plugin
+    if len(plugin) > 1
+      execute "Plug '" . plugin[0] . "', " .join(plugin[1:], ',')
+    else
+      execute "Plug '" . plugin[0] . "'"
+    endif
   endfor
 endfunction
 
 call plug#begin()
+call s:check_plugins()
 call s:load_builtin_plugins()
 call s:load_custom_plugins()
 call plug#end()
