@@ -110,11 +110,13 @@ if !exists('g:custom_leader_guide')
         \     's': {'name': 'Search'},
         \     't': {'name': 'Toggle'},
         \     'w': {'name': 'Windows'},
-        \   },
-        \   maplocalleader: {
-        \     'name': '<LocalLeader>'
         \   }
         \ }
+  if maplocalleader != mapleader
+    let g:custom_leader_guide[maplocalleader] = {
+          \   'name': '<LocalLeader>'
+          \ }
+  endif
 endif
 
 autocmd VimEnter * if exists(':LeaderGuide') | call leaderGuide#register_prefix_descriptions('', 'g:custom_leader_guide') | endif
