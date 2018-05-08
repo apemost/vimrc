@@ -46,6 +46,7 @@ let s:builtin_plugins = [
       \   'surround',
       \   'tabular',
       \   'tagbar',
+      \   'tmuxline',
       \   'typescript',
       \   'ultisnips',
       \   'undotree',

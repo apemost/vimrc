@@ -55,3 +55,5 @@ nnoremap <Leader>gh :Commits<CR>
 nnoremap <Leader>sa :Ag<Space>
 nnoremap <Leader>sg :Gg<Space>
 nnoremap <Leader>sr :Rg<Space>
+
+nnoremap <Leader>ww :Windows<Space>
