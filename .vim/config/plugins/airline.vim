@@ -14,15 +14,18 @@ let g:airline#extensions#tabline#tabs_label = 'TABS'
 
 Plug 'vim-airline/vim-airline'
 
-nmap <Leader>1 <Plug>AirlineSelectTab1<CR>
-nmap <Leader>2 <Plug>AirlineSelectTab2<CR>
-nmap <Leader>3 <Plug>AirlineSelectTab3<CR>
-nmap <Leader>4 <Plug>AirlineSelectTab4<CR>
-nmap <Leader>5 <Plug>AirlineSelectTab5<CR>
-nmap <Leader>6 <Plug>AirlineSelectTab6<CR>
-nmap <Leader>7 <Plug>AirlineSelectTab7<CR>
-nmap <Leader>8 <Plug>AirlineSelectTab8<CR>
-nmap <Leader>9 <Plug>AirlineSelectTab9<CR>
+nmap <C-n> <Plug>AirlineSelectNextTab
+nmap <C-p> <Plug>AirlineSelectPrevTab
+
+nmap <Leader>1 <Plug>AirlineSelectTab1
+nmap <Leader>2 <Plug>AirlineSelectTab2
+nmap <Leader>3 <Plug>AirlineSelectTab3
+nmap <Leader>4 <Plug>AirlineSelectTab4
+nmap <Leader>5 <Plug>AirlineSelectTab5
+nmap <Leader>6 <Plug>AirlineSelectTab6
+nmap <Leader>7 <Plug>AirlineSelectTab7
+nmap <Leader>8 <Plug>AirlineSelectTab8
+nmap <Leader>9 <Plug>AirlineSelectTab9
 
 "*********************************************************************
 " vim-airline/vim-airline-themes

@@ -5,9 +5,6 @@
 " Make Y behave like other capitals
 nnoremap Y y$
 
-nmap <silent> <C-n> :bnext<CR>
-nmap <silent> <C-p> :bprevious<CR>
-
 nmap <silent> ]b :bnext<CR>
 nmap <silent> [b :bprevious<CR>
 
