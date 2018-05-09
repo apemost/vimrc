@@ -48,12 +48,13 @@ nnoremap <Leader>fm :Marks<CR>
 nnoremap <Leader>fr :Rg<Space><C-r><C-w><CR>
 nnoremap <expr> <Leader>fs (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles?\<CR>"
 nnoremap <Leader>fu :Snippets<CR>
+nnoremap <expr> <Leader>fz (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":FZF\<Space>"
 
 nnoremap <expr> <Leader>gg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles\<CR>"
 nnoremap <Leader>gh :Commits<CR>
 
-nnoremap <Leader>sa :Ag<Space>
-nnoremap <Leader>sg :Gg<Space>
-nnoremap <Leader>sr :Rg<Space>
+nnoremap <expr> <Leader>sa (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Ag\<Space>"
+nnoremap <expr> <Leader>sg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Gg\<Space>"
+nnoremap <expr> <Leader>sr (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Rg\<Space>"
 
 nnoremap <Leader>ww :Windows<CR>
