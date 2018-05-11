@@ -103,14 +103,12 @@ if !exists('g:custom_leader_guide')
         \   mapleader: {
         \     'name': '<Leader>',
         \     'a': {'name': 'Alignment'},
-        \     'b': {'name': 'Buffers'},
         \     'c': {'name': 'Comments'},
         \     'f': {'name': 'Fuzzy finder'},
         \     'g': {'name': 'Git'},
         \     'j': {'name': 'Jump'},
         \     's': {'name': 'Search'},
         \     't': {'name': 'Toggle'},
-        \     'w': {'name': 'Windows'},
         \   }
         \ }
   if maplocalleader != mapleader

@@ -19,12 +19,17 @@ inoremap <C-d> <Del>
 
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
 
-nnoremap <Leader>bd :bdelete<CR>
-nnoremap <Leader>bf :bfirst<CR>
-nnoremap <Leader>bl :blast<CR>
+function! s:toggle_quickfix()
+  if exists("g:quickfix_win")
+    cclose
+    unlet g:quickfix_win
+  else
+    copen
+    let g:quickfix_win = bufnr('$')
+  endif
+endfunction
 
-nnoremap <Leader>wo :copen<CR>
-nnoremap <Leader>wx :cclose<CR>
+nnoremap <silent> <Leader>tw :call <SID>toggle_quickfix()<CR>
 
 function! s:internet_search(q)
   let url = get(g:, 'custom_search_engine', 'https://www.google.com/search?q=%s')
