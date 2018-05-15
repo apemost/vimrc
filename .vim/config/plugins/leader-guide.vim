@@ -19,9 +19,11 @@ else
 endif
 
 map <Leader>. <Plug>leaderguide-global
-map <LocalLeader>. <Plug>leaderguide-buffer
-
 nnoremap <silent> <Leader> :LeaderGuide mapleader<CR>
 vnoremap <silent> <Leader> :LeaderGuideVisual mapleader<CR>
-nnoremap <silent> <LocalLeader> :LeaderGuide  maplocalleader<CR>
-vnoremap <silent> <LocalLeader> :LeaderGuideVisual  maplocalleader<CR>
+
+if mapleader != maplocalleader
+  map <LocalLeader>. <Plug>leaderguide-buffer
+  nnoremap <silent> <LocalLeader> :LeaderGuide  maplocalleader<CR>
+  vnoremap <silent> <LocalLeader> :LeaderGuideVisual  maplocalleader<CR>
+endif
