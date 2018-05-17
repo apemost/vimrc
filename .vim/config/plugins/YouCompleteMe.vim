@@ -27,7 +27,7 @@ if HasFeatures() && get(g:, 'custom_completion_plugin', '') == 'youcompleteme'
         \   'java':1,
         \ }
 
-  Plug 'Valloric/YouCompleteMe', {'do': './install.py ' . g:custom_plugins_ycm_install_options}
+  Plug 'Valloric/YouCompleteMe', {'do': './install.py ' . g:custom_youcompleteme_install_options}
 
   nnoremap <Leader>jd :YcmCompleter GoToDeclaration<CR>
   nnoremap <Leader>ji :YcmCompleter GoToInclude<CR>
