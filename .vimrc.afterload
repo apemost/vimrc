@@ -4,10 +4,8 @@
 
 "set nogdefault
 
-
 "*********************************************************************
 " Plugins
 "*********************************************************************
 
-nnoremap <Leader><Leader> :UndotreeHide<CR>:NERDTreeToggle<CR>
-nnoremap <Ctrl> :YcmCompleter GoToDeclaration<CR>
+"nnoremap <Leader><Leader> :UndotreeHide<CR>:NERDTreeToggle<CR>
