@@ -1,9 +1,9 @@
-let g:custom_background = 'dark'
-let g:custom_colorscheme = 'molokai'
-
-let g:custom_completion_plugin = 'youcompleteme'
-let g:custom_lint_plugin = 'ale'
-
-let g:custom_search_engine = 'https://www.google.com/search?q=%s'
+if filereadable(expand('~/.vimrc.preload'))
+  source ~/.vimrc.preload
+endif
 
 execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/.vim/init.vim'
+
+if filereadable(expand('~/.vimrc.afterload'))
+  source ~/.vimrc.afterload
+endif

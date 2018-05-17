@@ -1,0 +1,37 @@
+"*********************************************************************
+" General
+"*********************************************************************
+
+"set nobackup
+"set nowritebackup
+"set noswapfile
+
+"let g:custom_leader = ','
+"let g:custom_localleader = ','
+
+"*********************************************************************
+" Appearance
+"*********************************************************************
+
+"let g:custom_background = 'light'
+"let g:custom_colorscheme = 'solarized'
+
+"let g:custom_enable_powerline_fonts = 0
+
+"*********************************************************************
+" Plugins
+"*********************************************************************
+
+"let g:custom_plugins = [
+"      \   ['junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}],
+"      \   ['junegunn/fzf.vim'],
+"      \ ]
+
+"let g:custom_disabled_plugins = ['sneak', 'go']
+
+"let g:custom_completion_plugin = 'youcompleteme'
+"let g:custom_lint_plugin = 'ale'
+
+"let g:custom_youcompleteme_install_options = '--clang-completer'
+
+"let g:custom_search_engine = 'https://www.google.com/search?q=%s'

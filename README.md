@@ -22,7 +22,7 @@ source bootstrap.sh
 
 ## Changing themes and adding your own customization
 
-To change themes, create a file `~/.vim/custom/preload.vim`, which looks like this:
+To change themes, create a file `~/.vimrc.preload`, which looks like this:
 
 ```
 ... your code here ...
@@ -31,7 +31,7 @@ let g:custom_background = 'light'
 let g:custom_colorscheme = 'solarized'
 ```
 
-To add your own customization, read [this](.vim/custom/README.md) for more details.
+To add your own customization, copy `.vimrc.preload` to `~/.vimrc.preload`, and `.vimrc.afterload` to `~/.vimrc.afterlaod`.
 
 ## License
 
