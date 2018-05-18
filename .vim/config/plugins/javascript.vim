@@ -5,3 +5,9 @@
 let g:javascript_plugin_jsdoc = get(g:, 'javascript_plugin_jsdoc', 1)
 
 Plug 'pangloss/vim-javascript'
+
+"*********************************************************************
+" mxw/vim-jsx
+"*********************************************************************
+
+Plug 'mxw/vim-jsx'
