@@ -31,6 +31,7 @@ let s:builtin_plugins = [
       \   'go',
       \   'graphql',
       \   'is',
+      \   'indentLine',
       \   'javascript',
       \   'jsdoc',
       \   'json',
