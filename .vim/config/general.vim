@@ -40,9 +40,6 @@ set ignorecase
 " When searching try to be smart about cases
 set smartcase
 
-" Add the g flag to search/replace by default
-set gdefault
-
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
