@@ -29,7 +29,6 @@ let s:builtin_plugins = [
       \   'gitgutter',
       \   'gnupg',
       \   'go',
-      \   'graphql',
       \   'is',
       \   'indentLine',
       \   'javascript',
