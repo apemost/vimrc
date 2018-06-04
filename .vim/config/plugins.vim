@@ -30,7 +30,6 @@ let s:builtin_plugins = [
       \   'gnupg',
       \   'go',
       \   'is',
-      \   'indentLine',
       \   'javascript',
       \   'jsdoc',
       \   'json',
