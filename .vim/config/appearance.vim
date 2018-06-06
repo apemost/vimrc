@@ -32,6 +32,11 @@ else
   endif
 endif
 
+" Set colorcolumn
+if exists('+colorcolumn') && exists('g:custom_colorcolumn')
+  execute 'set colorcolumn=' . g:custom_colorcolumn
+endif
+
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 
