@@ -13,7 +13,7 @@ if HasFeatures() && get(g:, 'custom_completion_plugin', '') == 'youcompleteme'
   let g:ycm_python_binary_path = get(g:, 'ycm_python_binary_path', 'python')
   let g:ycm_show_diagnostics_ui = get(g:, 'ycm_show_diagnostics_ui', 0)
   let g:ycm_key_detailed_diagnostics = get(g:, 'ycm_key_detailed_diagnostics', '')
-  let g:ycm_semantic_triggers = {'c,cpp,python,javascript,typescript,go,java': ['re!\w{2}']}
+  let g:ycm_semantic_triggers = {'c,cpp,python,javascript,typescript,go,java': ['re!\w{3}']}
   let g:ycm_filetype_whitelist = {
         \   'sh':1,
         \   'zsh':1,
