@@ -12,7 +12,6 @@ execute 'set background=' . g:custom_background
 " Set theme colorscheme
 let g:custom_colorscheme = get(g:, 'custom_colorscheme', 'molokai')
 if !has('gui_running') && g:custom_colorscheme == 'molokai'
-  let g:molokai_original = 1
   let g:rehash256 = 1
 endif
 execute 'colorscheme ' . g:custom_colorscheme

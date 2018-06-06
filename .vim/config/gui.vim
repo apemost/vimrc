@@ -4,7 +4,7 @@
 
 " Set GUI font
 " Please install the Hack font: https://github.com/source-foundry/Hack
-set guifont=Hack:h13,Monaco:h13
+set guifont=Hack:h14,Monaco:h13
 
 " Hide menu bar
 set guioptions-=m
