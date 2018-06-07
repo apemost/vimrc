@@ -12,9 +12,7 @@ endif
 
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
 let s:builtin_plugins = [
-      \   'YouCompleteMe',
       \   'airline',
-      \   'ale',
       \   'asyncrun',
       \   'auto-pairs',
       \   'auto-save',
@@ -48,10 +46,26 @@ let s:builtin_plugins = [
       \   'tagbar',
       \   'tmuxline',
       \   'typescript',
-      \   'ultisnips',
       \   'undotree',
+      \   'vimux',
       \   'vue',
       \ ]
+
+if has('python3')
+  call add(s:builtin_plugins, 'ultisnips')
+endif
+
+let g:custom_completion_plugin = get(g:, 'custom_completion_plugin', '')
+let g:custom_lint_plugin = get(g:, 'custom_lint_plugin', '')
+
+if HasFeatures()
+  if g:custom_completion_plugin == 'youcompleteme'
+    call add(s:builtin_plugins, 'YouCompleteMe')
+  endif
+  if g:custom_lint_plugin == 'ale'
+    call add(s:builtin_plugins, 'ale')
+  endif
+endif
 
 let s:custom_plugins = get(g:, 'custom_plugins', [])
 let s:disabled_plugins = get(g:, 'custom_disabled_plugins', [])
@@ -109,6 +123,7 @@ if !exists('g:custom_leader_guide')
         \     'j': {'name': 'Jump'},
         \     's': {'name': 'Search'},
         \     't': {'name': 'Toggle'},
+        \     'v': {'name': 'Vimux'},
         \   }
         \ }
   if maplocalleader != mapleader

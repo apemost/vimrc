@@ -2,27 +2,25 @@
 " w0rp/ale
 "*********************************************************************
 
-if HasFeatures() && get(g:, 'custom_lint_plugin', '') == 'ale'
-  let g:ale_sign_error = get(g:, 'custom_error_symbol', '×')
-  let g:ale_sign_warning = get(g:,'custom_warning_symbol', '¤')
-  let g:ale_lint_on_text_changed = get(g:, 'ale_lint_on_text_changed', 'never')
-  let g:ale_lint_on_enter = get(g:, 'ale_lint_on_enter', 0)
-  let g:ale_linters = {
-        \   'javascript': ['eslint'],
-        \   'python': ['pylint'],
-        \   'typescript': ['tslint'],
-        \ }
-  let g:ale_pattern_options = {
-        \   '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
-        \   '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
-        \ }
+let g:ale_sign_error = get(g:, 'custom_error_symbol', '×')
+let g:ale_sign_warning = get(g:,'custom_warning_symbol', '¤')
+let g:ale_lint_on_text_changed = get(g:, 'ale_lint_on_text_changed', 'never')
+let g:ale_lint_on_enter = get(g:, 'ale_lint_on_enter', 0)
+let g:ale_linters = {
+      \   'javascript': ['eslint'],
+      \   'python': ['pylint'],
+      \   'typescript': ['tslint'],
+      \ }
+let g:ale_pattern_options = {
+      \   '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+      \   '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+      \ }
 
-  Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 
-  nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-  nmap <silent> <C-j> <Plug>(ale_next_wrap)
-  nmap <silent> <C-l> <Plug>(ale_lint)
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-l> <Plug>(ale_lint)
 
-  nmap <silent> ]a <Plug>(ale_previous_wrap)
-  nmap <silent> [a <Plug>(ale_next_wrap)
-endif
+nmap <silent> ]a <Plug>(ale_previous_wrap)
+nmap <silent> [a <Plug>(ale_next_wrap)
