@@ -17,6 +17,7 @@ let s:builtin_plugins = [
       \   'auto-pairs',
       \   'auto-save',
       \   'autoformat',
+      \   'bbye',
       \   'cpp',
       \   'editorconfig',
       \   'emacscommandline',
@@ -117,6 +118,7 @@ if !exists('g:custom_leader_guide')
         \   mapleader: {
         \     'name': '<Leader>',
         \     'a': {'name': 'Alignment'},
+        \     'b': {'name': 'Buffers'},
         \     'c': {'name': 'Comments'},
         \     'f': {'name': 'Fuzzy finder'},
         \     'g': {'name': 'Git'},

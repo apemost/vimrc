@@ -19,6 +19,8 @@ inoremap <C-d> <Del>
 
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
 
+nnoremap <expr> <Leader>tb (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":buffer#\<CR>"
+
 function! s:toggle_quickfix()
   if exists("g:quickfix_win")
     cclose

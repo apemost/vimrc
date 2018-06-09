@@ -34,11 +34,12 @@ nmap <Leader><Tab> <Plug>(fzf-maps-n)
 xmap <Leader><Tab> <Plug>(fzf-maps-x)
 omap <Leader><Tab> <Plug>(fzf-maps-o)
 
+nnoremap <expr> <Leader>bb (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Buffers\<CR>"
+
 nnoremap <Leader>f/ :History/<CR>
 nnoremap <Leader>f: :History:<CR>
 nnoremap <Leader>fa :Ag<Space><C-r><C-w><CR>
 vnoremap <Leader>fa "gy:Ag<Space><C-r>g<CR>
-nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fc :Commands<CR>
 nnoremap <expr> <Leader>ff (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Files\<CR>"
 nnoremap <Leader>fg :Gg<Space><C-r><C-w><CR>
