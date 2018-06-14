@@ -1,3 +1,8 @@
+"*********************************************************************
+" Andrew's vimrc
+" https://github.com/apemost/vimrc
+"*********************************************************************
+
 if filereadable(expand('~/.vimrc.preload'))
   source ~/.vimrc.preload
 endif

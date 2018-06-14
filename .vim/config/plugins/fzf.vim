@@ -35,6 +35,7 @@ xmap <Leader><Tab> <Plug>(fzf-maps-x)
 omap <Leader><Tab> <Plug>(fzf-maps-o)
 
 nnoremap <expr> <Leader>bb (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Buffers\<CR>"
+nnoremap <Leader>bh :BCommits<CR>
 
 nnoremap <Leader>f/ :History/<CR>
 nnoremap <Leader>f: :History:<CR>
@@ -55,7 +56,6 @@ nnoremap <expr> <Leader>fz (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . 
 
 nnoremap <expr> <Leader>gg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles\<CR>"
 nnoremap <Leader>gh :Commits<CR>
-nnoremap <LocalLeader>h :BCommits<CR>
 
 nnoremap <expr> <Leader>sa (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Ag\<Space>"
 nnoremap <expr> <Leader>sg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Gg\<Space>"
