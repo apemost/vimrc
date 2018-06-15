@@ -3,6 +3,9 @@
 " https://github.com/apemost/vimrc
 "*********************************************************************
 
+" Enable nocompatible
+set nocompatible
+
 if filereadable(expand('~/.vimrc.preload'))
   source ~/.vimrc.preload
 endif

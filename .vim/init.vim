@@ -2,13 +2,6 @@
 " Initialization
 "*********************************************************************
 
-" Enable nocompatible
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-endif
-
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
 let s:scripts = [
       \   '/config/general.vim',
