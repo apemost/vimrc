@@ -10,7 +10,7 @@ if has('vim_starting')
 endif
 
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
-let s:scrips = [
+let s:scripts = [
       \   '/config/general.vim',
       \   '/config/appearance.vim',
       \   '/config/plugins.vim',
@@ -20,7 +20,7 @@ let s:scrips = [
 execute 'source' fnameescape(s:dirname . '/functions.vim')
 
 function! s:init()
-  for filename in s:scrips
+  for filename in s:scripts
     call TrySource(s:dirname . filename)
   endfor
 endfunction
