@@ -3,8 +3,8 @@
 "*********************************************************************
 
 " Set GUI font
-" Please install the Hack font: https://github.com/source-foundry/Hack
-set guifont=Hack:h14,Monaco:h13
+let g:custom_guifont = get(g:, 'custom_guifont', 'Hack:h13,Monaco:h13')
+execute 'set guifont=' . g:custom_guifont
 
 " Hide menu bar
 set guioptions-=m

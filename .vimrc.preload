@@ -13,6 +13,8 @@
 "let g:custom_colorscheme = 'solarized'
 "let g:custom_colorcolumn = 80
 
+"let g:custom_guifont = 'Monaco:h13'
+
 "let g:custom_enable_powerline_fonts = 0
 
 "let g:custom_plugins = [
