@@ -33,7 +33,6 @@ let s:builtin_plugins = [
       \   'jsdoc',
       \   'json',
       \   'kotlin',
-      \   'leader-guide',
       \   'markdown',
       \   'nerdcommenter',
       \   'nerdtree',
@@ -58,6 +57,7 @@ endif
 
 let g:custom_completion_plugin = get(g:, 'custom_completion_plugin', '')
 let g:custom_lint_plugin = get(g:, 'custom_lint_plugin', '')
+let g:custom_guide_plugin = get(g:, 'custom_guide_plugin', 'leader-guide')
 
 if HasFeatures()
   if g:custom_completion_plugin == 'youcompleteme'
@@ -66,6 +66,10 @@ if HasFeatures()
   if g:custom_lint_plugin == 'ale'
     call add(s:builtin_plugins, 'ale')
   endif
+endif
+
+if g:custom_guide_plugin == 'leader-guide'
+  call add(s:builtin_plugins, 'leader-guide')
 endif
 
 let s:custom_plugins = get(g:, 'custom_plugins', [])
@@ -113,26 +117,28 @@ call s:load_builtin_plugins()
 call s:load_custom_plugins()
 call plug#end()
 
-if !exists('g:custom_leader_guide')
-  let g:custom_leader_guide = {
-        \   mapleader: {
-        \     'name': '<Leader>',
-        \     'a': {'name': 'Alignment'},
-        \     'b': {'name': 'Buffers'},
-        \     'c': {'name': 'Comments'},
-        \     'f': {'name': 'Fuzzy finder'},
-        \     'g': {'name': 'Git'},
-        \     'j': {'name': 'Jump'},
-        \     's': {'name': 'Search'},
-        \     't': {'name': 'Toggle'},
-        \     'v': {'name': 'Vimux'},
-        \   }
-        \ }
-  if maplocalleader != mapleader
-    let g:custom_leader_guide[maplocalleader] = {
-          \   'name': '<LocalLeader>'
+if g:custom_guide_plugin == 'leader-guide'
+  if !exists('g:custom_leader_guide')
+    let g:custom_leader_guide = {
+          \   mapleader: {
+          \     'name': '<Leader>',
+          \     'a': {'name': 'Alignment'},
+          \     'b': {'name': 'Buffers'},
+          \     'c': {'name': 'Comments'},
+          \     'f': {'name': 'Fuzzy finder'},
+          \     'g': {'name': 'Git'},
+          \     'j': {'name': 'Jump'},
+          \     's': {'name': 'Search'},
+          \     't': {'name': 'Toggle'},
+          \     'v': {'name': 'Vimux'},
+          \   }
           \ }
+    if maplocalleader != mapleader
+      let g:custom_leader_guide[maplocalleader] = {
+            \   'name': '<LocalLeader>'
+            \ }
+    endif
   endif
-endif
 
-autocmd VimEnter * if exists(':LeaderGuide') | call leaderGuide#register_prefix_descriptions('', 'g:custom_leader_guide') | endif
+  autocmd VimEnter * if exists(':LeaderGuide') | call leaderGuide#register_prefix_descriptions('', 'g:custom_leader_guide') | endif
+endif

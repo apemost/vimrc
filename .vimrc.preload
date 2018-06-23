@@ -26,6 +26,7 @@
 
 "let g:custom_completion_plugin = 'youcompleteme'
 "let g:custom_lint_plugin = 'ale'
+"let g:custom_guide_plugin = ''
 
 "let g:custom_ycm_install_options = '--clang-completer'
 
