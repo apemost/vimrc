@@ -58,15 +58,15 @@ if has('python3')
 endif
 
 if HasFeatures()
-  if g:custom_completion_plugin
+  if !empty(g:custom_completion_plugin)
     call add(s:builtin_plugins, g:custom_completion_plugin)
   endif
-  if g:custom_lint_plugin
+  if !empty(g:custom_lint_plugin)
     call add(s:builtin_plugins, g:custom_lint_plugin)
   endif
 endif
 
-if g:custom_guide_plugin
+if !empty(g:custom_guide_plugin)
   call add(s:builtin_plugins, g:custom_guide_plugin)
 endif
 
