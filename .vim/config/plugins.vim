@@ -28,6 +28,7 @@ let s:builtin_plugins = [
       \   'gitgutter',
       \   'gnupg',
       \   'go',
+      \   'gruvbox',
       \   'is',
       \   'javascript',
       \   'jsdoc',
@@ -56,31 +57,25 @@ if has('python3')
   call add(s:builtin_plugins, 'ultisnips')
 endif
 
-let g:custom_completion_plugin = get(g:, 'custom_completion_plugin', '')
-let g:custom_lint_plugin = get(g:, 'custom_lint_plugin', '')
-let g:custom_guide_plugin = get(g:, 'custom_guide_plugin', 'leader-guide')
-
 if HasFeatures()
-  if g:custom_completion_plugin == 'youcompleteme'
-    call add(s:builtin_plugins, 'YouCompleteMe')
+  if g:custom_completion_plugin
+    call add(s:builtin_plugins, g:custom_completion_plugin)
   endif
-  if g:custom_lint_plugin == 'ale'
-    call add(s:builtin_plugins, 'ale')
+  if g:custom_lint_plugin
+    call add(s:builtin_plugins, g:custom_lint_plugin)
   endif
 endif
 
-if g:custom_guide_plugin == 'leader-guide'
-  call add(s:builtin_plugins, 'leader-guide')
+if g:custom_guide_plugin
+  call add(s:builtin_plugins, g:custom_guide_plugin)
 endif
 
-let s:custom_plugins = get(g:, 'custom_plugins', [])
-let s:disabled_plugins = get(g:, 'custom_disabled_plugins', [])
 let s:enabled_builtin_plugins = []
 
 function! s:check_plugins()
   for plugin in s:builtin_plugins
     let need_enable = 1
-    for disabled in s:disabled_plugins
+    for disabled in g:custom_disabled_plugins
       if plugin == disabled
         let need_enable = 0
         break
@@ -103,7 +98,7 @@ function! s:load_builtin_plugins()
 endfunction
 
 function! s:load_custom_plugins()
-  for plugin in s:custom_plugins
+  for plugin in g:custom_plugins
     if len(plugin) > 1
       execute "Plug '" . plugin[0] . "', " .join(plugin[1:], ',')
     else

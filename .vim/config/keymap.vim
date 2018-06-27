@@ -34,7 +34,7 @@ endfunction
 nnoremap <silent> <Leader>tw :call <SID>toggle_quickfix()<CR>
 
 function! s:internet_search(q)
-  let url = get(g:, 'custom_search_engine', 'https://www.google.com/search?q=%s')
+  let url = g:custom_search_engine
   let q = substitute(a:q, '["\n]', ' ', 'g')
   let q = substitute(q, '[[:punct:] ]', '\=printf("%%%02X", char2nr(submatch(0)))', 'g')
   let open = IsLinux() ? 'xdg-open' : 'open'

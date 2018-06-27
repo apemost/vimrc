@@ -4,8 +4,6 @@
 
 let g:ycm_key_list_select_completion = ['<TAB>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-p>', '<Up>']
-let g:custom_ycm_install_options =
-      \ get(g:, 'custom_ycm_install_options', '--clang-completer')
 let g:ycm_auto_trigger =
       \ get(g:, 'ycm_auto_trigger', 1)
 let g:ycm_autoclose_preview_window_after_insertion =

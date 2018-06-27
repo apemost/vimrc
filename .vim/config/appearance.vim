@@ -6,11 +6,9 @@
 syntax enable
 
 " Set theme background
-let g:custom_background = get(g:, 'custom_background', 'dark')
 execute 'set background=' . g:custom_background
 
 " Set theme colorscheme
-let g:custom_colorscheme = get(g:, 'custom_colorscheme', 'molokai')
 if !has('gui_running') && g:custom_colorscheme == 'molokai'
   let g:rehash256 = 1
 endif
@@ -32,7 +30,7 @@ else
 endif
 
 " Set colorcolumn
-if exists('+colorcolumn') && exists('g:custom_colorcolumn')
+if exists('+colorcolumn') && g:custom_colorcolumn > 0
   execute 'set colorcolumn=' . g:custom_colorcolumn
 endif
 

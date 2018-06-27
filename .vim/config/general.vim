@@ -67,5 +67,5 @@ endif
 set backupskip=/tmp/*,/private/tmp/*
 
 " Change mapleader
-let mapleader = get(g:, 'custom_leader', ' ')
-let maplocalleader = get(g:, 'custom_localleader', ',')
+let mapleader = g:custom_leader
+let maplocalleader = g:custom_localleader

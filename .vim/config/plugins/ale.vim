@@ -2,8 +2,8 @@
 " w0rp/ale
 "*********************************************************************
 
-let g:ale_sign_error = get(g:, 'custom_error_symbol', '×')
-let g:ale_sign_warning = get(g:,'custom_warning_symbol', '¤')
+let g:ale_sign_error = get(g:, 'ale_sign_error', g:custom_error_symbol)
+let g:ale_sign_warning = get(g:, 'ale_sign_warning', g:custom_warning_symbol)
 let g:ale_lint_on_text_changed = get(g:, 'ale_lint_on_text_changed', 'never')
 let g:ale_lint_on_enter = get(g:, 'ale_lint_on_enter', 0)
 let g:ale_linters = {
