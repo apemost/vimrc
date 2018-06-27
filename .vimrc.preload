@@ -10,7 +10,7 @@
 "let g:custom_localleader = ','
 
 "let g:custom_background = 'light'
-let g:custom_colorscheme = 'gruvbox'
+"let g:custom_colorscheme = 'gruvbox'
 "let g:custom_colorcolumn = 80
 
 "let g:custom_guifont = 'Monaco:h13'
