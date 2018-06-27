@@ -34,6 +34,7 @@ let s:builtin_plugins = [
       \   'jsdoc',
       \   'json',
       \   'kotlin',
+      \   'kronos',
       \   'markdown',
       \   'nerdcommenter',
       \   'nerdtree',
