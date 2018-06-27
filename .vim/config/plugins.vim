@@ -37,6 +37,7 @@ let s:builtin_plugins = [
       \   'nerdcommenter',
       \   'nerdtree',
       \   'pangu',
+      \   'plantuml',
       \   'pydocstring',
       \   'rename',
       \   'repeat',
