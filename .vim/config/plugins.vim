@@ -38,6 +38,7 @@ let s:builtin_plugins = [
       \   'markdown',
       \   'nerdcommenter',
       \   'nerdtree',
+      \   'nginx',
       \   'pangu',
       \   'plantuml',
       \   'pydocstring',
