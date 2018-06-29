@@ -83,6 +83,9 @@ if exists("&relativenumber")
   autocmd BufReadPost * set relativenumber
 endif
 
+" Highlight current line
+set cursorline
+
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
