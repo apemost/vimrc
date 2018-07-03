@@ -33,6 +33,7 @@ let s:builtin_plugins = [
       \   'javascript',
       \   'jsdoc',
       \   'json',
+      \   'jump',
       \   'kotlin',
       \   'kronos',
       \   'markdown',
