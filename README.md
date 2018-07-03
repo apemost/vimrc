@@ -24,41 +24,35 @@ source bootstrap.sh
 
 To change themes, create a file `~/.vimrc.preload`, which looks like this:
 
-```
-... your code here ...
-
+```vim
 let g:custom_background = 'light'
 let g:custom_colorscheme = 'solarized'
 ```
 
-To add your own customization, copy `.vimrc.preload` to `~/.vimrc.preload`,
+To conveniently add your own customization, copy `.vimrc.preload` to `~/.vimrc.preload`,
 and `.vimrc.afterload` to `~/.vimrc.afterlaod`.
 
-## Add plugin
+## Add your custom plugin as builtin
 
-Create `your_custom_plugin.vim` under `~/.vim/config/plugins`
-
+Create `your_custom_plugin.vim` under `~/.vim/config/plugins`.
 
 Add plugin and customize like:
 
-
-```
-Plug 'gitrepo/plugin_name'
+```vim
+Plug 'gitrepo/your_custom_plugin'
 
 let g:custom_settings = 'custom_value'
 ```
 
-Then add custom plugin file name at `~/.vim/config/plugin.vim`, see below:
+Then add custom plugin file name at `~/.vim/config/plugins.vim`, see below:
 
-
-```
+```vim
 let s:builtin_plugins = [
      \ 'your_custom_plugin',
      ....
 ```
 
-
-Finally source your vimrc and run `PlugInstall`
+Finally source your vimrc and run `PlugInstall`.
 
 ## License
 
