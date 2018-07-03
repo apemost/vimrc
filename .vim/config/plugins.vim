@@ -48,7 +48,6 @@ let s:builtin_plugins = [
       \   'surround',
       \   'tabular',
       \   'tagbar',
-      \   'tmuxline',
       \   'typescript',
       \   'undotree',
       \   'vimux',
@@ -57,6 +56,10 @@ let s:builtin_plugins = [
 
 if has('python3')
   call add(s:builtin_plugins, 'ultisnips')
+endif
+
+if !has('gui_running')
+  call add(s:builtin_plugins, 'tmuxline')
 endif
 
 if HasFeatures()
