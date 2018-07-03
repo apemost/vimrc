@@ -34,6 +34,32 @@ let g:custom_colorscheme = 'solarized'
 To add your own customization, copy `.vimrc.preload` to `~/.vimrc.preload`,
 and `.vimrc.afterload` to `~/.vimrc.afterlaod`.
 
+## Add plugin
+
+Create `your_custom_plugin.vim` under `~/.vim/config/plugins`
+
+
+Add plugin and customize like:
+
+
+```
+Plug 'gitrepo/plugin_name'
+
+let g:custom_settings = 'custom_value'
+```
+
+Then add custom plugin file name at `~/.vim/config/plugin.vim`, see below:
+
+
+```
+let s:builtin_plugins = [
+     \ 'your_custom_plugin',
+     ....
+```
+
+
+Finally source your vimrc and run `PlugInstall`
+
 ## License
 
 [MIT](LICENSE)
