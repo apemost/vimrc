@@ -49,6 +49,7 @@ let s:builtin_plugins = [
       \   'surround',
       \   'tabular',
       \   'tagbar',
+      \   'toml',
       \   'typescript',
       \   'undotree',
       \   'vimux',
