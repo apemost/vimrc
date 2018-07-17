@@ -1,6 +1,6 @@
 # Andrew's vimrc
 
-[![Build Status][travis-image]][travis-url]
+[![build Status](https://travis-ci.org/apemost/vimrc.svg?branch=master)](https://travis-ci.org/apemost/vimrc)
 
 This is my Vim configuration, continually used and tweaked since 2017.
 
@@ -54,9 +54,10 @@ let s:builtin_plugins = [
 
 Finally source your vimrc and run `PlugInstall`.
 
+## Uninstallation
+
+Run `rm ~/.vimrc`.
+
 ## License
 
 [MIT](LICENSE)
-
-[travis-image]: https://travis-ci.org/apemost/vimrc.svg?branch=master
-[travis-url]: https://travis-ci.org/apemost/vimrc

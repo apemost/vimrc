@@ -29,4 +29,4 @@ let g:custom_search_engine =
 let g:custom_error_symbol =
       \ get(g:, 'custom_error_symbol', '×')
 let g:custom_warning_symbol =
-      \ get(g:,'custom_warning_symbol', '¤')
+      \ get(g:, 'custom_warning_symbol', '¤')
