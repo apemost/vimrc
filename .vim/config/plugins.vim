@@ -30,6 +30,7 @@ let s:builtin_plugins = [
       \   'go',
       \   'gruvbox',
       \   'is',
+      \   'illuminate',
       \   'javascript',
       \   'jsdoc',
       \   'json',
