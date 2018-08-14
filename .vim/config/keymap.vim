@@ -19,20 +19,6 @@ inoremap <C-d> <Del>
 
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
 
-nnoremap <expr> <Leader>tb (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":buffer#\<CR>"
-
-function! s:toggle_quickfix()
-  if exists('g:quickfix_win')
-    cclose
-    unlet g:quickfix_win
-  else
-    copen
-    let g:quickfix_win = bufnr('$')
-  endif
-endfunction
-
-nnoremap <silent> <Leader>tw :call <SID>toggle_quickfix()<CR>
-
 function! s:internet_search(q)
   let url = g:custom_search_engine
   let q = substitute(a:q, '["\n]', ' ', 'g')
