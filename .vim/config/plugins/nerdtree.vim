@@ -10,6 +10,6 @@ Plug 'scrooloose/nerdtree'
 
 autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
 
-nnoremap <Leader>tf :NERDTreeFind<CR>
-nnoremap <Leader>tj :NERDTreeFocus<CR>
+nnoremap <Leader>nj :NERDTreeFind<CR>
+nnoremap <Leader>nn :NERDTreeFocus<CR>
 nnoremap <Leader>tn :NERDTreeToggle<CR>
