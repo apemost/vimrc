@@ -19,6 +19,7 @@ let s:builtin_plugins = [
       \   'autoformat',
       \   'bbye',
       \   'cpp',
+      \   'docker',
       \   'editorconfig',
       \   'emacscommandline',
       \   'emmet',
