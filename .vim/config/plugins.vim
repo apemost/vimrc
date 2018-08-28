@@ -33,6 +33,7 @@ let s:builtin_plugins = [
       \   'is',
       \   'illuminate',
       \   'javascript',
+      \   'jinja',
       \   'jsdoc',
       \   'json',
       \   'jump',
