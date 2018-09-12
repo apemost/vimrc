@@ -76,10 +76,6 @@ if HasFeatures()
   endif
 endif
 
-if !empty(g:custom_guide_plugin)
-  call add(s:builtin_plugins, g:custom_guide_plugin)
-endif
-
 let s:enabled_builtin_plugins = []
 
 function! s:check_plugins()
@@ -100,9 +96,9 @@ endfunction
 function! s:load_builtin_plugins()
   for plugin in s:enabled_builtin_plugins
     if matchend(plugin, '\.vim') == len(plugin)
-      call TrySource(s:dirname . '/plugins/' . plugin)
+      call TrySource(s:dirname . '/' . plugin)
     else
-      call TrySource(s:dirname . '/plugins/' . plugin . '.vim')
+      call TrySource(s:dirname . '/' . plugin . '.vim')
     endif
   endfor
 endfunction
@@ -122,29 +118,3 @@ call s:check_plugins()
 call s:load_builtin_plugins()
 call s:load_custom_plugins()
 call plug#end()
-
-if g:custom_guide_plugin == 'leader-guide'
-  if !exists('g:custom_leader_guide')
-    let g:custom_leader_guide = {
-          \   mapleader: {
-          \     'name': '<Leader>',
-          \     'a': {'name': 'Alignment'},
-          \     'b': {'name': 'Buffers'},
-          \     'c': {'name': 'Comments'},
-          \     'f': {'name': 'Fuzzy finder'},
-          \     'g': {'name': 'Git'},
-          \     'j': {'name': 'Jump'},
-          \     's': {'name': 'Search'},
-          \     't': {'name': 'Toggle'},
-          \     'v': {'name': 'Vimux'},
-          \   }
-          \ }
-    if maplocalleader != mapleader
-      let g:custom_leader_guide[maplocalleader] = {
-            \   'name': '<LocalLeader>'
-            \ }
-    endif
-  endif
-
-  autocmd VimEnter * if exists(':LeaderGuide') | call leaderGuide#register_prefix_descriptions('', 'g:custom_leader_guide') | endif
-endif

@@ -20,8 +20,6 @@ let g:custom_completion_plugin =
       \ get(g:, 'custom_completion_plugin', '')
 let g:custom_lint_plugin =
       \ get(g:, 'custom_lint_plugin', '')
-let g:custom_guide_plugin =
-      \ get(g:, 'custom_guide_plugin', 'leader-guide')
 let g:custom_ycm_install_options =
       \ get(g:, 'custom_ycm_install_options', '--clang-completer')
 let g:custom_search_engine =
