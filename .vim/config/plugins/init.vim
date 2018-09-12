@@ -28,7 +28,6 @@ let s:builtin_plugins = [
       \   'fzf',
       \   'gitgutter',
       \   'gnupg',
-      \   'go',
       \   'gruvbox',
       \   'is',
       \   'illuminate',
@@ -65,6 +64,10 @@ endif
 
 if !has('gui_running')
   call add(s:builtin_plugins, 'tmuxline')
+endif
+
+if v:version > 704 || (v:version == 704 && has('patch2009'))
+  call add(s:builtin_plugins, 'go')
 endif
 
 if HasFeatures()
