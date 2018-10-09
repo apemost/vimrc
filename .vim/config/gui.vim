@@ -28,3 +28,8 @@ set guioptions-=e
 
 " Make comments italic
 highlight Comment gui=italic
+
+" Enable ligatures on macOS
+if IsMac()
+  set macligatures
+endif

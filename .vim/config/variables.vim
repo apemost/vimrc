@@ -9,7 +9,7 @@ let g:custom_colorscheme =
 let g:custom_colorcolumn =
       \ get(g:, 'custom_colorcolumn', 0)
 let g:custom_guifont =
-      \ get(g:, 'custom_guifont', 'Hack:h14,Monaco:h13')
+      \ get(g:, 'custom_guifont', 'Fira\ Code:h14,Hack:h14,Monaco:h13')
 let g:custom_powerline_fonts =
       \ get(g:, 'custom_powerline_fonts', 1)
 let g:custom_plugins =
