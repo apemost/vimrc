@@ -18,8 +18,7 @@
 "let g:custom_powerline_fonts = 0
 
 "let g:custom_plugins = [
-"      \   ['junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}],
-"      \   ['junegunn/fzf.vim'],
+"      \   ['NLKNguyen/papercolor-theme'],
 "      \ ]
 
 "let g:custom_disabled_plugins = ['sneak', 'go']
