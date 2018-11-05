@@ -31,7 +31,7 @@ nmap <Leader>9 <Plug>AirlineSelectTab9
 " vim-airline/vim-airline-themes
 "*********************************************************************
 
-let g:airline_theme = g:custom_colorscheme
+let g:airline_theme = tolower(g:custom_colorscheme)
 let g:airline_powerline_fonts = g:custom_powerline_fonts
 
 Plug 'vim-airline/vim-airline-themes'
