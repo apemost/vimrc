@@ -13,20 +13,32 @@ let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(gre
 
 Plug 'junegunn/fzf.vim'
 
+command! -bang -nargs=* GG
+      \ call fzf#vim#grep(
+      \   'git grep --line-number --color=always ' . <q-args>, 0,
+      \   extend(
+      \     {'dir': systemlist('git rev-parse --show-toplevel')[0]},
+      \     <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   ), <bang>0)
+command! -bang -nargs=* RG
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --color=always ' . <q-args>, 1,
+      \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
 command! -bang -nargs=* Ag
       \ call fzf#vim#ag(<q-args>,
       \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   <bang>0)
 command! -bang -nargs=* Gg
       \ call fzf#vim#grep(
-      \   'git grep --line-number --color=always '.shellescape(<q-args>), 0,
+      \   'git grep --line-number --color=always ' . shellescape(<q-args>), 0,
       \   extend(
       \     {'dir': systemlist('git rev-parse --show-toplevel')[0]},
       \     <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   ), <bang>0)
 command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
-      \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+      \   'rg --column --line-number --no-heading --color=always ' . shellescape(<q-args>), 1,
       \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   <bang>0)
 
@@ -57,6 +69,8 @@ nnoremap <expr> <Leader>fz (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . 
 nnoremap <expr> <Leader>gg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles\<CR>"
 nnoremap <Leader>gh :Commits<CR>
 
+nnoremap <expr> <Leader>sG (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GG\<Space>"
+nnoremap <expr> <Leader>sR (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":RG\<Space>"
 nnoremap <expr> <Leader>sa (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Ag\<Space>"
 nnoremap <expr> <Leader>sg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Gg\<Space>"
 nnoremap <expr> <Leader>sr (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Rg\<Space>"
