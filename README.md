@@ -58,6 +58,15 @@ Finally source your vimrc and run `PlugInstall`.
 
 Run `rm ~/.vimrc`.
 
+## Contributing
+
+All contributions are welcome!
+If you would like to hack on this work, please follow these steps:
+
+1. Fork this repository
+2. Make your changes
+3. Submit a pull request
+
 ## License
 
 [MIT](LICENSE)
