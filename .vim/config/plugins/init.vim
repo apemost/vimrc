@@ -18,6 +18,7 @@ let s:builtin_plugins = [
       \   'auto-save',
       \   'autoformat',
       \   'bbye',
+      \   'bufonly',
       \   'cpp',
       \   'docker',
       \   'editorconfig',
