@@ -18,6 +18,7 @@ inoremap <C-f> <Right>
 inoremap <C-d> <Del>
 
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
+nnoremap <silent> <Leader>yf :let @* = expand("%:p")<CR>
 
 function! s:internet_search(q)
   let url = g:custom_search_engine
