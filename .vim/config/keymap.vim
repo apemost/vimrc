@@ -18,6 +18,8 @@ inoremap <C-f> <Right>
 inoremap <C-d> <Del>
 
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
+
+" Yank full path of current buffer
 nnoremap <silent> <Leader>yf :let @* = expand("%:p")<CR>
 
 function! s:internet_search(q)
