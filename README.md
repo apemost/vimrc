@@ -63,6 +63,12 @@ Finally source your vimrc and run `:PlugInstall`.
 cp ideavimrc ~/.ideavimrc
 ```
 
+Or you can link ideavimrc to ~/.ideavimrc.
+
+```bash
+ln -s "$PWD/ideavimrc" ~/.ideavimrc
+```
+
 ## Normal mode leader key mappings
 
 | Key                | Command                            | Comment                                                                          |
