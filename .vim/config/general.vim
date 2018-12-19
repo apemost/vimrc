@@ -40,6 +40,9 @@ set ignorecase
 " When searching try to be smart about cases
 set smartcase
 
+" Allow buffer switching without saving
+set hidden
+
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
