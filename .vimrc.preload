@@ -6,6 +6,8 @@
 "set nowritebackup
 "set noswapfile
 
+"let g:auto_save = 1
+
 "let g:custom_leader = ','
 "let g:custom_localleader = ','
 
