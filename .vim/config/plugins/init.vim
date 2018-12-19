@@ -30,6 +30,7 @@ let s:builtin_plugins = [
       \   'gitgutter',
       \   'gnupg',
       \   'gruvbox',
+      \   'gv',
       \   'is',
       \   'illuminate',
       \   'javascript',

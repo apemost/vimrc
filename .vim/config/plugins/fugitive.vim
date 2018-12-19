@@ -16,12 +16,3 @@ nnoremap <Leader>gp :Gpush<Space>
 nnoremap <Leader>gr :Gread<Space>
 nnoremap <expr> <Leader>gs (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Gstatus\<CR>"
 nnoremap <Leader>gw :Gwrite<Space>
-
-"*********************************************************************
-" junegunn/gv.vim
-"*********************************************************************
-
-Plug 'junegunn/gv.vim'
-
-nnoremap <Leader>gv :GV!<CR>
-vnoremap <Leader>gv :GV!<CR>
