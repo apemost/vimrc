@@ -94,7 +94,7 @@ and `.vimrc.afterload` to `~/.vimrc.afterlaod`.
 
 ## Add your custom plugin as builtin
 
-Create `your_custom_plugin.vim` under `~/.vim/config/plugins`.
+Create `your_custom_plugin.vim` under `~/.vim/plugins`.
 
 Add plugin and customize like:
 
@@ -104,7 +104,7 @@ Plug 'gitrepo/your_custom_plugin'
 let g:custom_settings = 'custom_value'
 ```
 
-Then add custom plugin file name at `~/.vim/config/plugins.vim`, see below:
+Then add custom plugin file name at `~/.vim/plugins/init.vim`, see below:
 
 ```vim
 let s:builtin_plugins = [
