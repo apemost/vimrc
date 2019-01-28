@@ -50,6 +50,7 @@ let s:builtin_plugins = [
       \   'repeat',
       \   'sneak',
       \   'surround',
+      \   'swift',
       \   'tabular',
       \   'tagbar',
       \   'toml',
