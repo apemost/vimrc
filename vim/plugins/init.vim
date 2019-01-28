@@ -46,6 +46,7 @@ let s:builtin_plugins = [
       \   'pangu',
       \   'plantuml',
       \   'pydocstring',
+      \   'quickrun',
       \   'rename',
       \   'repeat',
       \   'sneak',
