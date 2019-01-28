@@ -44,6 +44,7 @@ let g:ycm_semantic_triggers =  {
       \   'scala' : ['.', 're!\w{3}'],
       \   'sh': ['re![\w-]{2}', '/', '-'],
       \   'typescript' : ['.', 're!\w{3}'],
+      \   'typescript.tsx' : ['.', 're!\w{3}'],
       \   'vb' : ['.', 're!\w{3}'],
       \   'vim': ['re![_a-zA-Z]+[_\w]*\.'],
       \   'zsh': ['re![\w-]{2}', '/', '-'],
@@ -58,6 +59,7 @@ let g:ycm_filetype_whitelist = {
       \   'python': 1,
       \   'sh': 1,
       \   'typescript': 1,
+      \   'typescript.tsx': 1,
       \   'vim': 1,
       \   'zsh': 1,
       \ }
