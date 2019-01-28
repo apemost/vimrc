@@ -35,3 +35,4 @@ nnoremap <silent> <Leader>se :call <SID>internet_search(expand('<cWORD>'))<CR>
 xnoremap <silent> <Leader>se "gy:call <SID>internet_search(@g)<CR>
 
 autocmd FileType help nnoremap <buffer> q :q<CR>
+autocmd FileType qf nnoremap <buffer> q :q<CR>
