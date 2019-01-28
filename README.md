@@ -89,8 +89,8 @@ let g:custom_background = 'light'
 let g:custom_colorscheme = 'solarized'
 ```
 
-To conveniently add your own customization, copy `.vimrc.preload` to `~/.vimrc.preload`,
-and `.vimrc.afterload` to `~/.vimrc.afterlaod`.
+To conveniently add your own customization, copy `vimrc.preload` to `~/.vimrc.preload`,
+and `vimrc.afterload` to `~/.vimrc.afterlaod`.
 
 ## Add your custom plugin as builtin
 
