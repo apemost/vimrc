@@ -9,6 +9,7 @@ let s:scripts = [
       \   'plugins/init.vim',
       \   'keymap.vim',
       \   'appearance.vim',
+      \   'autocommands.vim',
       \ ]
 
 execute 'source' fnameescape(s:dirname . '/functions.vim')
