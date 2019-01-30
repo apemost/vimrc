@@ -13,7 +13,7 @@ let g:ycm_seed_identifiers_with_syntax =
 let g:ycm_collect_identifiers_from_comments_and_strings =
       \ get(g:, 'ycm_collect_identifiers_from_comments_and_strings', 1)
 let g:ycm_global_ycm_extra_conf =
-      \ '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+      \ '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_python_binary_path =
       \ get(g:, 'ycm_python_binary_path', 'python')
 let g:ycm_show_diagnostics_ui =
