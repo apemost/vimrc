@@ -19,9 +19,9 @@ inoremap <C-d> <Del>
 
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
 " Yank full path of current buffer
-nnoremap <silent> <Leader>yf :let @* = expand("%:p")<CR>
+nnoremap <silent> <Leader>yf :let @+ = expand("%:p")<CR>
 " Yank relative path of current buffer
-nnoremap <silent> <Leader>yn :let @* = expand("%")<CR>
+nnoremap <silent> <Leader>yn :let @+ = expand("%")<CR>
 
 function! s:internet_search(q)
   let url = g:custom_search_engine
