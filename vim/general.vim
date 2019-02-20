@@ -19,7 +19,7 @@ set secure
 " Use the OS clipboard by default
 if has('clipboard')
   if has('unnamedplus')
-    set clipboard=unnamedplus,unnamed
+    set clipboard=unnamed,unnamedplus
   else
     set clipboard=unnamed
   endif
