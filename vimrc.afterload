@@ -1,5 +1,5 @@
 "*********************************************************************
-" .vimrc.afterload
+" vimrc.afterload
 "*********************************************************************
 
 "nnoremap <Leader><Leader> :UndotreeHide<CR>:NERDTreeToggle<CR>
