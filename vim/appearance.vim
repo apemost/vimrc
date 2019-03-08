@@ -22,7 +22,7 @@ else
     set t_Co=256
   endif
   " Make comments italic
-  if empty($TMUX) && empty($SSH_TTY)
+  if empty($TMUX) && empty($SSH_TTY) && empty($SUDO_USER)
     let &t_ZH="\e[3m"
     let &t_ZR="\e[23m"
     highlight Comment cterm=italic
