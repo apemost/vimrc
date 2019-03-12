@@ -110,11 +110,104 @@ Then add custom plugin file name at `~/.vim/plugins/init.vim`, see below:
 
 ```vim
 let s:builtin_plugins = [
-     \ 'your_custom_plugin',
-     ....
+\ 'your_custom_plugin',
+....
 ```
 
-Finally source your vimrc and run `PlugInstall`.
+Finally source your vimrc and run `:PlugInstall`.
+
+## Normal mode leader key mappings
+
+| Key                | Command                       | Comment                       |
+|--------------------|-------------------------------|-------------------------------|
+| \<Leader>1         |                               |                               |
+| \<Leader>2         |                               |                               |
+| \<Leader>3         |                               |                               |
+| \<Leader>4         |                               |                               |
+| \<Leader>5         |                               |                               |
+| \<Leader>6         |                               |                               |
+| \<Leader>7         |                               |                               |
+| \<Leader>8         |                               |                               |
+| \<Leader>9         |                               |                               |
+| \<Leader>:         |                               |                               |
+| \<Leader>\<Tab>    | :Maps\<CR>                    | Normal mode mappings          |
+| \<Leader>=         |                               |                               |
+| \<Leader>W         |                               |                               |
+| \<Leader>a:        |                               |                               |
+| \<Leader>a=        |                               |                               |
+| \<Leader>ac        |                               |                               |
+| \<Leader>at        |                               |                               |
+| \<Leader>bb        | :Buffers\<CR>                 | Open buffers                  |
+| \<Leader>bd        |                               |                               |
+| \<Leader>bh        |                               |                               |
+| \<Leader>bo        |                               |                               |
+| \<Leader>bw        |                               |                               |
+| \<Leader>c$        |                               |                               |
+| \<Leader>c\<Space> |                               |                               |
+| \<Leader>cA        |                               |                               |
+| \<Leader>ca        |                               |                               |
+| \<Leader>cb        |                               |                               |
+| \<Leader>cc        |                               |                               |
+| \<Leader>ci        |                               |                               |
+| \<Leader>cl        | \<Plug>NERDCommenterAlignLeft |                               |
+| \<Leader>cm        |                               |                               |
+| \<Leader>cn        |                               |                               |
+| \<Leader>cs        |                               |                               |
+| \<Leader>cu        | \<Plug>NERDCommenterUncomment |                               |
+| \<Leader>cy        |                               |                               |
+| \<Leader>f/        |                               |                               |
+| \<Leader>f:        |                               |                               |
+| \<Leader>fa        |                               |                               |
+| \<Leader>fc        |                               |                               |
+| \<Leader>ff        | :GFiles\<CR>                  | Git files (`git ls-files`)    |
+| \<Leader>fg        |                               |                               |
+| \<Leader>fh        | :History\<CR>                 | `v:oldfiles` and open buffers |
+| \<Leader>fm        |                               |                               |
+| \<Leader>fr        |                               |                               |
+| \<Leader>fs        | :GFiles?\<CR>                 | Git files (`git status`)      |
+| \<Leader>fu        |                               |                               |
+| \<Leader>fw        |                               |                               |
+| \<Leader>fz        | :FZF\<Space>                  |                               |
+| \<Leader>gb        |                               |                               |
+| \<Leader>gc        | :Gcommit\<Space>              |                               |
+| \<Leader>gd        |                               |                               |
+| \<Leader>ge        |                               |                               |
+| \<Leader>gf        |                               |                               |
+| \<Leader>gg        |                               |                               |
+| \<Leader>gh        |                               |                               |
+| \<Leader>gl        |                               |                               |
+| \<Leader>gm        |                               |                               |
+| \<Leader>gp        |                               |                               |
+| \<Leader>gr        |                               |                               |
+| \<Leader>gs        | :Gstatus\<CR>                 |                               |
+| \<Leader>gv        |                               |                               |
+| \<Leader>gw        |                               |                               |
+| \<Leader>jd        |                               |                               |
+| \<Leader>ji        |                               |                               |
+| \<Leader>jj        |                               |                               |
+| \<Leader>jr        |                               |                               |
+| \<Leader>nj        |                               |                               |
+| \<Leader>nn        |                               |                               |
+| \<Leader>qr        |                               |                               |
+| \<Leader>sG        | :GG\<Space>                   | `git grep` search result      |
+| \<Leader>sR        | :RG\<Space>                   | `rg` search result            |
+| \<Leader>sa        | :Ag\<Space>                   | `ag` search result            |
+| \<Leader>se        |                               |                               |
+| \<Leader>sg        | :Gg\<Space>                   | `git grep` search result      |
+| \<Leader>sr        | :Rg\<Space>                   | `rg` search result            |
+| \<Leader>td        |                               |                               |
+| \<Leader>tn        |                               |                               |
+| \<Leader>tt        |                               |                               |
+| \<Leader>tu        |                               |                               |
+| \<Leader>vc        |                               |                               |
+| \<Leader>vi        |                               |                               |
+| \<Leader>vl        |                               |                               |
+| \<Leader>vp        |                               |                               |
+| \<Leader>vq        |                               |                               |
+| \<Leader>vr        |                               |                               |
+| \<Leader>vz        |                               |                               |
+| \<Leader>yf        |                               |                               |
+| \<Leader>yn        |                               |                               |
 
 ## Uninstallation
 
