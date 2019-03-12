@@ -7,6 +7,7 @@ Plug 'tpope/vim-fugitive'
 nnoremap <Leader>gb :Gblame<CR>
 vnoremap <Leader>gb :Gblame<CR>
 nnoremap <expr> <Leader>gc (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Gcommit\<Space>"
+nnoremap <Leader>gD :Gdiff<Space>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>ge :Gedit<Space>
 nnoremap <Leader>gf :Gfetch<Space>

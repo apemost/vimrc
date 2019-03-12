@@ -57,7 +57,6 @@ let s:builtin_plugins = [
       \   'toml',
       \   'typescript',
       \   'undotree',
-      \   'vimux',
       \   'vue',
       \ ]
 
