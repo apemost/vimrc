@@ -58,91 +58,91 @@ Finally source your vimrc and run `:PlugInstall`.
 
 ## Normal mode leader key mappings
 
-| Key                | Command                         | Comment                                                  |
-|--------------------|---------------------------------|----------------------------------------------------------|
-| \<Leader>1         | \<Plug>AirlineSelectTab1        | Select tab 1                                             |
-| \<Leader>2         | \<Plug>AirlineSelectTab2        | Select tab 2                                             |
-| \<Leader>3         | \<Plug>AirlineSelectTab3        | Select tab 3                                             |
-| \<Leader>4         | \<Plug>AirlineSelectTab4        | Select tab 4                                             |
-| \<Leader>5         | \<Plug>AirlineSelectTab5        | Select tab 5                                             |
-| \<Leader>6         | \<Plug>AirlineSelectTab6        | Select tab 6                                             |
-| \<Leader>7         | \<Plug>AirlineSelectTab7        | Select tab 7                                             |
-| \<Leader>8         | \<Plug>AirlineSelectTab8        | Select tab 8                                             |
-| \<Leader>9         | \<Plug>AirlineSelectTab9        | Select tab 9                                             |
-| \<Leader>:         | :AsyncRun\<Space>               | Run async shell commands                                 |
-| \<Leader>\<Tab>    | :Maps\<CR>                      | Normal mode mappings                                     |
-| \<Leader>=         | :Autoformat\<CR>                | Auto format                                              |
-| \<Leader>W         | :w !sudo tee % > /dev/null\<CR> | Save as superuser                                        |
-| \<Leader>a:        |                                 |                                                          |
-| \<Leader>a=        |                                 |                                                          |
-| \<Leader>ac        | :Pangu\<CR>                     |                                                          |
-| \<Leader>at        |                                 |                                                          |
-| \<Leader>bb        | :Buffers\<CR>                   | Open buffers                                             |
-| \<Leader>bd        | :Bdelete\<CR>                   | Unload current buffer and delete it from the buffer list |
-| \<Leader>bh        |                                 |                                                          |
-| \<Leader>bo        |                                 |                                                          |
-| \<Leader>bw        | :Bwipeout\<CR>                  | Like `:Bdelete`, but really delete the buffer            |
-| \<Leader>c$        |                                 |                                                          |
-| \<Leader>c\<Space> |                                 |                                                          |
-| \<Leader>cA        |                                 |                                                          |
-| \<Leader>ca        |                                 |                                                          |
-| \<Leader>cb        |                                 |                                                          |
-| \<Leader>cc        |                                 |                                                          |
-| \<Leader>ci        |                                 |                                                          |
-| \<Leader>cl        | \<Plug>NERDCommenterAlignLeft   |                                                          |
-| \<Leader>cm        |                                 |                                                          |
-| \<Leader>cn        |                                 |                                                          |
-| \<Leader>cs        |                                 |                                                          |
-| \<Leader>cu        | \<Plug>NERDCommenterUncomment   |                                                          |
-| \<Leader>cy        |                                 |                                                          |
-| \<Leader>f/        |                                 |                                                          |
-| \<Leader>f:        |                                 |                                                          |
-| \<Leader>fa        |                                 |                                                          |
-| \<Leader>fc        |                                 |                                                          |
-| \<Leader>ff        | :GFiles\<CR>                    | Git files (`git ls-files`)                               |
-| \<Leader>fg        |                                 |                                                          |
-| \<Leader>fh        | :History\<CR>                   | `v:oldfiles` and open buffers                            |
-| \<Leader>fm        |                                 |                                                          |
-| \<Leader>fr        |                                 |                                                          |
-| \<Leader>fs        | :GFiles?\<CR>                   | Git files (`git status`)                                 |
-| \<Leader>fu        |                                 |                                                          |
-| \<Leader>fw        |                                 |                                                          |
-| \<Leader>fz        | :FZF\<Space>                    |                                                          |
-| \<Leader>gb        | :Gblame\<CR>                    | `git blame`                                              |
-| \<Leader>gc        | :Gcommit\<Space>                | `git commit`                                             |
-| \<Leader>gD        | :Gdiff\<Space>                  | `git diff`                                               |
-| \<Leader>gd        | :Gdiff\<CR>                     | `git diff`                                               |
-| \<Leader>ge        | :Gedit\<Space>                  | `:edit` a `fugitive-object`                              |
-| \<Leader>gf        | :Gfetch\<Space>                 |                                                          |
-| \<Leader>gg        |                                 |                                                          |
-| \<Leader>gh        |                                 |                                                          |
-| \<Leader>gl        | :Gpull\<Space>                  | `git pull`                                               |
-| \<Leader>gm        | :Gmerge\<Space>                 | `git merge`                                              |
-| \<Leader>gp        | :Gpush\<Space>                  | `git push`                                               |
-| \<Leader>gr        | :Gread\<Space>                  | Empty the buffer and `:read` a `fugitive-object`         |
-| \<Leader>gs        | :Gstatus\<CR>                   |                                                          |
-| \<Leader>gV        | :GV\<Space>                     | Open commit browser                                      |
-| \<Leader>gv        | :GV!\<CR>                       | List commits that affected the current file              |
-| \<Leader>gw        | :Gwrite<Space>                  | Write to the current file's path and stage the results   |
-| \<Leader>jd        |                                 |                                                          |
-| \<Leader>ji        |                                 |                                                          |
-| \<Leader>jj        |                                 |                                                          |
-| \<Leader>jr        |                                 |                                                          |
-| \<Leader>nj        | :NERDTreeFind\<CR>              | Find and reveal the file in the NERD tree                |
-| \<Leader>nn        | :NERDTreeFocus\<CR>             | Focus NERD tree                                          |
-| \<Leader>qr        | \<Plug>(quickrun)               | Execute whole/part of editing file                       |
-| \<Leader>sG        | :GG\<Space>                     | `git grep` search result                                 |
-| \<Leader>sR        | :RG\<Space>                     | `rg` search result                                       |
-| \<Leader>sa        | :Ag\<Space>                     | `ag` search result                                       |
-| \<Leader>se        |                                 | Search engine                                            |
-| \<Leader>sg        | :Gg\<Space>                     | `git grep` search result                                 |
-| \<Leader>sr        | :Rg\<Space>                     | `rg` search result                                       |
-| \<Leader>td        |                                 |                                                          |
-| \<Leader>tn        | :NERDTreeToggle\<CR>            | Toggle NERD tree                                         |
-| \<Leader>tt        |                                 |                                                          |
-| \<Leader>tu        |                                 |                                                          |
-| \<Leader>yf        | :let @+ = expand("%:p")\<CR>    | Yank full path of current buffer                         |
-| \<Leader>yn        | :let @+ = expand("%")\<CR>      | Yank relative path of current buffer                     |
+| Key                | Command                            | Comment                                                  |
+|--------------------|------------------------------------|----------------------------------------------------------|
+| \<Leader>1         | \<Plug>AirlineSelectTab1           | Select tab 1                                             |
+| \<Leader>2         | \<Plug>AirlineSelectTab2           | Select tab 2                                             |
+| \<Leader>3         | \<Plug>AirlineSelectTab3           | Select tab 3                                             |
+| \<Leader>4         | \<Plug>AirlineSelectTab4           | Select tab 4                                             |
+| \<Leader>5         | \<Plug>AirlineSelectTab5           | Select tab 5                                             |
+| \<Leader>6         | \<Plug>AirlineSelectTab6           | Select tab 6                                             |
+| \<Leader>7         | \<Plug>AirlineSelectTab7           | Select tab 7                                             |
+| \<Leader>8         | \<Plug>AirlineSelectTab8           | Select tab 8                                             |
+| \<Leader>9         | \<Plug>AirlineSelectTab9           | Select tab 9                                             |
+| \<Leader>:         | :AsyncRun\<Space>                  | Run async shell commands                                 |
+| \<Leader>\<Tab>    | :Maps\<CR>                         | Normal mode mappings                                     |
+| \<Leader>=         | :Autoformat\<CR>                   | Auto format                                              |
+| \<Leader>W         | :w !sudo tee % > /dev/null\<CR>    | Save as superuser                                        |
+| \<Leader>a:        | :Tabularize /:\zs\<CR>             | Text align at `:`                                        |
+| \<Leader>a=        | :Tabularize /=\<CR>                | Text align at `=`                                        |
+| \<Leader>ac        | :Pangu\<CR>                        |                                                          |
+| \<Leader>at        | :TableFormat\<CR>                  | Table format                                             |
+| \<Leader>bb        | :Buffers\<CR>                      | Open buffers                                             |
+| \<Leader>bd        | :Bdelete\<CR>                      | Unload current buffer and delete it from the buffer list |
+| \<Leader>bh        | :BCommits\<CR>                     |                                                          |
+| \<Leader>bo        | :BufOnly\<CR>                      |                                                          |
+| \<Leader>bw        | :Bwipeout\<CR>                     | Like `:Bdelete`, but really delete the buffer            |
+| \<Leader>c$        | \<Plug>NERDCommenterToEOL          |                                                          |
+| \<Leader>c\<Space> | \<Plug>NERDCommenterToggle         |                                                          |
+| \<Leader>cA        | \<Plug>NERDCommenterAppend         |                                                          |
+| \<Leader>ca        | \<Plug>NERDCommenterAltDelims      |                                                          |
+| \<Leader>cb        | \<Plug>NERDCommenterAlignBoth      |                                                          |
+| \<Leader>cc        | \<Plug>NERDCommenterComment        |                                                          |
+| \<Leader>ci        | \<Plug>NERDCommenterInvert         |                                                          |
+| \<Leader>cl        | \<Plug>NERDCommenterAlignLeft      |                                                          |
+| \<Leader>cm        | \<Plug>NERDCommenterMinimal        |                                                          |
+| \<Leader>cn        | \<Plug>NERDCommenterNested         |                                                          |
+| \<Leader>cs        | \<Plug>NERDCommenterSexy           |                                                          |
+| \<Leader>cu        | \<Plug>NERDCommenterUncomment      |                                                          |
+| \<Leader>cy        | \<Plug>NERDCommenterYank           |                                                          |
+| \<Leader>f/        | :History/\<CR>                     |                                                          |
+| \<Leader>f:        | :History:\<CR>                     |                                                          |
+| \<Leader>fa        | :Ag\<Space>\<C-r>\<C-w>\<CR>       |                                                          |
+| \<Leader>fc        | :Commands\<CR>                     |                                                          |
+| \<Leader>ff        | :GFiles\<CR>                       | Git files (`git ls-files`)                               |
+| \<Leader>fg        | :Gg\<Space>\<C-r>\<C-w>\<CR>       |                                                          |
+| \<Leader>fh        | :History\<CR>                      | `v:oldfiles` and open buffers                            |
+| \<Leader>fm        | :Marks\<CR>                        |                                                          |
+| \<Leader>fr        | :Rg\<Space>\<C-r>\<C-w>\<CR>       |                                                          |
+| \<Leader>fs        | :GFiles?\<CR>                      | Git files (`git status`)                                 |
+| \<Leader>fu        | :Snippets\<CR>                     |                                                          |
+| \<Leader>fw        | :Windows\<CR>                      |                                                          |
+| \<Leader>fz        | :FZF\<Space>                       |                                                          |
+| \<Leader>gb        | :Gblame\<CR>                       | `git blame`                                              |
+| \<Leader>gc        | :Gcommit\<Space>                   | `git commit`                                             |
+| \<Leader>gD        | :Gdiff\<Space>                     | `git diff`                                               |
+| \<Leader>gd        | :Gdiff\<CR>                        | `git diff`                                               |
+| \<Leader>ge        | :Gedit\<Space>                     | `:edit` a `fugitive-object`                              |
+| \<Leader>gf        | :Gfetch\<Space>                    |                                                          |
+| \<Leader>gg        | :GFiles\<CR>                       | Git files (`git ls-files`)                               |
+| \<Leader>gh        | :Commits\<CR>                      |                                                          |
+| \<Leader>gl        | :Gpull\<Space>                     | `git pull`                                               |
+| \<Leader>gm        | :Gmerge\<Space>                    | `git merge`                                              |
+| \<Leader>gp        | :Gpush\<Space>                     | `git push`                                               |
+| \<Leader>gr        | :Gread\<Space>                     | Empty the buffer and `:read` a `fugitive-object`         |
+| \<Leader>gs        | :Gstatus\<CR>                      |                                                          |
+| \<Leader>gV        | :GV\<Space>                        | Open commit browser                                      |
+| \<Leader>gv        | :GV!\<CR>                          | List commits that affected the current file              |
+| \<Leader>gw        | :Gwrite<Space>                     | Write to the current file's path and stage the results   |
+| \<Leader>jd        | :YcmCompleter GoToDeclaration\<CR> |                                                          |
+| \<Leader>ji        | :YcmCompleter GoToInclude\<CR>     |                                                          |
+| \<Leader>jj        | :YcmCompleter GoToDefinition\<CR>  |                                                          |
+| \<Leader>jr        | :YcmCompleter GoToReferences\<CR>  |                                                          |
+| \<Leader>nj        | :NERDTreeFind\<CR>                 | Find and reveal the file in the NERD tree                |
+| \<Leader>nn        | :NERDTreeFocus\<CR>                | Focus NERD tree                                          |
+| \<Leader>qr        | \<Plug>(quickrun)                  | Execute whole/part of editing file                       |
+| \<Leader>sG        | :GG\<Space>                        | `git grep` search result                                 |
+| \<Leader>sR        | :RG\<Space>                        | `rg` search result                                       |
+| \<Leader>sa        | :Ag\<Space>                        | `ag` search result                                       |
+| \<Leader>se        |                                    | Search engine result                                     |
+| \<Leader>sg        | :Gg\<Space>                        | `git grep` search result                                 |
+| \<Leader>sr        | :Rg\<Space>                        | `rg` search result                                       |
+| \<Leader>td        | :DockerToolsToggle\<CR>            |                                                          |
+| \<Leader>tn        | :NERDTreeToggle\<CR>               | Toggle NERD tree                                         |
+| \<Leader>tt        | :TagbarToggle\<CR>                 |                                                          |
+| \<Leader>tu        | :UndotreeToggle\<CR>               |                                                          |
+| \<Leader>yf        | :let @+ = expand("%:p")\<CR>       | Yank full path of current buffer                         |
+| \<Leader>yn        | :let @+ = expand("%")\<CR>         | Yank relative path of current buffer                     |
 
 ## Built-in plugins:
 
