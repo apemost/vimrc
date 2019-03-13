@@ -75,7 +75,7 @@ Finally source your vimrc and run `:PlugInstall`.
 | \<Leader>W         | :w !sudo tee % > /dev/null\<CR>    | Save as superuser                                                                |
 | \<Leader>a:        | :Tabularize /:\zs\<CR>             | Text align at `:`                                                                |
 | \<Leader>a=        | :Tabularize /=\<CR>                | Text align at `=`                                                                |
-| \<Leader>ac        | :Pangu\<CR>                        |                                                                                  |
+| \<Leader>ac        | :Pangu\<CR>                        | Add space between Chinese characters and English letters/numbers/marks           |
 | \<Leader>at        | :TableFormat\<CR>                  | Table format                                                                     |
 | \<Leader>bb        | :Buffers\<CR>                      | Open buffers                                                                     |
 | \<Leader>bd        | :Bdelete\<CR>                      | Unload current buffer and delete it from the buffer list                         |
