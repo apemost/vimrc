@@ -3,3 +3,5 @@
 "*********************************************************************
 
 "nnoremap <Leader><Leader> :UndotreeHide<CR>:NERDTreeToggle<CR>
+
+"highlight Normal guibg=NONE ctermbg=NONE
