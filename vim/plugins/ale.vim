@@ -9,7 +9,6 @@ let g:ale_lint_on_enter = get(g:, 'ale_lint_on_enter', 0)
 let g:ale_linters = get(g:, 'ale_linters', {
       \ 'javascript': ['eslint'],
       \ 'python': ['pylint'],
-      \ 'typescript': ['tslint'],
       \ })
 let g:ale_pattern_options = get(g:, 'ale_pattern_options', {
       \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
