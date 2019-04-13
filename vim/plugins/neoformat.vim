@@ -1,8 +1,8 @@
 "*********************************************************************
-" chiel92/vim-autoformat
+" sbdchd/neoformat
 "*********************************************************************
 
-Plug 'chiel92/vim-autoformat'
+Plug 'sbdchd/neoformat'
 
-nnoremap <Leader>= :Autoformat<CR>
-vnoremap <Leader>= :Autoformat<CR>
+nnoremap <Leader>= :Neoformat<CR>
+vnoremap <Leader>= :Neoformat<CR>

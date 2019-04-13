@@ -60,7 +60,7 @@ Finally source your vimrc and run `:PlugInstall`.
 ## Normal mode leader key mappings
 
 | Key                | Command                            | Comment                                                                          |
-|--------------------|------------------------------------|----------------------------------------------------------------------------------|
+| ------------------ | ---------------------------------- | -------------------------------------------------------------------------------- |
 | \<Leader>1         | \<Plug>AirlineSelectTab1           | Select tab 1                                                                     |
 | \<Leader>2         | \<Plug>AirlineSelectTab2           | Select tab 2                                                                     |
 | \<Leader>3         | \<Plug>AirlineSelectTab3           | Select tab 3                                                                     |
@@ -83,7 +83,7 @@ Finally source your vimrc and run `:PlugInstall`.
 | \<Leader>bh        | :BCommits\<CR>                     | Git commits for the current buffer                                               |
 | \<Leader>bo        | :BufOnly\<CR>                      | Delete all the buffers except the current buffer                                 |
 | \<Leader>bw        | :Bwipeout\<CR>                     | Like `:Bdelete`, but really delete the buffer                                    |
-| \<Leader>c$        | \<Plug>NERDCommenterToEOL          | Comment the current line from the cursor to the end of line                      |
+| \<Leader>c\$       | \<Plug>NERDCommenterToEOL          | Comment the current line from the cursor to the end of line                      |
 | \<Leader>c\<Space> | \<Plug>NERDCommenterToggle         | Toggle the comment state of the selected line(s)                                 |
 | \<Leader>cA        | \<Plug>NERDCommenterAppend         | Add comment delimiters to the end of line and goes into insert mode between them |
 | \<Leader>ca        | \<Plug>NERDCommenterAltDelims      | Switch to the alternative set of delimiters                                      |
