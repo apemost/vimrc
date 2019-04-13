@@ -6,15 +6,15 @@ let g:ale_sign_error = get(g:, 'ale_sign_error', g:custom_error_symbol)
 let g:ale_sign_warning = get(g:, 'ale_sign_warning', g:custom_warning_symbol)
 let g:ale_lint_on_text_changed = get(g:, 'ale_lint_on_text_changed', 'never')
 let g:ale_lint_on_enter = get(g:, 'ale_lint_on_enter', 0)
-let g:ale_linters = {
-      \   'javascript': ['eslint'],
-      \   'python': ['pylint'],
-      \   'typescript': ['tslint'],
-      \ }
-let g:ale_pattern_options = {
-      \   '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
-      \   '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
-      \ }
+let g:ale_linters = get(g:, 'ale_linters', {
+      \ 'javascript': ['eslint'],
+      \ 'python': ['pylint'],
+      \ 'typescript': ['tslint'],
+      \ })
+let g:ale_pattern_options = get(g:, 'ale_pattern_options', {
+      \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+      \ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+      \ })
 
 Plug 'w0rp/ale'
 

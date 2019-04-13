@@ -9,7 +9,8 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 "*********************************************************************
 
 let g:fzf_buffers_jump = get(g:, 'fzf_buffers_jump', 1)
-let g:fzf_commits_log_options = '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"'
+let g:fzf_commits_log_options =
+      \ get(g:, 'fzf_commits_log_options', '--color=always --format="%C(auto)%h%d %s %C(green)%C(bold)%cr"')
 
 Plug 'junegunn/fzf.vim'
 

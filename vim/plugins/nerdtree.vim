@@ -2,7 +2,12 @@
 " scrooloose/nerdtree
 "*********************************************************************
 
-let NERDTreeIgnore = ['\.git$', '\.pyc$', '__pycache__', 'node_modules']
+let NERDTreeIgnore = get(g:, 'NERDTreeIgnore', [
+      \ '\.git$',
+      \ '\.pyc$',
+      \ '__pycache__',
+      \ 'node_modules',
+      \ ])
 let NERDTreeMapJumpNextSibling = get(g:, 'NERDTreeMapJumpNextSibling', '<C-n>')
 let NERDTreeMapJumpPrevSibling = get(g:, 'NERDTreeMapJumpPrevSibling', '<C-p>')
 

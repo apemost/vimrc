@@ -2,9 +2,9 @@
 " heavenshell/vim-jsdoc
 "*********************************************************************
 
-let g:jsdoc_tags = {
-      \   'returns': 'return',
-      \ }
+let g:jsdoc_tags = get(g:, 'jsdoc_tags', {
+      \ 'returns': 'return',
+      \ })
 
 Plug 'heavenshell/vim-jsdoc'
 
