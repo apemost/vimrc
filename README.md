@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-brightgreen.svg)](https://github.com/apemost/vimrc)
 [![PRs Welcome](https://img.shields.io/badge/pull%20requests-welcome-brightgreen.svg)](https://github.com/apemost/vimrc/pulls)
 
-This is my Vim configuration, continually used and tweaked since 2017.
+A simple but powerful vim configuration, continually used and tweaked since 2017.
 
 ![Screenshot of Vim](assets/vim.png)
 
@@ -50,8 +50,9 @@ Then add custom plugin file name at `~/.vim/plugins/init.vim`, see below:
 
 ```vim
 let s:builtin_plugins = [
-\ 'your_custom_plugin',
-....
+      \ 'your_custom_plugin',
+      \ ...
+      \ ]
 ```
 
 Finally source your vimrc and run `:PlugInstall`.

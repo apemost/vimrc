@@ -4,12 +4,12 @@
 
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
 let s:scripts = [
-      \   'variables.vim',
-      \   'general.vim',
-      \   'plugins/init.vim',
-      \   'keymap.vim',
-      \   'appearance.vim',
-      \   'autocommands.vim',
+      \ 'variables.vim',
+      \ 'general.vim',
+      \ 'plugins/init.vim',
+      \ 'keymap.vim',
+      \ 'appearance.vim',
+      \ 'autocommands.vim',
       \ ]
 
 execute 'source' fnameescape(s:dirname . '/functions.vim')
