@@ -72,7 +72,7 @@ Finally source your vimrc and run `:PlugInstall`.
 | \<Leader>9         | \<Plug>AirlineSelectTab9           | Select tab 9                                                                     |
 | \<Leader>:         | :AsyncRun\<Space>                  | Run async shell commands                                                         |
 | \<Leader>\<Tab>    | :Maps\<CR>                         | Normal mode mappings                                                             |
-| \<Leader>=         | :Autoformat\<CR>                   | Auto format                                                                      |
+| \<Leader>=         | :Neoformat\<CR>                    | Neoformat                                                                        |
 | \<Leader>W         | :w !sudo tee % > /dev/null\<CR>    | Save as superuser                                                                |
 | \<Leader>a:        | :Tabularize /:\zs\<CR>             | Text align at `:`                                                                |
 | \<Leader>a=        | :Tabularize /=\<CR>                | Text align at `=`                                                                |
@@ -161,6 +161,7 @@ Finally source your vimrc and run `:PlugInstall`.
 - [is.vim](https://github.com/haya14busa/is.vim)
 - [jump.vim](https://github.com/padde/jump.vim)
 - [kotlin-vim](https://github.com/udalov/kotlin-vim)
+- [neoformat](https://github.com/sbdchd/neoformat)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [nginx.vim](https://github.com/chr4/nginx.vim)
@@ -177,7 +178,6 @@ Finally source your vimrc and run `:PlugInstall`.
 - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [vim-auto-save](https://github.com/907th/vim-auto-save)
-- [vim-autoformat](https://github.com/chiel92/vim-autoformat)
 - [vim-bbye](https://github.com/moll/vim-bbye)
 - [vim-bufonly](https://github.com/schickling/vim-bufonly)
 - [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
