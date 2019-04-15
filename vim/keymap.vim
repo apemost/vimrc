@@ -17,9 +17,6 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
 
-nnoremap < <<
-nnoremap > >>
-
 " Save as superuser
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>
 " Yank full path of current buffer
