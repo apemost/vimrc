@@ -22,5 +22,7 @@ map <Leader>jd :action GotoDeclaration<CR>
 map <Leader>jj :action GotoImplementation<CR>
 map <Leader>jr :action ShowUsages<CR>
 
+map <Leader>nn :action ActivateProjectToolWindow<CR>
+
 map <Leader>yf :action CopyPaths<CR>
 map <Leader>yn :action CopyReference<CR>
