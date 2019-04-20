@@ -6,6 +6,8 @@ set surround
 
 let mapleader = ' '
 
+map <Leader>= :action ReformatCode<CR>
+
 map <Leader>jd :action GotoDeclaration<CR>
 map <Leader>jj :action GotoImplementation<CR>
 map <Leader>jr :action ShowUsages<CR>
