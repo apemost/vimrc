@@ -57,6 +57,12 @@ let s:builtin_plugins = [
 
 Finally source your vimrc and run `:PlugInstall`.
 
+## Support for IdeaVim
+
+```bash
+cp ideavimrc ~/.ideavimrc
+```
+
 ## Normal mode leader key mappings
 
 | Key                | Command                            | Comment                                                                          |
