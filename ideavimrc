@@ -15,6 +15,7 @@ map <Leader>gd :action Compare.LastVersion<CR>
 map <Leader>gf :action Git.Fetch<CR>
 map <Leader>gm :action Git.Merge<CR>
 map <Leader>gl :action Git.Pull<CR>
+map <Leader>gs :action ActivateVersionControlToolWindow<CR>
 map <Leader>gv :action LocalHistory.ShowHistory<CR>
 
 map <Leader>jd :action GotoDeclaration<CR>
