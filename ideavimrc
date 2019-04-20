@@ -8,6 +8,18 @@ let mapleader = ' '
 
 map <Leader>= :action ReformatCode<CR>
 
+map <Leader>bh :action LocalHistory.ShowHistory<CR>
+
+map <Leader>gb :action Annotate<CR>
+map <Leader>gd :action Compare.LastVersion<CR>
+map <Leader>gf :action Git.Fetch<CR>
+map <Leader>gm :action Git.Merge<CR>
+map <Leader>gl :action Git.Pull<CR>
+map <Leader>gv :action LocalHistory.ShowHistory<CR>
+
 map <Leader>jd :action GotoDeclaration<CR>
 map <Leader>jj :action GotoImplementation<CR>
 map <Leader>jr :action ShowUsages<CR>
+
+map <Leader>yf :action CopyPaths<CR>
+map <Leader>yn :action CopyReference<CR>
