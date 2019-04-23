@@ -6,7 +6,6 @@ set surround
 
 let mapleader = ' '
 
-" Make Y behave like other capitals
 nnoremap Y y$
 
 inoremap <C-a> <Home>
@@ -34,7 +33,10 @@ omap <Leader><Tab> :action GotoAction<CR>
 
 nnoremap <Leader>= :action ReformatCode<CR>
 
+nnoremap <Leader>bd :CloseContent<CR>
 nnoremap <Leader>bh :action LocalHistory.ShowHistory<CR>
+nnoremap <Leader>bo :CloseAllEditorsButActive<CR>
+nnoremap <Leader>bw :CloseEditor<CR>
 
 nnoremap <Leader>ff :action GotoFile<CR>
 nnoremap <Leader>fh :action RecentFiles<CR>
