@@ -15,26 +15,49 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
 
-map <Leader>= :action ReformatCode<CR>
+nmap <C-k> :action GotoPreviousError<CR>
+nmap <C-j> :action GotoNextError<CR>
 
-map <Leader>bh :action LocalHistory.ShowHistory<CR>
+nmap <Leader>1 :action GoToTab1<CR>
+nmap <Leader>2 :action GoToTab2<CR>
+nmap <Leader>3 :action GoToTab3<CR>
+nmap <Leader>4 :action GoToTab4<CR>
+nmap <Leader>5 :action GoToTab5<CR>
+nmap <Leader>6 :action GoToTab6<CR>
+nmap <Leader>7 :action GoToTab7<CR>
+nmap <Leader>8 :action GoToTab8<CR>
+nmap <Leader>9 :action GoToTab9<CR>
 
-map <Leader>ff :action SearchEverywhere<CR>
+nmap <Leader><Tab> :action GotoAction<CR>
+xmap <Leader><Tab> :action GotoAction<CR>
+omap <Leader><Tab> :action GotoAction<CR>
 
-map <Leader>gb :action Annotate<CR>
-map <Leader>gd :action Compare.LastVersion<CR>
-map <Leader>gf :action Git.Fetch<CR>
-map <Leader>gg :action SearchEverywhere<CR>
-map <Leader>gm :action Git.Merge<CR>
-map <Leader>gl :action Git.Pull<CR>
-map <Leader>gs :action ActivateVersionControlToolWindow<CR>
-map <Leader>gv :action LocalHistory.ShowHistory<CR>
+nnoremap <Leader>= :action ReformatCode<CR>
 
-map <Leader>jd :action GotoDeclaration<CR>
-map <Leader>jj :action GotoImplementation<CR>
-map <Leader>jr :action ShowUsages<CR>
+nnoremap <Leader>bh :action LocalHistory.ShowHistory<CR>
 
-map <Leader>nn :action ActivateProjectToolWindow<CR>
+nnoremap <Leader>ff :action GotoFile<CR>
+nnoremap <Leader>fh :action RecentFiles<CR>
+nnoremap <Leader>fs :action RecentChangedFiles<CR>
 
-map <Leader>yf :action CopyPaths<CR>
-map <Leader>yn :action CopyReference<CR>
+nnoremap <Leader>gb :action Annotate<CR>
+nnoremap <Leader>gd :action Compare.LastVersion<CR>
+nnoremap <Leader>gf :action Git.Fetch<CR>
+nnoremap <Leader>gg :action GotoFile<CR>
+nnoremap <Leader>gm :action Git.Merge<CR>
+nnoremap <Leader>gl :action Git.Pull<CR>
+nnoremap <Leader>gs :action ActivateVersionControlToolWindow<CR>
+nnoremap <Leader>gv :action LocalHistory.ShowHistory<CR>
+
+nnoremap <Leader>sa :action GotoSymbol<CR>
+nnoremap <Leader>sg :action GotoSymbol<CR>
+nnoremap <Leader>sr :action GotoSymbol<CR>
+
+nnoremap <Leader>jd :action GotoDeclaration<CR>
+nnoremap <Leader>jj :action GotoImplementation<CR>
+nnoremap <Leader>jr :action ShowUsages<CR>
+
+nnoremap <Leader>nn :action ActivateProjectToolWindow<CR>
+
+nnoremap <Leader>yf :action CopyPaths<CR>
+nnoremap <Leader>yn :action CopyReference<CR>
