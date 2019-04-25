@@ -16,6 +16,10 @@ inoremap <C-d> <Del>
 
 nmap <C-k> :action GotoPreviousError<CR>
 nmap <C-j> :action GotoNextError<CR>
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
+nmap <C-n> :action NextTab<CR>
+nmap <C-p> :action PreviousTab<CR>
 
 nmap <Leader>1 :action GoToTab1<CR>
 nmap <Leader>2 :action GoToTab2<CR>
@@ -63,3 +67,7 @@ nnoremap <Leader>nn :action ActivateProjectToolWindow<CR>
 
 nnoremap <Leader>yf :action CopyPaths<CR>
 nnoremap <Leader>yn :action CopyReference<CR>
+
+if filereadable(expand('~/.ideavimrc.local'))
+  source ~/.ideavimrc.local
+endif
