@@ -7,6 +7,8 @@ set surround
 let mapleader = ' '
 
 nnoremap Y y$
+nnoremap S :action FindInPath<CR>
+nnoremap s :action Find<CR>
 
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
