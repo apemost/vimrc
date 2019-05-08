@@ -225,9 +225,9 @@ Run `rm ~/.vimrc`.
 All contributions are welcome!
 If you would like to hack on this work, please follow these steps:
 
-1. Fork this repository
+1. [Fork this repository](https://github.com/apemost/vimrc/fork)
 2. Make your changes
-3. Submit a pull request
+3. [Submit a pull request](https://github.com/apemost/vimrc/pull/new/master)
 
 ## License
 
