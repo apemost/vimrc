@@ -72,6 +72,8 @@ nnoremap <Leader>nn :action ActivateProjectToolWindow<CR>
 nnoremap <Leader>yf :action CopyPaths<CR>
 nnoremap <Leader>yn :action CopyReference<CR>
 
+nnoremap <Leader>c<Space> :action CommentByLineComment<CR>
+
 if filereadable(expand('~/.ideavimrc.local'))
   source ~/.ideavimrc.local
 endif
