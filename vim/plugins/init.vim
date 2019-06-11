@@ -62,6 +62,9 @@ let s:builtin_plugins = [
 
 if has('python3')
   call add(s:builtin_plugins, 'ultisnips')
+  if v:version > 800
+    call add(s:builtin_plugins, 'kronos')
+  endif
 endif
 
 if !has('gui_running')
