@@ -173,6 +173,7 @@ ln -s "$PWD/ideavimrc" ~/.ideavimrc
 - [is.vim](https://github.com/haya14busa/is.vim)
 - [jump.vim](https://github.com/padde/jump.vim)
 - [kotlin-vim](https://github.com/udalov/kotlin-vim)
+- [kronos.vim](https://github.com/soywod/kronos.vim)
 - [neoformat](https://github.com/sbdchd/neoformat)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
