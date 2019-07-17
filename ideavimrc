@@ -22,8 +22,8 @@ nmap <C-k> :action GotoPreviousError<CR>
 nmap <C-j> :action GotoNextError<CR>
 nmap <C-o> :action Back<CR>
 nmap <C-i> :action Forward<CR>
-nmap <C-n> gt<CR>
-nmap <C-p> gT<CR>
+nmap <C-n> :action NextTab<CR>
+nmap <C-p> :action PreviousTab<CR>
 
 nmap <Leader>1 :action GoToTab1<CR>
 nmap <Leader>2 :action GoToTab2<CR>
@@ -41,10 +41,10 @@ omap <Leader><Tab> :action GotoAction<CR>
 
 nnoremap <Leader>= :action ReformatCode<CR>
 
-nnoremap <Leader>bd :CloseContent<CR>
+nnoremap <Leader>bd :action CloseContent<CR>
 nnoremap <Leader>bh :action LocalHistory.ShowHistory<CR>
-nnoremap <Leader>bo :CloseAllEditorsButActive<CR>
-nnoremap <Leader>bw :CloseEditor<CR>
+nnoremap <Leader>bo :action CloseAllEditorsButActive<CR>
+nnoremap <Leader>bw :action CloseEditor<CR>
 
 nnoremap <Leader>ff :action GotoFile<CR>
 nnoremap <Leader>fh :action RecentFiles<CR>
