@@ -6,6 +6,11 @@ set surround
 
 let mapleader = ' '
 
+" Use relative line numbers
+if exists("&relativenumber")
+  set relativenumber
+endif
+
 nnoremap Y y$
 nnoremap S :action FindInPath<CR>
 nnoremap s :action Find<CR>
