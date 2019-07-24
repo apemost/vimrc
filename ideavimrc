@@ -6,6 +6,33 @@ set surround
 
 let mapleader = ' '
 
+" Use the OS clipboard by default
+if has('clipboard')
+  if has('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+  else
+    set clipboard=unnamed
+  endif
+endif
+
+" Ignore case of searches
+set ignorecase
+
+" When searching try to be smart about cases
+set smartcase
+
+" Show the current mode
+set showmode
+
+" Enable line numbers
+set number
+
+" Highlight searches
+set hlsearch
+
+" Highlight dynamically as pattern is typed
+set incsearch
+
 " Use relative line numbers
 if exists("&relativenumber")
   set relativenumber
