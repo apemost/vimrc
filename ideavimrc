@@ -15,6 +15,9 @@ if has('clipboard')
   endif
 endif
 
+" Enable native idea paste action for put operations
+set clipboard+=ideaput
+
 " Ignore case of searches
 set ignorecase
 
