@@ -30,9 +30,6 @@ set showmode
 " Enable line numbers
 set number
 
-" Highlight searches
-set hlsearch
-
 " Highlight dynamically as pattern is typed
 set incsearch
 
