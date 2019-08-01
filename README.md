@@ -217,6 +217,7 @@ ln -s "$PWD/ideavimrc" ~/.ideavimrc
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [vim-toml](https://github.com/cespare/vim-toml)
 - [vim-vue](https://github.com/posva/vim-vue)
+- [vimtex](https://github.com/lervag/vimtex)
 
 ## Uninstallation
 
