@@ -159,6 +159,7 @@ ln -s "$PWD/ideavimrc" ~/.ideavimrc
 
 ## Built-in plugins:
 
+- [Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)
 - [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 - [ale](https://github.com/w0rp/ale)
