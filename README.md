@@ -57,16 +57,18 @@ let s:builtin_plugins = [
 
 Finally source your vimrc and run `:PlugInstall`.
 
-## Support for IdeaVim
+## Consistent experience for IdeaVim
 
-```bash
-cp ideavimrc ~/.ideavimrc
-```
-
-Or you can link ideavimrc to ~/.ideavimrc.
+Link the [ideavimrc](ideavimrc) to `~/.ideavimrc`:
 
 ```bash
 ln -s "$PWD/ideavimrc" ~/.ideavimrc
+```
+
+Or:
+
+```bash
+cp ideavimrc ~/.ideavimrc
 ```
 
 ## Normal mode leader key mappings
