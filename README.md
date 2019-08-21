@@ -8,6 +8,12 @@ A simple but powerful vim configuration, continually used and tweaked since 2017
 
 ![Screenshot of Vim](assets/vim.png)
 
+## Trying with Docker
+
+```bash
+docker run -it --rm apemost/dotfiles vim
+```
+
 ## Installation
 
 You can clone this repository wherever you want. To install, run command:
