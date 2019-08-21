@@ -23,7 +23,10 @@
 "      \   ['NLKNguyen/papercolor-theme'],
 "      \ ]
 
-"let g:custom_disabled_plugins = ['sneak', 'go']
+"let g:custom_disabled_plugins = [
+"      \   'sneak',
+"      \   'go',
+"      \ ]
 
 "let g:custom_completion_plugin = 'youcompleteme'
 "let g:custom_lint_plugin = 'ale'
