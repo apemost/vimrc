@@ -103,6 +103,9 @@ nnoremap <Leader>jr :action ShowUsages<CR>
 
 nnoremap <Leader>nn :action ActivateProjectToolWindow<CR>
 
+nnoremap <Leader>tn :action ActivateProjectToolWindow<CR>
+nnoremap <Leader>tt :action ActivateStructureToolWindow<CR>
+
 nnoremap <Leader>yf :action CopyPaths<CR>
 nnoremap <Leader>yn :action CopyReference<CR>
 
