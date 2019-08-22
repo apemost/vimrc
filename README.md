@@ -8,6 +8,12 @@ A simple but powerful vim configuration, continually used and tweaked since 2017
 
 ![Screenshot of Vim](assets/vim.png)
 
+## Trying with Docker
+
+```bash
+docker run -it --rm apemost/dotfiles vim
+```
+
 ## Installation
 
 You can clone this repository wherever you want. To install, run command:
@@ -22,51 +28,75 @@ To update, `cd` into your local `vimrc` repository and then:
 source bootstrap.sh
 ```
 
-## Changing themes and adding your own customization
+## Setting up for the first time
 
-To change themes, create a file `~/.vimrc.preload`, which looks like this:
+We will automatically setting up the [vim-plug](https://github.com/junegunn/vim-plug)
+plugin manager when you open vim for the first time.
+
+Then, you can:
+
+- run `:PlugInstall` to install the plugins
+- run `:PlugUpdate` to update the plugins
+- see [tutorial](https://github.com/junegunn/vim-plug/wiki/tutorial) page to learn the basics of vim-plug
+
+## Adding your own customization
+
+To conveniently add your own customization, copy [vimrc.preload](vimrc.preload)
+to `~/.vimrc.preload`, and [vimrc.afterload](vimrc.afterload) to `~/.vimrc.afterlaod`.
+
+### Changing the default color scheme
+
+Edit `~/.vimrc.preload`:
 
 ```vim
 let g:custom_background = 'light'
 let g:custom_colorscheme = 'solarized'
 ```
 
-To conveniently add your own customization, copy `vimrc.preload` to `~/.vimrc.preload`,
-and `vimrc.afterload` to `~/.vimrc.afterlaod`.
+### Enable completion and lint plugins
 
-## Add your custom plugin as builtin
-
-Create `your_custom_plugin.vim` under `~/.vim/plugins`.
-
-Add plugin and customize like:
+The completion and lint plugins are disabled by default. To enable them, edit `~/.vimrc.preload`:
 
 ```vim
-Plug 'gitrepo/your_custom_plugin'
-
-let g:custom_settings = 'custom_value'
+let g:custom_completion_plugin = 'youcompleteme'
+let g:custom_lint_plugin = 'ale'
 ```
 
-Then add custom plugin file name at `~/.vim/plugins/init.vim`, see below:
+### Adding your plugins
+
+Edit `~/.vimrc.preload`:
 
 ```vim
-let s:builtin_plugins = [
-      \ 'your_custom_plugin',
-      \ ...
+let g:custom_plugins = [
+      \   ['NLKNguyen/papercolor-theme'],
       \ ]
 ```
 
-Finally source your vimrc and run `:PlugInstall`.
+Reload `.vimrc` and run `:PlugInstall`.
 
-## Support for IdeaVim
+### Disable built-in plugins
 
-```bash
-cp ideavimrc ~/.ideavimrc
+Edit `~/.vimrc.preload`:
+
+```vim
+let g:custom_disabled_plugins = [
+      \   'sneak',
+      \   'go',
+      \ ]
 ```
 
-Or you can link ideavimrc to ~/.ideavimrc.
+## Consistent experience for IdeaVim
+
+Link the [ideavimrc](ideavimrc) to `~/.ideavimrc`:
 
 ```bash
 ln -s "$PWD/ideavimrc" ~/.ideavimrc
+```
+
+Or:
+
+```bash
+cp ideavimrc ~/.ideavimrc
 ```
 
 ## Normal mode leader key mappings
@@ -159,6 +189,7 @@ ln -s "$PWD/ideavimrc" ~/.ideavimrc
 
 ## Built-in plugins:
 
+- [Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)
 - [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 - [ale](https://github.com/w0rp/ale)
@@ -216,10 +247,21 @@ ln -s "$PWD/ideavimrc" ~/.ideavimrc
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [vim-toml](https://github.com/cespare/vim-toml)
 - [vim-vue](https://github.com/posva/vim-vue)
+- [vimtex](https://github.com/lervag/vimtex)
 
 ## Uninstallation
 
 Run `rm ~/.vimrc`.
+
+## FAQ
+
+### How dare you remap s?
+
+> You can specify any mapping for Sneak (see `:help sneak`). By the way: `cl` is equivalent to `s`, and `cc` is equivalent to `S`.
+
+See https://github.com/justinmk/vim-sneak#how-dare-you-remap-s
+
+To disable Sneak, see [Disable built-in plugins](#disable-built-in-plugins)
 
 ## Contributing
 

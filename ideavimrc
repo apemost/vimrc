@@ -112,8 +112,8 @@ nnoremap <Leader>yn :action CopyReference<CR>
 nnoremap <Leader>c<Space> :action CommentByLineComment<CR>
 vnoremap <Leader>c<Space> :action CommentByLineComment<CR>
 
-nnoremap ,k :action ExpressionTypeInfo<CR>
 nnoremap ,K :action QuickJavaDoc<CR>
+nnoremap ,k :action ExpressionTypeInfo<CR>
 
 if filereadable(expand('~/.ideavimrc.local'))
   source ~/.ideavimrc.local
