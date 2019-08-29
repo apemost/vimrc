@@ -173,6 +173,7 @@ cp ideavimrc ~/.ideavimrc
 | \<Leader>jr        | :YcmCompleter GoToReferences\<CR>  | Reference finding                                                                |
 | \<Leader>nj        | :NERDTreeFind\<CR>                 | Find and reveal the file in the NERD tree                                        |
 | \<Leader>nn        | :NERDTreeFocus\<CR>                | Focus NERD tree                                                                  |
+| \<Leader>pm        | :MarkdownPreview\<CR>              | Preview markdown                                                                 |
 | \<Leader>qr        | \<Plug>(quickrun)                  | Execute whole/part of editing file                                               |
 | \<Leader>sG        | :GG\<Space>                        | `git grep` search result                                                         |
 | \<Leader>sR        | :RG\<Space>                        | `rg` search result                                                               |
@@ -205,6 +206,7 @@ cp ideavimrc ~/.ideavimrc
 - [jump.vim](https://github.com/padde/jump.vim)
 - [kotlin-vim](https://github.com/udalov/kotlin-vim)
 - [kronos.vim](https://github.com/soywod/kronos.vim)
+- [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [neoformat](https://github.com/sbdchd/neoformat)
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
