@@ -14,7 +14,7 @@ nnoremap <Leader>at :TableFormat<CR>
 " JamshedVesuna/vim-markdown-preview
 "*********************************************************************
 
-if v:version < 801
+if v:version < 801 && empty($RUNNING_IN_DOCKER)
   let vim_markdown_preview_hotkey = get(g:, 'vim_markdown_preview_hotkey', '<C-m>')
   let vim_markdown_preview_browser = get(g:, 'vim_markdown_preview_browser', 'Google Chrome')
   if executable('grip')
@@ -28,7 +28,7 @@ endif
 " iamcco/markdown-preview.nvim
 "*********************************************************************
 
-if v:version >= 801
+if v:version >= 801 && empty($RUNNING_IN_DOCKER)
   let g:mkdp_auto_start = get(g:, 'mkdp_auto_start', 0)
   let g:mkdp_auto_close = get(g:, 'mkdp_auto_close', 1)
   let g:mkdp_refresh_slow = get(g:, 'mkdp_refresh_slow', 0)
