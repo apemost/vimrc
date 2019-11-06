@@ -21,7 +21,7 @@ let g:custom_completion_plugin =
 let g:custom_lint_plugin =
       \ get(g:, 'custom_lint_plugin', '')
 let g:custom_ycm_install_options =
-      \ get(g:, 'custom_ycm_install_options', '--clang-completer')
+      \ get(g:, 'custom_ycm_install_options', '--clangd-completer')
 let g:custom_search_engine =
       \ get(g:, 'custom_search_engine', 'https://www.google.com/search?q=%s')
 let g:custom_error_symbol =
