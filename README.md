@@ -1,5 +1,6 @@
 # Andrew's vimrc
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0a558ab726a45c2a5dc83e26b01fab6)](https://app.codacy.com/manual/apemost/vimrc?utm_source=github.com&utm_medium=referral&utm_content=apemost/vimrc&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/apemost/vimrc.svg?branch=master)](https://travis-ci.com/apemost/vimrc)
 [![Unit Tests](https://github.com/apemost/vimrc/workflows/unit-tests/badge.svg)](https://github.com/apemost/vimrc/actions?query=workflow%3Aunit-tests)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-brightgreen.svg)](https://github.com/apemost/vimrc)
