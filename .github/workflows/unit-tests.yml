@@ -15,7 +15,6 @@ jobs:
       matrix:
         runs-on:
           - ubuntu-latest
-          - macOS-latest
       fail-fast: false
     runs-on: ${{ matrix.runs-on }}
     steps:
@@ -29,5 +28,5 @@ jobs:
         run: source bootstrap.sh
       - name: Check vim version
         run: vim --version
-      - name: Install plugins
+      - name: Install vim plugins
         run: yes | vim +PlugUpdate +PlugSnapshot +w\ vim_plug_snapshot.txt +qa &> /dev/null && cat vim_plug_snapshot.txt

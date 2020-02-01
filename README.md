@@ -1,6 +1,7 @@
 # Andrew's vimrc
 
 [![Build Status](https://travis-ci.com/apemost/vimrc.svg?branch=master)](https://travis-ci.com/apemost/vimrc)
+[![Unit Tests](https://github.com/apemost/vimrc/workflows/unit-tests/badge.svg)](https://github.com/apemost/vimrc/actions?query=workflow%3Aunit-tests)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos-brightgreen.svg)](https://github.com/apemost/vimrc)
 [![PRs Welcome](https://img.shields.io/badge/pull%20requests-welcome-brightgreen.svg)](https://github.com/apemost/vimrc/pulls)
 
