@@ -10,6 +10,7 @@ let NERDTreeIgnore = get(g:, 'NERDTreeIgnore', [
       \ ])
 let NERDTreeMapJumpNextSibling = get(g:, 'NERDTreeMapJumpNextSibling', '<C-n>')
 let NERDTreeMapJumpPrevSibling = get(g:, 'NERDTreeMapJumpPrevSibling', '<C-p>')
+let NERDTreeCaseSensitiveSort = get(g:, 'NERDTreeCaseSensitiveSort', 1)
 
 Plug 'scrooloose/nerdtree'
 
