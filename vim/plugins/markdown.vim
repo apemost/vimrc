@@ -11,6 +11,17 @@ Plug 'plasticboy/vim-markdown'
 nnoremap <Leader>at :TableFormat<CR>
 
 "*********************************************************************
+" mzlogin/vim-markdown-toc
+"*********************************************************************
+
+let g:vmt_auto_update_on_save = get(g:, 'vmt_auto_update_on_save', 1)
+let g:vmt_list_item_char = get(g:, 'vmt_list_item_char', '-')
+let g:vmt_fence_text = get(g:, 'vmt_fence_text', 'TOC')
+let g:vmt_fence_closing_text = get(g:, 'vmt_fence_closing_text', '/TOC')
+
+Plug 'mzlogin/vim-markdown-toc'
+
+"*********************************************************************
 " JamshedVesuna/vim-markdown-preview
 "*********************************************************************
 
