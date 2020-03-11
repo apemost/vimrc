@@ -41,9 +41,9 @@ if exists("&relativenumber")
 endif
 
 nnoremap Y y$
-nnoremap S :action FindInPath<CR>
+nnoremap S :action Find<CR>
 nnoremap s :action Find<CR>
-vnoremap S :action FindInPath<CR>
+vnoremap S :action Find<CR>
 vnoremap s :action Find<CR>
 
 inoremap <C-a> <Home>
@@ -100,9 +100,9 @@ nnoremap <Leader>jr :action ShowUsages<CR>
 
 nnoremap <Leader>nn :action ActivateProjectToolWindow<CR>
 
-nnoremap <Leader>sa :action GotoSymbol<CR>
-nnoremap <Leader>sg :action GotoSymbol<CR>
-nnoremap <Leader>sr :action GotoSymbol<CR>
+nnoremap <Leader>sa :action FindInPath<CR>
+nnoremap <Leader>sg :action FindInPath<CR>
+nnoremap <Leader>sr :action FindInPath<CR>
 
 nnoremap <Leader>tn :action ActivateProjectToolWindow<CR>
 nnoremap <Leader>tt :action ActivateStructureToolWindow<CR>
