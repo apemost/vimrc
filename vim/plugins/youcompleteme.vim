@@ -65,6 +65,9 @@ let g:ycm_filetype_whitelist = get(g:, 'ycm_filetype_whitelist', {
       \ 'vim': 1,
       \ 'zsh': 1,
       \ })
+let g:ycm_extra_conf_globlist = get(g:, 'ycm_extra_conf_globlist', [
+      \ '~/.vim/plugged/YouCompleteMe/*',
+      \ ])
 
 Plug 'Valloric/YouCompleteMe', {'do': './install.py ' . g:custom_ycm_install_options}
 
