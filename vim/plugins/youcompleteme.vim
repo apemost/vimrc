@@ -14,8 +14,6 @@ let g:ycm_seed_identifiers_with_syntax =
       \ get(g:, 'ycm_seed_identifiers_with_syntax', 1)
 let g:ycm_collect_identifiers_from_comments_and_strings =
       \ get(g:, 'ycm_collect_identifiers_from_comments_and_strings', 1)
-let g:ycm_global_ycm_extra_conf =
-      \ '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_python_binary_path =
       \ get(g:, 'ycm_python_binary_path', 'python')
 let g:ycm_show_diagnostics_ui =
@@ -66,7 +64,7 @@ let g:ycm_filetype_whitelist = get(g:, 'ycm_filetype_whitelist', {
       \ 'zsh': 1,
       \ })
 let g:ycm_extra_conf_globlist = get(g:, 'ycm_extra_conf_globlist', [
-      \ '~/.vim/plugged/YouCompleteMe/*',
+      \ '~/*',
       \ ])
 
 Plug 'Valloric/YouCompleteMe', {'do': './install.py ' . g:custom_ycm_install_options}
