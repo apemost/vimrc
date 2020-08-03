@@ -1,5 +1,5 @@
 "*********************************************************************
-" leafgarland/typescript-vim
+" HerringtonDarkholme/yats.vim
 "*********************************************************************
 
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
