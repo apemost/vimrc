@@ -1,7 +1,6 @@
 "*********************************************************************
-" heavenshell/vim-pydocstring
+" https://github.com/heavenshell/vim-pydocstring
 "*********************************************************************
-
 
 let g:pydocstring_formatter = get(g:, 'pydocstring_formatter', 'numpy')
 

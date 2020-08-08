@@ -1,5 +1,5 @@
 "*********************************************************************
-" ekalinin/Dockerfile.vim
+" https://github.com/ekalinin/Dockerfile.vim
 "*********************************************************************
 
 Plug 'ekalinin/Dockerfile.vim'

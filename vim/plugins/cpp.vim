@@ -1,5 +1,5 @@
 "*********************************************************************
-" octol/vim-cpp-enhanced-highlight
+" https://github.com/octol/vim-cpp-enhanced-highlight
 "*********************************************************************
 
 let g:cpp_class_scope_highlight = get(g:, 'cpp_class_scope_highlight', 1)

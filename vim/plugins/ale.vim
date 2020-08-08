@@ -1,5 +1,5 @@
 "*********************************************************************
-" dense-analysis/ale
+" https://github.com/dense-analysis/ale
 "*********************************************************************
 
 let g:ale_sign_error = get(g:, 'ale_sign_error', g:custom_error_symbol)

@@ -1,5 +1,5 @@
 "*********************************************************************
-" morhetz/gruvbox
+" https://github.com/morhetz/gruvbox
 "*********************************************************************
 
 let g:gruvbox_termcolors = get(g:, 'gruvbox_termcolors', 256)

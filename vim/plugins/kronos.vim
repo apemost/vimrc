@@ -1,5 +1,5 @@
 "*********************************************************************
-" soywod/kronos.vim
+" https://github.com/soywod/kronos.vim
 "*********************************************************************
 
 let g:kronos_database = get(g:, 'kronos_database', expand('~/kronos.db'))

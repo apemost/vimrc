@@ -1,5 +1,5 @@
 "*********************************************************************
-" Yggdroot/indentLine
+" https://github.com/Yggdroot/indentLine
 "*********************************************************************
 
 let g:indentLine_enabled = get(g:, 'indentLine_enabled', 0)

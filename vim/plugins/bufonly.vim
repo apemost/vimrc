@@ -1,5 +1,5 @@
 "*********************************************************************
-" schickling/vim-bufonly
+" https://github.com/schickling/vim-bufonly
 "*********************************************************************
 
 Plug 'schickling/vim-bufonly'

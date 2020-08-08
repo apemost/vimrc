@@ -1,5 +1,5 @@
 "*********************************************************************
-" jiangmiao/auto-pairs
+" https://github.com/jiangmiao/auto-pairs
 "*********************************************************************
 
 let g:AutoPairsMapSpace = get(g:, 'AutoPairsMapSpace', 0)

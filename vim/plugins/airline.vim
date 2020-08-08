@@ -1,5 +1,5 @@
 "*********************************************************************
-" vim-airline/vim-airline
+" https://github.com/vim-airline/vim-airline
 "*********************************************************************
 
 let g:airline#extensions#tabline#enabled =
@@ -37,7 +37,7 @@ nmap <Leader>8 <Plug>AirlineSelectTab8
 nmap <Leader>9 <Plug>AirlineSelectTab9
 
 "*********************************************************************
-" vim-airline/vim-airline-themes
+" https://github.com/vim-airline/vim-airline-themes
 "*********************************************************************
 
 let g:airline_theme =

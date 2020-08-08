@@ -1,5 +1,5 @@
 "*********************************************************************
-" pangloss/vim-javascript
+" https://github.com/pangloss/vim-javascript
 "*********************************************************************
 
 let g:javascript_plugin_jsdoc = get(g:, 'javascript_plugin_jsdoc', 1)

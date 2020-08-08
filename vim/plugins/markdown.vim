@@ -1,5 +1,5 @@
 "*********************************************************************
-" plasticboy/vim-markdown
+" https://github.com/plasticboy/vim-markdown
 "*********************************************************************
 
 let g:vim_markdown_folding_disabled = get(g:, 'vim_markdown_folding_disabled', 1)
@@ -11,7 +11,7 @@ Plug 'plasticboy/vim-markdown'
 nnoremap <Leader>at :TableFormat<CR>
 
 "*********************************************************************
-" mzlogin/vim-markdown-toc
+" https://github.com/mzlogin/vim-markdown-toc
 "*********************************************************************
 
 let g:vmt_auto_update_on_save = get(g:, 'vmt_auto_update_on_save', 1)
@@ -22,7 +22,7 @@ let g:vmt_fence_closing_text = get(g:, 'vmt_fence_closing_text', '/TOC')
 Plug 'mzlogin/vim-markdown-toc'
 
 "*********************************************************************
-" JamshedVesuna/vim-markdown-preview
+" https://github.com/JamshedVesuna/vim-markdown-preview
 "*********************************************************************
 
 if v:version < 801 && empty($RUNNING_IN_DOCKER)
@@ -36,7 +36,7 @@ if v:version < 801 && empty($RUNNING_IN_DOCKER)
 endif
 
 "*********************************************************************
-" iamcco/markdown-preview.nvim
+" https://github.com/iamcco/markdown-preview.nvim
 "*********************************************************************
 
 if v:version >= 801 && empty($RUNNING_IN_DOCKER)

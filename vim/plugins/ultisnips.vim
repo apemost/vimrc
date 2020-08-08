@@ -1,5 +1,5 @@
 "*********************************************************************
-" SirVer/ultisnips
+" https://github.com/SirVer/ultisnips
 "*********************************************************************
 
 let g:UltiSnipsEditSplit = get(g:, 'UltiSnipsEditSplit', 'vertical')

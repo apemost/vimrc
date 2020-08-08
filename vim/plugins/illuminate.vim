@@ -1,5 +1,5 @@
 "*********************************************************************
-" RRethy/vim-illuminate
+" https://github.com/RRethy/vim-illuminate
 "*********************************************************************
 
 let g:Illuminate_delay = get(g:, 'Illuminate_delay', 250)

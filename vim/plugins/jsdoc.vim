@@ -1,5 +1,5 @@
 "*********************************************************************
-" heavenshell/vim-jsdoc
+" https://github.com/heavenshell/vim-jsdoc
 "*********************************************************************
 
 let g:jsdoc_tags = get(g:, 'jsdoc_tags', {

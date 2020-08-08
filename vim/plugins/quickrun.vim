@@ -1,5 +1,5 @@
 "*********************************************************************
-" thinca/vim-quickrun
+" https://github.com/thinca/vim-quickrun
 "*********************************************************************
 
 let g:quickrun_no_default_key_mappings =

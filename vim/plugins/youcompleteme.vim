@@ -1,5 +1,5 @@
 "*********************************************************************
-" Valloric/YouCompleteMe
+" https://github.com/Valloric/YouCompleteMe
 "*********************************************************************
 
 let g:ycm_key_list_select_completion =

@@ -1,5 +1,5 @@
 "*********************************************************************
-" scrooloose/nerdtree
+" https://github.com/scrooloose/nerdtree
 "*********************************************************************
 
 let NERDTreeIgnore = get(g:, 'NERDTreeIgnore', [

@@ -1,5 +1,5 @@
 "*********************************************************************
-" elzr/vim-json
+" https://github.com/elzr/vim-json
 "*********************************************************************
 
 let g:vim_json_syntax_conceal = get(g:, 'vim_json_syntax_conceal', 0)
