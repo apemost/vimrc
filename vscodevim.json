@@ -1,0 +1,116 @@
+{
+  "vim.incsearch": true,
+  "vim.leader": " ",
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["C-k"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    {
+      "before": ["C-j"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["C-a"],
+      "commands": ["cursorHome"]
+    },
+    {
+      "before": ["C-e"],
+      "commands": ["cursorEnd"]
+    },
+    {
+      "before": ["C-b"],
+      "after": ["<Left>"]
+    },
+    {
+      "before": ["C-f"],
+      "after": ["<Right>"]
+    },
+    {
+      "before": ["C-d"],
+      "after": ["<Del>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", ":"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "="],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "c", "<space>"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<leader>", "c", "c"],
+      "commands": ["editor.action.addCommentLine"]
+    },
+    {
+      "before": ["<leader>", "c", "u"],
+      "commands": ["editor.action.removeCommentLine"]
+    },
+    {
+      "before": ["<leader>", "j", "j"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["<leader>", "j", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "n", "n"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "s", "a"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["<leader>", "s", "r"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["<leader>", "t", "n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "="],
+      "commands": ["editor.action.formatSelection"]
+    },
+    {
+      "before": ["<leader>", "c", "<space>"],
+      "commands": ["editor.action.blockComment"]
+    },
+    {
+      "before": ["<leader>", "c", "c"],
+      "commands": ["editor.action.addCommentLine"]
+    },
+    {
+      "before": ["<leader>", "c", "u"],
+      "commands": ["editor.action.removeCommentLine"]
+    }
+  ]
+}
