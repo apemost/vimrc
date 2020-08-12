@@ -67,6 +67,42 @@
       "commands": ["editor.action.removeCommentLine"]
     },
     {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<leader>", "g", "d"],
+      "commands": ["git.openChange"]
+    },
+    {
+      "before": ["<leader>", "g", "f"],
+      "commands": ["git.fetch"]
+    },
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "g", "l"],
+      "commands": ["git.pull"]
+    },
+    {
+      "before": ["<leader>", "g", "m"],
+      "commands": ["git.merge"]
+    },
+    {
+      "before": ["<leader>", "g", "p"],
+      "commands": ["git.push"]
+    },
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
       "before": ["<leader>", "j", "j"],
       "commands": ["editor.action.revealDefinition"]
     },
@@ -93,6 +129,14 @@
     {
       "before": ["<leader>", "t", "n"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "y", "f"],
+      "commands": ["copyFilePath"]
+    },
+    {
+      "before": ["<leader>", "y", "n"],
+      "commands": ["copyRelativeFilePath"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
