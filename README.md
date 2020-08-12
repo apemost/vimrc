@@ -101,6 +101,10 @@ Or:
 cp ideavimrc ~/.ideavimrc
 ```
 
+## Consistent experience for VSCodeVim
+
+Copy the content of [vscodevim.json](vscodevim.json) to your VS Code configuration file such as `settings.json`.
+
 ## Normal mode leader key mappings
 
 | Key                | Command                            | Comment                                                                          |
