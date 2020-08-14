@@ -94,8 +94,9 @@ nnoremap <Leader>gl :action Git.Pull<CR>
 nnoremap <Leader>gs :action ActivateVersionControlToolWindow<CR>
 nnoremap <Leader>gv :action LocalHistory.ShowHistory<CR>
 
-nnoremap <Leader>jd :action GotoDeclaration<CR>
+nnoremap <Leader>jd :action GotoDeclarationOnly<CR>
 nnoremap <Leader>jj :action GotoImplementation<CR>
+nnoremap <Leader>js :action GotoSuperMethod<CR>
 nnoremap <Leader>jr :action ShowUsages<CR>
 
 nnoremap <Leader>nn :action ActivateProjectToolWindow<CR>
