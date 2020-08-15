@@ -19,6 +19,7 @@ let s:builtin_plugins = [
       \ 'bbye',
       \ 'bufonly',
       \ 'cpp',
+      \ 'closetag',
       \ 'docker',
       \ 'editorconfig',
       \ 'emacscommandline',
