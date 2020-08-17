@@ -33,14 +33,14 @@ command! -bang -nargs=* Ag
       \   <bang>0)
 command! -bang -nargs=* Gg
       \ call fzf#vim#grep(
-      \   'git grep --line-number --color=always ' . shellescape(<q-args>), 0,
+      \   'git grep --line-number --ignore-case --color=always ' . shellescape(<q-args>), 0,
       \   extend(
       \     {'dir': systemlist('git rev-parse --show-toplevel')[0]},
       \     <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   ), <bang>0)
 command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
-      \   'rg --column --line-number --no-heading --color=always ' . shellescape(<q-args>), 1,
+      \   'rg --column --line-number --ignore-case --no-heading --color=always ' . shellescape(<q-args>), 1,
       \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   <bang>0)
 
