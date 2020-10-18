@@ -51,6 +51,8 @@ inoremap <C-e> <End>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
 
 nmap <C-k> :action GotoPreviousError<CR>
 nmap <C-j> :action GotoNextError<CR>
