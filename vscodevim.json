@@ -1,6 +1,7 @@
 {
   "vim.incsearch": true,
   "vim.leader": " ",
+  "vim.smartRelativeLine": true,
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.useCtrlKeys": true,
