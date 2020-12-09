@@ -102,6 +102,7 @@ nnoremap <Leader>js :action GotoSuperMethod<CR>
 nnoremap <Leader>jr :action ShowUsages<CR>
 
 nnoremap <Leader>nn :action ActivateProjectToolWindow<CR>
+nnoremap <Leader>nj :action ActivateProjectToolWindow<CR>
 
 nnoremap <Leader>sa :action FindInPath<CR>
 nnoremap <Leader>sg :action FindInPath<CR>
