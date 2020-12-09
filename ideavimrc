@@ -41,10 +41,10 @@ if exists("&relativenumber")
 endif
 
 nnoremap Y y$
-nnoremap S <Action>(Find)
-nnoremap s <Action>(Find)
-vnoremap S <Action>(Find)
-vnoremap s <Action>(Find)
+nmap S <Action>(Find)
+nmap s <Action>(Find)
+vmap S <Action>(Find)
+vmap s <Action>(Find)
 
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
@@ -73,49 +73,49 @@ nmap <Leader><Tab> <Action>(GotoAction)
 xmap <Leader><Tab> <Action>(GotoAction)
 omap <Leader><Tab> <Action>(GotoAction)
 
-nnoremap <Leader>= <Action>(ReformatCode)
+nmap <Leader>= <Action>(ReformatCode)
 
-nnoremap <Leader>bd <Action>(CloseContent)
-nnoremap <Leader>bh <Action>(LocalHistory.ShowHistory)
-nnoremap <Leader>bo <Action>(CloseAllEditorsButActive)
-nnoremap <Leader>bw <Action>(CloseEditor)
+nmap <Leader>bd <Action>(CloseContent)
+nmap <Leader>bh <Action>(LocalHistory.ShowHistory)
+nmap <Leader>bo <Action>(CloseAllEditorsButActive)
+nmap <Leader>bw <Action>(CloseEditor)
 
-nnoremap <Leader>c<Space> <Action>(CommentByLineComment)
-vnoremap <Leader>c<Space> <Action>(CommentByLineComment)
+nmap <Leader>c<Space> <Action>(CommentByLineComment)
+vmap <Leader>c<Space> <Action>(CommentByLineComment)
 
-nnoremap <Leader>ff <Action>(GotoFile)
-nnoremap <Leader>fh <Action>(RecentFiles)
-nnoremap <Leader>fs <Action>(RecentChangedFiles)
+nmap <Leader>ff <Action>(GotoFile)
+nmap <Leader>fh <Action>(RecentFiles)
+nmap <Leader>fs <Action>(RecentChangedFiles)
 
-nnoremap <Leader>gb <Action>(Annotate)
-nnoremap <Leader>gd <Action>(Compare.LastVersion)
-nnoremap <Leader>gf <Action>(Git.Fetch)
-nnoremap <Leader>gg <Action>(GotoFile)
-nnoremap <Leader>gm <Action>(Git.Merge)
-nnoremap <Leader>gl <Action>(Git.Pull)
-nnoremap <Leader>gs <Action>(ActivateVersionControlToolWindow)
-nnoremap <Leader>gv <Action>(LocalHistory.ShowHistory)
+nmap <Leader>gb <Action>(Annotate)
+nmap <Leader>gd <Action>(Compare.LastVersion)
+nmap <Leader>gf <Action>(Git.Fetch)
+nmap <Leader>gg <Action>(GotoFile)
+nmap <Leader>gm <Action>(Git.Merge)
+nmap <Leader>gl <Action>(Git.Pull)
+nmap <Leader>gs <Action>(ActivateVersionControlToolWindow)
+nmap <Leader>gv <Action>(LocalHistory.ShowHistory)
 
-nnoremap <Leader>jd <Action>(GotoDeclarationOnly)
-nnoremap <Leader>jj <Action>(GotoImplementation)
-nnoremap <Leader>js <Action>(GotoSuperMethod)
-nnoremap <Leader>jr <Action>(ShowUsages)
+nmap <Leader>jd <Action>(GotoDeclarationOnly)
+nmap <Leader>jj <Action>(GotoImplementation)
+nmap <Leader>js <Action>(GotoSuperMethod)
+nmap <Leader>jr <Action>(ShowUsages)
 
-nnoremap <Leader>nn <Action>(ActivateProjectToolWindow)
-nnoremap <Leader>nj <Action>(SelectInProjectView)
+nmap <Leader>nn <Action>(ActivateProjectToolWindow)
+nmap <Leader>nj <Action>(SelectInProjectView)
 
-nnoremap <Leader>sa <Action>(FindInPath)
-nnoremap <Leader>sg <Action>(FindInPath)
-nnoremap <Leader>sr <Action>(FindInPath)
+nmap <Leader>sa <Action>(FindInPath)
+nmap <Leader>sg <Action>(FindInPath)
+nmap <Leader>sr <Action>(FindInPath)
 
-nnoremap <Leader>tn <Action>(ActivateProjectToolWindow)
-nnoremap <Leader>tt <Action>(ActivateStructureToolWindow)
+nmap <Leader>tn <Action>(ActivateProjectToolWindow)
+nmap <Leader>tt <Action>(ActivateStructureToolWindow)
 
-nnoremap <Leader>yf <Action>(CopyPaths)
-nnoremap <Leader>yn <Action>(CopyReference)
+nmap <Leader>yf <Action>(CopyPaths)
+nmap <Leader>yn <Action>(CopyReference)
 
-nnoremap ,K <Action>(QuickJavaDoc)
-nnoremap ,k <Action>(ExpressionTypeInfo)
+nmap ,K <Action>(QuickJavaDoc)
+nmap ,k <Action>(ExpressionTypeInfo)
 
 if filereadable(expand('~/.ideavimrc.local'))
   source ~/.ideavimrc.local
