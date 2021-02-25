@@ -30,7 +30,6 @@ let s:builtin_plugins = [
       \ 'gnupg',
       \ 'gruvbox',
       \ 'gv',
-      \ 'illuminate',
       \ 'is',
       \ 'javascript',
       \ 'jinja',
@@ -76,6 +75,10 @@ endif
 
 if v:version > 704 || (v:version == 704 && has('patch2009'))
   call add(s:builtin_plugins, 'go')
+endif
+
+if v:version >= 801
+  call add(s:builtin_plugins, 'illuminate')
 endif
 
 if HasFeatures()
