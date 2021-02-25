@@ -12,7 +12,6 @@ endif
 
 let s:dirname = fnamemodify(expand('<sfile>'), ':h')
 let s:builtin_plugins = [
-      \ 'airline',
       \ 'asyncrun',
       \ 'auto-pairs',
       \ 'auto-save',
@@ -69,6 +68,10 @@ endif
 
 if !has('gui_running')
   call add(s:builtin_plugins, 'tmuxline')
+endif
+
+if v:version >= 702
+  call add(s:builtin_plugins, 'airline')
 endif
 
 if v:version > 704 || (v:version == 704 && has('patch2009'))
