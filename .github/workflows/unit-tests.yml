@@ -5,9 +5,6 @@ on:
       - master
     paths-ignore:
       - "**.md"
-  pull_request:
-    paths-ignore:
-      - "**.md"
 jobs:
   test:
     name: Unit tests
@@ -29,4 +26,4 @@ jobs:
       - name: Check vim version
         run: vim --version
       - name: Install vim plugins
-        run: yes | vim +PlugUpdate +PlugSnapshot\ vim_plug_snapshot.txt +qa! && cat vim_plug_snapshot.txt
+        run: yes 2>/dev/null | vim --not-a-term +PlugUpdate +PlugSnapshot\ vim_plug_snapshot.txt +qa!
