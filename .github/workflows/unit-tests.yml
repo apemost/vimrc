@@ -29,4 +29,4 @@ jobs:
       - name: Check vim version
         run: vim --version
       - name: Install vim plugins
-        run: yes | vim --not-a-term +PlugUpdate +PlugSnapshot +w\ vim_plug_snapshot.txt +qa! && cat vim_plug_snapshot.txt
+        run: yes | vim +PlugUpdate +PlugSnapshot\ vim_plug_snapshot.txt +qa! && cat vim_plug_snapshot.txt
