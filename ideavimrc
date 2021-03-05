@@ -59,6 +59,9 @@ nmap <C-j> <Action>(GotoNextError)
 nmap <C-n> <Action>(NextTab)
 nmap <C-p> <Action>(PreviousTab)
 
+nmap <C-i> <action>(Forward)
+nmap <C-o> <action>(Back)
+
 nmap <Leader>1 <Action>(GoToTab1)
 nmap <Leader>2 <Action>(GoToTab2)
 nmap <Leader>3 <Action>(GoToTab3)
