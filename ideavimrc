@@ -2,6 +2,7 @@
 " ideavimrc
 "*********************************************************************
 
+set NERDTree
 set surround
 
 " Change mapleader
@@ -41,6 +42,7 @@ if exists("&relativenumber")
 endif
 
 nnoremap Y y$
+
 nmap S <Action>(Find)
 nmap s <Action>(Find)
 vmap S <Action>(Find)
@@ -104,14 +106,10 @@ nmap <Leader>jj <Action>(GotoImplementation)
 nmap <Leader>js <Action>(GotoSuperMethod)
 nmap <Leader>jr <Action>(ShowUsages)
 
-nmap <Leader>nn <Action>(ActivateProjectToolWindow)
-nmap <Leader>nj <Action>(SelectInProjectView)
-
 nmap <Leader>sa <Action>(FindInPath)
 nmap <Leader>sg <Action>(FindInPath)
 nmap <Leader>sr <Action>(FindInPath)
 
-nmap <Leader>tn <Action>(ActivateProjectToolWindow)
 nmap <Leader>tt <Action>(ActivateStructureToolWindow)
 
 nmap <Leader>yf <Action>(CopyPaths)
@@ -119,6 +117,10 @@ nmap <Leader>yn <Action>(CopyReference)
 
 nmap ,K <Action>(QuickJavaDoc)
 nmap ,k <Action>(ExpressionTypeInfo)
+
+nnoremap <Leader>nj :NERDTreeFind<CR>
+nnoremap <Leader>nn :NERDTreeFocus<CR>
+nnoremap <Leader>tn :NERDTreeToggle<CR>
 
 if filereadable(expand('~/.ideavimrc.local'))
   source ~/.ideavimrc.local
