@@ -15,5 +15,5 @@ nnoremap <Leader>gl :Git pull<Space>
 nnoremap <Leader>gm :Git merge<Space>
 nnoremap <Leader>gp :Git push<Space>
 nnoremap <Leader>gr :Gread<Space>
-nnoremap <expr> <Leader>gs (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Gstatus\<CR>"
+nnoremap <expr> <Leader>gs (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Git\<CR>"
 nnoremap <Leader>gw :Gwrite<Space>
