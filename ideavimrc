@@ -10,13 +10,7 @@ let mapleader = ' '
 let maplocalleader = ','
 
 " Use the OS clipboard by default
-if has('clipboard')
-  if has('unnamedplus')
-    set clipboard=unnamed,unnamedplus
-  else
-    set clipboard=unnamed
-  endif
-endif
+set clipboard=unnamed,unnamedplus
 
 " Enable native idea paste action for put operations
 set clipboard+=ideaput
@@ -37,9 +31,7 @@ set number
 set incsearch
 
 " Use relative line numbers
-if exists("&relativenumber")
-  set relativenumber
-endif
+set relativenumber
 
 nnoremap Y y$
 
@@ -47,6 +39,14 @@ nmap S <Action>(Find)
 nmap s <Action>(Find)
 vmap S <Action>(Find)
 vmap s <Action>(Find)
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Del>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
 
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
