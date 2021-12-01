@@ -31,6 +31,6 @@
 "let g:custom_completion_plugin = 'youcompleteme'
 "let g:custom_lint_plugin = 'ale'
 
-"let g:custom_ycm_install_options = '--clangd-completer'
+"let g:custom_ycm_install_options = '--clangd-completer --go-completer --java-completer --rust-completer --ts-completer'
 
 "let g:custom_search_engine = 'https://www.google.com/search?q=%s'
