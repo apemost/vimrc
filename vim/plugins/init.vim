@@ -50,6 +50,7 @@ let s:builtin_plugins = [
       \ 'quickrun',
       \ 'rename',
       \ 'repeat',
+      \ 'rust',
       \ 'sneak',
       \ 'surround',
       \ 'swift',
