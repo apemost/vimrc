@@ -5,6 +5,9 @@
 set NERDTree
 set surround
 
+" Enable join via the IDE
+set ideajoin
+
 " Change mapleader
 let mapleader = ' '
 let maplocalleader = ','
