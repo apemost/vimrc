@@ -193,6 +193,7 @@ Copy the content of [vscodevim.json](vscodevim.json) to your VS Code configurati
 | \<Leader>tu        | :UndotreeToggle\<CR>               | Toggle undotree                                                                  |
 | \<Leader>yf        | :let @+ = expand("%:p")\<CR>       | Yank full path of current buffer                                                 |
 | \<Leader>yn        | :let @+ = expand("%")\<CR>         | Yank relative path of current buffer                                             |
+
 ## Uninstallation
 
 Run `rm ~/.vimrc`.
