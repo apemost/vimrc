@@ -1,4 +1,4 @@
-name: Test vimrc
+name: Unit tests
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ on:
       - "**.md"
 jobs:
   test:
-    name: Test
+    name: Test vimrc
     strategy:
       matrix:
         runs-on:
