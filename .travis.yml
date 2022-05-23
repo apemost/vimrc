@@ -1,7 +1,0 @@
-language: python
-install: source bootstrap.sh
-script:
-  - vim --version
-  - yes 2>/dev/null | vim --not-a-term +PlugUpdate +PlugSnapshot\ vim_plug_snapshot.txt +qa! && cat vim_plug_snapshot.txt
-notifications:
-  email: false
