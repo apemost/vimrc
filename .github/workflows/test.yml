@@ -1,13 +1,16 @@
-name: unit-tests
+name: Test vimrc
 on:
   push:
     branches:
-      - master
+      - main
+    paths-ignore:
+      - "**.md"
+  pull_request:
     paths-ignore:
       - "**.md"
 jobs:
   test:
-    name: Unit tests
+    name: Test
     strategy:
       matrix:
         runs-on:
