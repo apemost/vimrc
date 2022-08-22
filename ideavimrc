@@ -124,7 +124,3 @@ nmap ,k <Action>(ExpressionTypeInfo)
 nnoremap <Leader>nj :NERDTreeFind<CR>
 nnoremap <Leader>nn :NERDTreeFocus<CR>
 nnoremap <Leader>tn :NERDTreeToggle<CR>
-
-if !empty(glob('~/.ideavimrc.local'))
-  source ~/.ideavimrc.local
-endif
