@@ -83,6 +83,7 @@ omap <Leader><Tab> <Action>(GotoAction)
 
 nmap <Leader>= <Action>(ReformatCode)
 
+nmap <Leader>bb <Action>(RecentFiles)
 nmap <Leader>bd <Action>(CloseContent)
 nmap <Leader>bh <Action>(LocalHistory.ShowHistory)
 nmap <Leader>bo <Action>(CloseAllEditorsButActive)
