@@ -106,6 +106,7 @@ nmap <Leader>gs <Action>(ActivateVersionControlToolWindow)
 nmap <Leader>gv <Action>(LocalHistory.ShowHistory)
 
 nmap <Leader>jd <Action>(GotoDeclarationOnly)
+nmap <Leader>ji <Action>(GotoImplementation)
 nmap <Leader>jj <Action>(GotoImplementation)
 nmap <Leader>js <Action>(GotoSuperMethod)
 nmap <Leader>jr <Action>(ShowUsages)

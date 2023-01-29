@@ -112,6 +112,14 @@
       "commands": ["workbench.view.scm"]
     },
     {
+      "before": ["<leader>", "j", "d"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      "before": ["<leader>", "j", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
       "before": ["<leader>", "j", "j"],
       "commands": ["editor.action.revealDefinition"]
     },
