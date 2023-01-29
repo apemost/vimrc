@@ -128,6 +128,10 @@
       "commands": ["editor.action.goToReferences"]
     },
     {
+      "before": ["<leader>", "j", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
       "before": ["<leader>", "n", "n"],
       "commands": ["workbench.view.explorer"]
     },

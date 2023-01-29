@@ -110,6 +110,7 @@ nmap <Leader>ji <Action>(GotoImplementation)
 nmap <Leader>jj <Action>(GotoImplementation)
 nmap <Leader>js <Action>(GotoSuperMethod)
 nmap <Leader>jr <Action>(ShowUsages)
+nmap <Leader>jt <Action>(GotoTypeDeclaration)
 
 nmap <Leader>sa <Action>(FindInPath)
 nmap <Leader>sg <Action>(FindInPath)

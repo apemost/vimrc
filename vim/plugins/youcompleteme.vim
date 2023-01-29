@@ -76,6 +76,7 @@ nnoremap <Leader>jd :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImplementation<CR>
 nnoremap <Leader>jj :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>jr :YcmCompleter GoToReferences<CR>
+nnoremap <Leader>jt :YcmCompleter GoToType<CR>
 
 nnoremap <LocalLeader>K :YcmCompleter GetDoc<CR>
 nnoremap <LocalLeader>k :YcmCompleter GetType<CR>
