@@ -14,6 +14,14 @@
     {
       "before": ["C-j"],
       "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["C-n"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["C-p"],
+      "commands": ["workbench.action.previousEditor"]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
@@ -47,6 +55,42 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "1"],
+      "commands": ["workbench.action.openEditorAtIndex1"]
+    },
+    {
+      "before": ["<leader>", "2"],
+      "commands": ["workbench.action.openEditorAtIndex2"]
+    },
+    {
+      "before": ["<leader>", "3"],
+      "commands": ["workbench.action.openEditorAtIndex3"]
+    },
+    {
+      "before": ["<leader>", "4"],
+      "commands": ["workbench.action.openEditorAtIndex4"]
+    },
+    {
+      "before": ["<leader>", "5"],
+      "commands": ["workbench.action.openEditorAtIndex5"]
+    },
+    {
+      "before": ["<leader>", "6"],
+      "commands": ["workbench.action.openEditorAtIndex6"]
+    },
+    {
+      "before": ["<leader>", "7"],
+      "commands": ["workbench.action.openEditorAtIndex7"]
+    },
+    {
+      "before": ["<leader>", "8"],
+      "commands": ["workbench.action.openEditorAtIndex8"]
+    },
+    {
+      "before": ["<leader>", "9"],
+      "commands": ["workbench.action.openEditorAtIndex9"]
+    },
     {
       "before": ["<leader>", ":"],
       "commands": ["workbench.action.showCommands"]
@@ -130,6 +174,10 @@
     {
       "before": ["<leader>", "j", "t"],
       "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["<leader>", "n", "j"],
+      "commands": ["revealInExplorer"]
     },
     {
       "before": ["<leader>", "n", "n"],
