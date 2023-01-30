@@ -9,11 +9,11 @@
   "vim.normalModeKeyBindings": [
     {
       "before": ["C-k"],
-      "commands": ["editor.action.marker.prevInFiles"]
+      "commands": ["editor.action.marker.prev"]
     },
     {
       "before": ["C-j"],
-      "commands": ["editor.action.marker.nextInFiles"]
+      "commands": ["editor.action.marker.next"]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
