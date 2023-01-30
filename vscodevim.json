@@ -113,7 +113,7 @@
     },
     {
       "before": ["<leader>", "j", "d"],
-      "commands": ["editor.action.revealDeclaration"]
+      "commands": ["editor.action.goToDeclaration"]
     },
     {
       "before": ["<leader>", "j", "i"],
