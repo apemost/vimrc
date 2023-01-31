@@ -4,6 +4,7 @@
   "vim.smartRelativeLine": true,
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindings": [
@@ -116,8 +117,16 @@
       "commands": ["editor.action.formatDocument"]
     },
     {
+      "before": ["<leader>", "b", "b"],
+      "commands": ["workbench.files.action.focusOpenEditorsView"]
+    },
+    {
       "before": ["<leader>", "b", "d"],
       "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "h"],
+      "commands": ["gitlens.showQuickFileHistory"]
     },
     {
       "before": ["<leader>", "b", "w"],
@@ -154,6 +163,10 @@
     {
       "before": ["<leader>", "g", "g"],
       "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "g", "h"],
+      "commands": ["gitlens.showQuickRepoHistory"]
     },
     {
       "before": ["<leader>", "g", "l"],
