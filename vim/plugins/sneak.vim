@@ -3,6 +3,7 @@
 "*********************************************************************
 
 let g:sneak#label = get(g:, 'sneak#lable', 1)
+let pg:sneak#use_ic_scs = get(g:, 'sneak#use_ic_scs', 1)
 
 Plug 'justinmk/vim-sneak'
 
