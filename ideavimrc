@@ -77,6 +77,8 @@ nmap <Leader>9 <Action>(GoToTab9)
 nmap <Leader>- <Action>(PreviousTab)
 nmap <Leader>+ <Action>(NextTab)
 
+nmap [b <Action>(PreviousTab)
+nmap ]b <Action>(NextTab)
 nmap [t <Action>(PreviousTab)
 nmap ]t <Action>(NextTab)
 

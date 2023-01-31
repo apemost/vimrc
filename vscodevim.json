@@ -60,6 +60,14 @@
       "commands": ["workbench.action.nextEditor"]
     },
     {
+      "before": ["[", "b"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["]", "b"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
       "before": ["[", "t"],
       "commands": ["workbench.action.previousEditor"]
     },
