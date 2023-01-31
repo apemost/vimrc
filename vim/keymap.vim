@@ -8,9 +8,6 @@ nnoremap Y y$
 nmap <silent> ]b :bnext<CR>
 nmap <silent> [b :bprevious<CR>
 
-nmap <silent> ]t :tabnext<CR>
-nmap <silent> [t :tabprevious<CR>
-
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-b> <Left>

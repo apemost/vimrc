@@ -61,8 +61,6 @@ inoremap <C-p> <Up>
 
 nmap <C-k> <Action>(GotoPreviousError)
 nmap <C-j> <Action>(GotoNextError)
-nmap <C-n> <Action>(NextTab)
-nmap <C-p> <Action>(PreviousTab)
 
 nmap <C-i> <action>(Forward)
 nmap <C-o> <action>(Back)
@@ -76,6 +74,11 @@ nmap <Leader>6 <Action>(GoToTab6)
 nmap <Leader>7 <Action>(GoToTab7)
 nmap <Leader>8 <Action>(GoToTab8)
 nmap <Leader>9 <Action>(GoToTab9)
+nmap <Leader>- <Action>(PreviousTab)
+nmap <Leader>+ <Action>(NextTab)
+
+nmap [t <Action>(PreviousTab)
+nmap ]t <Action>(NextTab)
 
 nmap <Leader><Tab> <Action>(GotoAction)
 xmap <Leader><Tab> <Action>(GotoAction)

@@ -16,46 +16,6 @@
       "commands": ["editor.action.marker.next"]
     },
     {
-      "before": ["C-n"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["C-p"],
-      "commands": ["workbench.action.previousEditor"]
-    }
-  ],
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-      "before": ["C-a"],
-      "commands": ["cursorHome"]
-    },
-    {
-      "before": ["C-e"],
-      "commands": ["cursorEnd"]
-    },
-    {
-      "before": ["C-b"],
-      "after": ["<Left>"]
-    },
-    {
-      "before": ["C-f"],
-      "after": ["<Right>"]
-    },
-    {
-      "before": ["C-d"],
-      "after": ["<Del>"]
-    },
-    {
-      "before": ["C-n"],
-      "after": ["<Down>"]
-    },
-    {
-      "before": ["C-p"],
-      "after": ["<Up>"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
       "before": ["<leader>", "1"],
       "commands": ["workbench.action.openEditorAtIndex1"]
     },
@@ -91,6 +51,54 @@
       "before": ["<leader>", "9"],
       "commands": ["workbench.action.openEditorAtIndex9"]
     },
+    {
+      "before": ["<leader>", "-"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "+"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["[", "t"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["]", "t"],
+      "commands": ["workbench.action.nextEditor"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["C-a"],
+      "commands": ["cursorHome"]
+    },
+    {
+      "before": ["C-e"],
+      "commands": ["cursorEnd"]
+    },
+    {
+      "before": ["C-b"],
+      "after": ["<Left>"]
+    },
+    {
+      "before": ["C-f"],
+      "after": ["<Right>"]
+    },
+    {
+      "before": ["C-d"],
+      "after": ["<Del>"]
+    },
+    {
+      "before": ["C-n"],
+      "after": ["<Down>"]
+    },
+    {
+      "before": ["C-p"],
+      "after": ["<Up>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", ":"],
       "commands": ["workbench.action.showCommands"]
