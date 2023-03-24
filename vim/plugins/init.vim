@@ -37,6 +37,7 @@ let s:builtin_plugins = [
       \ 'json',
       \ 'jump',
       \ 'kotlin',
+      \ 'lark',
       \ 'latex',
       \ 'markdown',
       \ 'mermaid',
