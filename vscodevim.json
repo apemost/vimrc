@@ -97,14 +97,6 @@
     {
       "before": ["C-d"],
       "after": ["<Del>"]
-    },
-    {
-      "before": ["C-n"],
-      "after": ["<Down>"]
-    },
-    {
-      "before": ["C-p"],
-      "after": ["<Up>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
