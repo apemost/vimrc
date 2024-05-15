@@ -50,6 +50,7 @@ omap <Leader><Tab> <Plug>(fzf-maps-o)
 
 nnoremap <expr> <Leader>bb (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Buffers\<CR>"
 nnoremap <Leader>bh :BCommits<CR>
+vnoremap <Leader>bh :BCommits<CR>
 
 nnoremap <Leader>f/ :History/<CR>
 nnoremap <Leader>f: :History:<CR>
