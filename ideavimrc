@@ -85,6 +85,7 @@ xmap <Leader><Tab> <Action>(GotoAction)
 omap <Leader><Tab> <Action>(GotoAction)
 
 nmap <Leader>= <Action>(ReformatCode)
+nmap <Leader>: <Action>(RunAnything)
 
 nmap <Leader>bb <Action>(RecentFiles)
 nmap <Leader>bd <Action>(CloseContent)
