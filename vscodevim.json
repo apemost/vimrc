@@ -1,4 +1,5 @@
 {
+  "files.insertFinalNewline": true,
   "vim.incsearch": true,
   "vim.leader": " ",
   "vim.smartRelativeLine": true,
