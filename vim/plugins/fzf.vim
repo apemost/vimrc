@@ -2,7 +2,7 @@
 " https://github.com/junegunn/fzf
 "*********************************************************************
 
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': { -> fzf#install() }}
 
 "*********************************************************************
 " https://github.com/junegunn/fzf.vim
