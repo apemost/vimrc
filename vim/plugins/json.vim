@@ -10,4 +10,6 @@ Plug 'elzr/vim-json'
 " GutenYe/json5.vim
 "*********************************************************************
 
-Plug 'GutenYe/json5.vim'
+if v:version < 901
+  Plug 'GutenYe/json5.vim'
+endif
