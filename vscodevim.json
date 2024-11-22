@@ -113,8 +113,8 @@
           "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
         },
         {
-          "command": "notebook.formatCell",
-          "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+          "command": "notebook.format",
+          "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
         }
       ]
     },
