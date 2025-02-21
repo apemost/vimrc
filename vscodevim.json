@@ -107,16 +107,7 @@
     },
     {
       "before": ["<leader>", "="],
-      "commands": [
-        {
-          "command": "editor.action.formatDocument",
-          "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-        },
-        {
-          "command": "notebook.format",
-          "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
-        }
-      ]
+      "commands": ["editor.action.formatDocument"]
     },
     {
       "before": ["<leader>", "b", "b"],
