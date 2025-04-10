@@ -237,7 +237,7 @@
     },
     {
       "before": ["<leader>", "c", "<space>"],
-      "commands": ["editor.action.blockComment"]
+      "commands": ["editor.action.commentLine"]
     },
     {
       "before": ["<leader>", "c", "c"],
