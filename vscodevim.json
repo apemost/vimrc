@@ -10,6 +10,14 @@
   "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindings": [
     {
+      "before": ["C-o"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["C-i"],
+      "commands": ["workbench.action.navigateForward"]
+    },
+    {
       "before": ["C-k"],
       "commands": ["editor.action.marker.prev"]
     },
