@@ -8,7 +8,7 @@
   "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
-  "vim.normalModeKeyBindings": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["C-o"],
       "commands": ["workbench.action.navigateBack"]
@@ -24,6 +24,22 @@
     {
       "before": ["C-j"],
       "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["[", "b"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["]", "b"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["[", "t"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["]", "t"],
+      "commands": ["workbench.action.nextEditor"]
     },
     {
       "before": ["<leader>", "1"],
@@ -69,46 +85,6 @@
       "before": ["<leader>", "+"],
       "commands": ["workbench.action.nextEditor"]
     },
-    {
-      "before": ["[", "b"],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["]", "b"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["[", "t"],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["]", "t"],
-      "commands": ["workbench.action.nextEditor"]
-    }
-  ],
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-      "before": ["C-a"],
-      "commands": ["cursorHome"]
-    },
-    {
-      "before": ["C-e"],
-      "commands": ["cursorEnd"]
-    },
-    {
-      "before": ["C-b"],
-      "after": ["<Left>"]
-    },
-    {
-      "before": ["C-f"],
-      "after": ["<Right>"]
-    },
-    {
-      "before": ["C-d"],
-      "after": ["<Del>"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", ":"],
       "commands": ["workbench.action.showCommands"]
@@ -238,6 +214,28 @@
       "commands": ["copyRelativeFilePath"]
     }
   ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["C-a"],
+      "commands": ["cursorHome"]
+    },
+    {
+      "before": ["C-e"],
+      "commands": ["cursorEnd"]
+    },
+    {
+      "before": ["C-b"],
+      "after": ["<Left>"]
+    },
+    {
+      "before": ["C-f"],
+      "after": ["<Right>"]
+    },
+    {
+      "before": ["C-d"],
+      "after": ["<Del>"]
+    }
+  ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "="],
@@ -255,5 +253,6 @@
       "before": ["<leader>", "c", "u"],
       "commands": ["editor.action.removeCommentLine"]
     }
-  ]
+  ],
+  "telemetry.telemetryLevel": "off"
 }
