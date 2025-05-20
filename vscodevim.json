@@ -1,5 +1,6 @@
 {
   "files.insertFinalNewline": true,
+  "telemetry.telemetryLevel": "off",
   "vim.incsearch": true,
   "vim.leader": " ",
   "vim.smartRelativeLine": true,
@@ -253,6 +254,5 @@
       "before": ["<leader>", "c", "u"],
       "commands": ["editor.action.removeCommentLine"]
     }
-  ],
-  "telemetry.telemetryLevel": "off"
+  ]
 }
