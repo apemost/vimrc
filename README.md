@@ -104,6 +104,16 @@ cp ideavimrc ~/.ideavimrc
 
 Copy the content of [vscodevim.json](vscodevim.json) to your VS Code configuration file such as `settings.json`.
 
+To bind the <kbd>o</kbd> key for opening files in VS Code, add this entry to your `keybindings.json`:
+
+```json
+    {
+        "key": "o",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus && !explorerResourceIsFolder"
+    }
+```
+
 ## Uninstallation
 
 Run `rm ~/.vimrc`.
