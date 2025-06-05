@@ -46,16 +46,12 @@ cnoremap <C-e> <End>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 cnoremap <C-d> <Del>
-cnoremap <C-n> <Down>
-cnoremap <C-p> <Up>
 
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
-inoremap <C-n> <Down>
-inoremap <C-p> <Up>
 
 nmap <C-k> <Action>(GotoPreviousError)
 nmap <C-j> <Action>(GotoNextError)
