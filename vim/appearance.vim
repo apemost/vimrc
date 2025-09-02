@@ -25,7 +25,7 @@ else
     set termguicolors
   endif
   " Make comments italic
-  if empty($TMUX) && empty($SSH_TTY) && empty($SUDO_USER)
+  if empty($SSH_TTY) && empty($SUDO_USER)
     let &t_ZH="\e[3m"
     let &t_ZR="\e[23m"
     highlight Comment cterm=italic
