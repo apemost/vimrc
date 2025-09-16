@@ -4,7 +4,7 @@
 
 Plug 'tpope/vim-fugitive'
 
-nnoremap <Leader>gb :Git blame<CR>
+nnoremap <expr> <Leader>gb expand('%') =~ 'fugitiveblame' ? ":bdelete\<CR>" : ":Git blame\<CR>"
 vnoremap <Leader>gb :Git blame<CR>
 nnoremap <expr> <Leader>gc (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Git commit\<Space>"
 nnoremap <Leader>gD :Gdiff<Space>
