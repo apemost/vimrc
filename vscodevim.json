@@ -1,5 +1,6 @@
 {
   "files.insertFinalNewline": true,
+  "gitlens.blame.format": "${author|20?} ${agoOrDate|14-}",
   "telemetry.telemetryLevel": "off",
   "vim.incsearch": true,
   "vim.leader": " ",
@@ -129,6 +130,10 @@
     {
       "before": ["<leader>", "f", "s"],
       "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<leader>", "g", "b"],
+      "commands": ["gitlens.toggleFileBlame"]
     },
     {
       "before": ["<leader>", "g", "d"],
