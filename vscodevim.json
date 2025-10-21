@@ -93,16 +93,7 @@
     },
     {
       "before": ["<leader>", "="],
-      "commands": [
-        {
-          "command": "notebook.formatCell",
-          "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
-        },
-        {
-          "command": "editor.action.formatDocument",
-          "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-        }
-      ]
+      "commands": ["editor.action.formatDocument"]
     },
     {
       "before": ["<leader>", "b", "b"],
