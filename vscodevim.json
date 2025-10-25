@@ -1,8 +1,11 @@
 {
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.nonBasicASCII": false,
   "files.insertFinalNewline": true,
   "gitlens.blame.format": "${author|20?} ${agoOrDate|14-}",
   "jupyter.notebookFileRoot": "${workspaceFolder}",
   "notebook.lineNumbers": "on",
+  "notebook.output.scrolling": true,
   "telemetry.telemetryLevel": "off",
   "vim.incsearch": true,
   "vim.leader": " ",
