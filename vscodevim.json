@@ -3,6 +3,7 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
   "files.insertFinalNewline": true,
   "gitlens.blame.format": "${author|20?} ${agoOrDate|14-}",
+  "jupyter.askForKernelRestart": false,
   "jupyter.notebookFileRoot": "${workspaceFolder}",
   "notebook.lineNumbers": "on",
   "notebook.output.scrolling": true,
