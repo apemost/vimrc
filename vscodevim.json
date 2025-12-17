@@ -8,6 +8,7 @@
   "notebook.lineNumbers": "on",
   "notebook.output.scrolling": true,
   "telemetry.telemetryLevel": "off",
+  "terminal.integrated.cursorBlinking": true,
   "vim.incsearch": true,
   "vim.leader": " ",
   "vim.smartRelativeLine": true,
