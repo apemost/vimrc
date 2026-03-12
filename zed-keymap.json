@@ -1,0 +1,96 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting",
+    "bindings": {
+      "ctrl-o": "pane::GoBack",
+      "ctrl-i": "pane::GoForward",
+      "ctrl-k": "editor::GoToPreviousDiagnostic",
+      "ctrl-j": "editor::GoToDiagnostic",
+
+      "[ b": "pane::ActivatePreviousItem",
+      "] b": "pane::ActivateNextItem",
+      "[ t": "pane::ActivatePreviousItem",
+      "] t": "pane::ActivateNextItem",
+
+      "space 1": ["pane::ActivateItem", 0],
+      "space 2": ["pane::ActivateItem", 1],
+      "space 3": ["pane::ActivateItem", 2],
+      "space 4": ["pane::ActivateItem", 3],
+      "space 5": ["pane::ActivateItem", 4],
+      "space 6": ["pane::ActivateItem", 5],
+      "space 7": ["pane::ActivateItem", 6],
+      "space 8": ["pane::ActivateItem", 7],
+      "space 9": ["pane::ActivateItem", 8],
+      "space -": "pane::ActivatePreviousItem",
+      "space +": "pane::ActivateNextItem",
+      "space :": "command_palette::Toggle",
+      "space =": "editor::Format",
+
+      "space b b": "tab_switcher::Toggle",
+      "space b d": "pane::CloseActiveItem",
+      "space b w": "pane::CloseActiveItem",
+      "space b h": "git::FileHistory",
+
+      "space c space": "editor::ToggleComments",
+      "space c c": "editor::ToggleComments",
+      "space c u": "editor::ToggleComments",
+
+      "space f f": "file_finder::Toggle",
+      "space f s": "project_panel::ToggleFocus",
+
+      "space g b": "git::Blame",
+      "space g d": "editor::GoToHunk",
+      "space g g": "file_finder::Toggle",
+      "space g s": "project_panel::ToggleFocus",
+
+      "space j d": "editor::GoToDeclaration",
+      "space j i": "editor::GoToImplementation",
+      "space j j": "editor::GoToDefinition",
+      "space j r": "editor::FindAllReferences",
+      "space j t": "editor::GoToTypeDefinition",
+
+      "space n j": "project_panel::ToggleFocus",
+      "space n n": "project_panel::ToggleFocus",
+
+      "space s a": "workspace::NewSearch",
+      "space s g": "workspace::NewSearch",
+      "space s r": "workspace::NewSearch",
+
+      "space t n": "workspace::ToggleLeftDock",
+      "space y f": "workspace::CopyPath",
+      "space y n": "workspace::CopyRelativePath",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting",
+    "bindings": {
+      "space =": "editor::Format",
+      "space c space": "editor::ToggleComments",
+      "space c c": "editor::ToggleComments",
+      "space c u": "editor::ToggleComments",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-a": "editor::MoveToBeginningOfLine",
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-b": "editor::MoveLeft",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-d": "editor::Delete",
+    },
+  },
+]
