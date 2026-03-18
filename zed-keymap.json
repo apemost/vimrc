@@ -57,7 +57,7 @@
       "space c u": "editor::ToggleComments",
 
       "space f f": "file_finder::Toggle",
-      "space f s": "project_panel::ToggleFocus",
+      "space f s": "git_panel::Toggle",
 
       "space g b": "git::Blame",
       "space g c": "git::Commit",
