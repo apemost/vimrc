@@ -13,6 +13,14 @@
     },
   },
   {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "o": "project_panel::Open",
+      "i": "project_panel::OpenSplitHorizontal",
+      "s": "project_panel::OpenSplitVertical",
+    },
+  },
+  {
     "context": "Editor && vim_mode == normal && !VimWaiting",
     "bindings": {
       "ctrl-o": "pane::GoBack",
@@ -52,9 +60,11 @@
       "space f s": "project_panel::ToggleFocus",
 
       "space g b": "git::Blame",
-      "space g d": "editor::GoToHunk",
+      "space g c": "git::Commit",
+      "space g d": "git::Diff",
+      "space g f": "git::Fetch",
       "space g g": "file_finder::Toggle",
-      "space g s": "project_panel::ToggleFocus",
+      "space g s": "git_panel::Toggle",
 
       "space j d": "editor::GoToDeclaration",
       "space j i": "editor::GoToImplementation",
@@ -62,14 +72,14 @@
       "space j r": "editor::FindAllReferences",
       "space j t": "editor::GoToTypeDefinition",
 
-      "space n j": "project_panel::ToggleFocus",
+      "space n j": "pane::RevealInProjectPanel",
       "space n n": "project_panel::ToggleFocus",
+      "space t n": "workspace::ToggleLeftDock",
 
       "space s a": "workspace::NewSearch",
       "space s g": "workspace::NewSearch",
       "space s r": "workspace::NewSearch",
 
-      "space t n": "workspace::ToggleLeftDock",
       "space y f": "workspace::CopyPath",
       "space y n": "workspace::CopyRelativePath",
     },
