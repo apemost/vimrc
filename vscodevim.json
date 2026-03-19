@@ -249,6 +249,10 @@
     {
       "before": ["C-d"],
       "after": ["<Del>"]
+    },
+    {
+      "before": ["C-j"],
+      "after": ["<Enter>"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
