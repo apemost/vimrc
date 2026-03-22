@@ -1,4 +1,5 @@
 {
+  "editor.lineNumbers": "relative",
   "editor.minimap.autohide": "mouseover",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.nonBasicASCII": false,
