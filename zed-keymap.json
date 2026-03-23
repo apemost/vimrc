@@ -15,8 +15,11 @@
   {
     "context": "(ProjectPanel && not_editing)",
     "bindings": {
-      "o": "project_panel::Open",
       "i": "project_panel::OpenSplitHorizontal",
+      "m d": "project_panel::Delete",
+      "m o": "workspace::OpenWithSystem",
+      "m r": "project_panel::RevealInFileManager",
+      "o": "project_panel::Open",
       "s": "project_panel::OpenSplitVertical",
     },
   },
