@@ -19,7 +19,7 @@
       "m d": "project_panel::Delete",
       "m o": "workspace::OpenWithSystem",
       "m r": "project_panel::RevealInFileManager",
-      "o": "project_panel::Open",
+      "o": "project_panel::OpenPermanent",
       "s": "project_panel::OpenSplitVertical",
     },
   },

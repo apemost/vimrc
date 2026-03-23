@@ -116,7 +116,7 @@ To bind the <kbd>o</kbd> key for opening files in VS Code, add this entry to you
 
 ## Consistent experience for Zed
 
-Copy the content of [zed-keymap.json](zed-keymap.json) to your Zed keymap file such as `~/.config/zed/keymap.json`.
+Copy the content of [keymap.json](zed/keymap.json) to your Zed keymap file such as `~/.config/zed/keymap.json`.
 
 ## Uninstallation
 
