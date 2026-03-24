@@ -106,4 +106,10 @@
       "ctrl-d": "editor::Delete",
     },
   },
+  {
+    "context": "Editor && extension == md && vim_mode == normal && !VimWaiting",
+    "bindings": {
+      "space p m": "markdown::OpenPreview",
+    },
+  },
 ]
