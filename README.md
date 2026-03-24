@@ -29,7 +29,7 @@ To update, `cd` into your local `vimrc` repository and then:
 source bootstrap.sh
 ```
 
-## Setting up for the first time
+## Setting up Vim for the first time
 
 We will automatically setting up the [vim-plug](https://github.com/junegunn/vim-plug)
 plugin manager when you open vim for the first time.
@@ -39,6 +39,16 @@ Then, you can:
 - run `:PlugInstall` to install the plugins
 - run `:PlugUpdate` to update the plugins
 - see [tutorial](https://github.com/junegunn/vim-plug/wiki/tutorial) page to learn the basics of vim-plug
+
+## Setting up Neovim for the first time
+
+When you open Neovim for the first time, the configuration will automatically:
+
+- bootstrap [lazy.nvim](https://github.com/folke/lazy.nvim)
+- install [ellisonleao/gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
+- use `gruvbox` as the default colorscheme
+
+If `gruvbox` is unavailable for any reason, Neovim falls back to the built-in `habamax` colorscheme.
 
 ## Adding your own customization
 

@@ -12,7 +12,7 @@ let s:scripts = [
       \ 'autocommands.vim',
       \ ]
 
-execute 'source' fnameescape(s:dirname . '/functions.vim')
+execute 'source' fnameescape(s:dirname . '/helpers.vim')
 
 function! s:init()
   for filename in s:scripts
