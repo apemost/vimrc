@@ -100,10 +100,11 @@
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "ctrl-a": "editor::MoveToBeginningOfLine",
-      "ctrl-e": "editor::MoveToEndOfLine",
       "ctrl-b": "editor::MoveLeft",
-      "ctrl-f": "editor::MoveRight",
       "ctrl-d": "editor::Delete",
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-k": "editor::DeleteToEndOfLine",
     },
   },
   {
