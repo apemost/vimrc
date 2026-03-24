@@ -52,6 +52,7 @@ inoremap <C-e> <End>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
+imap <C-k> <Action>(EditorDeleteToLineEnd)
 
 nmap <C-k> <Action>(GotoPreviousError)
 nmap <C-j> <Action>(GotoNextError)

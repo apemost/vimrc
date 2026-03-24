@@ -13,6 +13,7 @@ inoremap <C-e> <End>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-d> <Del>
+inoremap <C-k> <C-o>D
 
 " Save as superuser
 nnoremap <Leader>W :w !sudo tee % > /dev/null<CR>

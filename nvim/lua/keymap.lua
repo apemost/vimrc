@@ -30,6 +30,7 @@ map("i", "<C-e>", "<End>")
 map("i", "<C-b>", "<Left>")
 map("i", "<C-f>", "<Right>")
 map("i", "<C-d>", "<Del>")
+map("i", "<C-k>", "<C-o>D")
 
 map("n", "<Leader>W", ":w !sudo tee % > /dev/null<CR>", { silent = true })
 map("n", "<Leader>yf", function()
