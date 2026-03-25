@@ -118,6 +118,10 @@
       "commands": ["gitlens.showQuickFileHistory"]
     },
     {
+      "before": ["<leader>", "b", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
       "before": ["<leader>", "b", "w"],
       "commands": ["workbench.action.closeActiveEditor"]
     },

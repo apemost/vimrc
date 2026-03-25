@@ -52,8 +52,9 @@
 
       "space b b": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
-      "space b w": "pane::CloseActiveItem",
       "space b h": "git::FileHistory",
+      "space b o": "pane::CloseOtherItems",
+      "space b w": "pane::CloseActiveItem",
 
       "space c space": "editor::ToggleComments",
       "space c c": "editor::ToggleComments",
