@@ -3,6 +3,7 @@
 "*********************************************************************
 
 let NERDTreeIgnore = get(g:, 'NERDTreeIgnore', [
+      \ '\.DS_Store$',
       \ '\.git$',
       \ '\.pyc$',
       \ '__pycache__',
