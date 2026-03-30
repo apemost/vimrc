@@ -4,6 +4,11 @@
   "editor.tabSize": 2,
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?「【（；，。、：）】」",
+  "files.exclude": {
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/node_modules": true
+  },
   "files.insertFinalNewline": true,
   "gitlens.blame.format": "${author|20?} ${agoOrDate|14-}",
   "jupyter.askForKernelRestart": false,
