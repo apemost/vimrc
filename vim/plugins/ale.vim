@@ -11,6 +11,9 @@ let g:ale_pattern_options = get(g:, 'ale_pattern_options', {
       \ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
       \ })
 
+let g:ale_python_auto_uv = get(g:, 'ale_python_auto_uv', 1)
+let g:ale_python_auto_virtualenv = get(g:, 'ale_python_auto_virtualenv', 1)
+
 Plug 'dense-analysis/ale'
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
