@@ -1,3 +1,5 @@
+local helpers = require("helpers")
+
 return {
   {
     "tpope/vim-fugitive",
@@ -15,7 +17,7 @@ return {
       map("v", "<Leader>gb", ":Git blame<CR>")
 
       map("n", "<Leader>gc", function()
-        if vim.fn.expand("%"):find("NERD_tree") then
+        if helpers.is_file_tree_buffer() then
           return "<C-w><C-w>:Git commit "
         end
 
@@ -31,7 +33,7 @@ return {
       map("n", "<Leader>gp", ":Git push ")
       map("n", "<Leader>gr", ":Gread ")
       map("n", "<Leader>gs", function()
-        if vim.fn.expand("%"):find("NERD_tree") then
+        if helpers.is_file_tree_buffer() then
           return "<C-w><C-w>:Git<CR>"
         end
 
