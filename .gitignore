@@ -3,3 +3,6 @@
 
 # Thumbnail cache files
 Thumbs.db
+
+# Other
+.nvimlog
