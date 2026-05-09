@@ -14,6 +14,11 @@ let g:fzf_commits_log_options =
 
 Plug 'junegunn/fzf.vim'
 
+command! -bang LocalFiles
+      \ call fzf#vim#files(
+      \   systemlist('git rev-parse --show-toplevel')[0] . '/.local',
+      \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
 command! -bang -nargs=* GG
       \ call fzf#vim#grep(
       \   'git grep --line-number --color=always ' . <q-args>, 0,
@@ -61,6 +66,7 @@ nnoremap <expr> <Leader>ff (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . 
 nnoremap <Leader>fg :Gg<Space><C-r><C-w><CR>
 vnoremap <Leader>fg "gy:Gg<Space><C-r>g<CR>
 nnoremap <expr> <Leader>fh (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":History\<CR>"
+nnoremap <expr> <Leader>fl (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":LocalFiles\<CR>"
 nnoremap <Leader>fm :Marks<CR>
 nnoremap <Leader>fr :Rg<Space><C-r><C-w><CR>
 vnoremap <Leader>fr "gy:Rg<Space><C-r>g<CR>
