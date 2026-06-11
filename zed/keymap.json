@@ -16,6 +16,7 @@
     "context": "(ProjectPanel && not_editing)",
     "bindings": {
       "i": "project_panel::OpenSplitHorizontal",
+      "m a": "project_panel::NewFile",
       "m d": "project_panel::Delete",
       "m o": "workspace::OpenWithSystem",
       "m r": "project_panel::RevealInFileManager",
