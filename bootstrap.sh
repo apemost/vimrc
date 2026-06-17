@@ -31,6 +31,7 @@ else
 fi
 
 if confirm_sync "nvim" "~/.config/nvim/"; then
+  mkdir -p ~/.config/nvim
   rsync -avh --no-perms --exclude .DS_Store nvim/ ~/.config/nvim/
 else
   echo "Skipped nvim sync."
