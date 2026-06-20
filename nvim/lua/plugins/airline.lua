@@ -1,8 +1,4 @@
-local function set_global_default(name, value)
-  if vim.g[name] == nil then
-    vim.g[name] = value
-  end
-end
+local helpers = require("helpers")
 
 local function lower_string(value, fallback)
   if type(value) == "string" and value ~= "" then
@@ -48,17 +44,17 @@ return {
       "vim-airline/vim-airline-themes",
     },
     init = function()
-      set_global_default("airline#extensions#tabline#enabled", 1)
-      set_global_default("airline#extensions#tabline#fnamemod", ":t")
-      set_global_default("airline#extensions#tabline#tab_nr_type", 2)
-      set_global_default("airline#extensions#tabline#show_tab_nr", 1)
-      set_global_default("airline#extensions#tabline#show_tab_type", 1)
-      set_global_default("airline#extensions#tabline#buffer_idx_mode", 1)
-      set_global_default("airline#extensions#tabline#buffers_label", "BUFFERS")
-      set_global_default("airline#extensions#tabline#tabs_label", "TABS")
-      set_global_default("airline#extensions#tmuxline#enabled", 1)
-      set_global_default("airline_theme", default_airline_theme())
-      set_global_default("airline_powerline_fonts", vim.g.custom_powerline_fonts)
+      helpers.set_global_default("airline#extensions#tabline#enabled", 1)
+      helpers.set_global_default("airline#extensions#tabline#fnamemod", ":t")
+      helpers.set_global_default("airline#extensions#tabline#tab_nr_type", 2)
+      helpers.set_global_default("airline#extensions#tabline#show_tab_nr", 1)
+      helpers.set_global_default("airline#extensions#tabline#show_tab_type", 1)
+      helpers.set_global_default("airline#extensions#tabline#buffer_idx_mode", 1)
+      helpers.set_global_default("airline#extensions#tabline#buffers_label", "BUFFERS")
+      helpers.set_global_default("airline#extensions#tabline#tabs_label", "TABS")
+      helpers.set_global_default("airline#extensions#tmuxline#enabled", 1)
+      helpers.set_global_default("airline_theme", default_airline_theme())
+      helpers.set_global_default("airline_powerline_fonts", vim.g.custom_powerline_fonts)
     end,
     config = function()
       local map = vim.keymap.set

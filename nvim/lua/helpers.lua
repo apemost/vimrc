@@ -16,6 +16,12 @@ function M.file_exists(path)
   return vim.fn.filereadable(expand(path)) == 1
 end
 
+function M.set_global_default(name, value)
+  if vim.g[name] == nil then
+    vim.g[name] = value
+  end
+end
+
 function M.has_option(name)
   return vim.fn.exists("+" .. name) == 1
 end
