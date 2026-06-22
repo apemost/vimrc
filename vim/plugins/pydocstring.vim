@@ -4,6 +4,6 @@
 
 let g:pydocstring_formatter = get(g:, 'pydocstring_formatter', 'numpy')
 
-Plug 'heavenshell/vim-pydocstring', {'do': 'make install'}
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 
 autocmd BufNewFile,BufRead *.py nmap <silent> <LocalLeader>d <Plug>(pydocstring)
