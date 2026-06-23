@@ -57,9 +57,9 @@ return {
         },
         filters = {
           custom = {
-            "^%.DS_Store$",
-            "^%.git$",
-            "%.pyc$",
+            "^\\.DS_Store$",
+            "^\\.git$",
+            "\\.pyc$",
             "^__pycache__$",
             "^node_modules$",
           },
