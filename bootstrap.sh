@@ -10,29 +10,8 @@ else
   git pull origin main
 fi
 
-confirm_sync() {
-  local label="$1"
-  local target="$2"
-  local reply
+rsync -avh --no-perms vimrc ~/.vimrc
+rsync -avh --no-perms --exclude .DS_Store vim/* ~/.vim/
 
-  printf "Sync %s to %s? [y/N] " "$label" "$target"
-  if ! IFS= read -r reply; then
-    echo
-    return 1
-  fi
-  [[ "$reply" =~ ^[Yy]$ ]]
-}
-
-if confirm_sync "vim" "~/.vim/"; then
-  rsync -avh --no-perms vimrc ~/.vimrc
-  rsync -avh --no-perms --exclude .DS_Store vim/* ~/.vim/
-else
-  echo "Skipped vim sync."
-fi
-
-if confirm_sync "nvim" "~/.config/nvim/"; then
-  mkdir -p ~/.config/nvim
-  rsync -avh --no-perms --exclude .DS_Store nvim/ ~/.config/nvim/
-else
-  echo "Skipped nvim sync."
-fi
+mkdir -p ~/.config/nvim
+rsync -avh --no-perms --exclude .DS_Store nvim/ ~/.config/nvim/
