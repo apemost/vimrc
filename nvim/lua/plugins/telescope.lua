@@ -136,7 +136,6 @@ end
 return {
   {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
     lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -252,6 +251,22 @@ return {
       map("n", "<Leader>fh", run_from_normal_window(function()
         builtin.oldfiles()
       end), { silent = true })
+
+      map("n", "<Leader>ji", function()
+        builtin.lsp_implementations()
+      end, { silent = true })
+
+      map("n", "<Leader>jj", function()
+        builtin.lsp_definitions()
+      end, { silent = true })
+
+      map("n", "<Leader>jr", function()
+        builtin.lsp_references()
+      end, { silent = true })
+
+      map("n", "<Leader>jt", function()
+        builtin.lsp_type_definitions()
+      end, { silent = true })
 
       map("n", "<Leader>fm", function()
         builtin.marks()
