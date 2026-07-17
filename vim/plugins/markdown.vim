@@ -82,5 +82,5 @@ if v:version >= 801
 
   Plug 'iamcco/markdown-preview.nvim', {'do': {-> mkdp#util#install()}}
 
-  nnoremap <Leader>pm :MarkdownPreview<CR>
+  nnoremap <Leader>mp :MarkdownPreview<CR>
 endif
