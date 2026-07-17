@@ -11,7 +11,7 @@ else
 fi
 
 rsync -avh --no-perms vimrc ~/.vimrc
-rsync -avh --no-perms --exclude .DS_Store vim/* ~/.vim/
+rsync -avh --no-perms --exclude .DS_Store vim/ ~/.vim/
 
 mkdir -p ~/.config/nvim
 rsync -avh --no-perms --exclude .DS_Store nvim/ ~/.config/nvim/
