@@ -38,7 +38,7 @@ return {
       end
     end,
     config = function()
-      vim.keymap.set("n", "<Leader>pm", "<Cmd>MarkdownPreview<CR>", { silent = true })
+      vim.keymap.set("n", "<Leader>mp", "<Cmd>MarkdownPreview<CR>", { silent = true })
     end,
   },
 }
