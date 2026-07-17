@@ -90,7 +90,7 @@ return {
             },
           },
         },
-        extensions = { "fugitive", "nvim-tree", "lazy" },
+        extensions = { "fugitive", "nvim-tree", "lazy", "gitsigns" },
       })
 
       -- Buffer / tab navigation keymaps that replicate vim-airline behavior.
