@@ -78,6 +78,20 @@ local function grep_command_runner(builtin, opts)
   end
 end
 
+local function local_files_picker(builtin)
+  local git_root = current_git_root()
+
+  if git_root == nil then
+    vim.notify("Local files are only available inside a git repository.", vim.log.levels.WARN)
+    return
+  end
+
+  builtin.find_files({
+    cwd = helpers.join_paths(git_root, ".local"),
+    hidden = true,
+  })
+end
+
 local function prompt_for_query(prompt, callback)
   vim.ui.input({ prompt = prompt }, function(input)
     if input == nil then
@@ -178,6 +192,10 @@ return {
         ignore_case = true,
       }), { nargs = "*", force = true })
 
+      vim.api.nvim_create_user_command("LocalFiles", function()
+        local_files_picker(builtin)
+      end, { bang = true, force = true })
+
       map({ "n", "x", "o" }, "<Leader><Tab>", function()
         builtin.keymaps()
       end, { silent = true })
@@ -250,6 +268,10 @@ return {
 
       map("n", "<Leader>fh", run_from_normal_window(function()
         builtin.oldfiles()
+      end), { silent = true })
+
+      map("n", "<Leader>fl", run_from_normal_window(function()
+        local_files_picker(builtin)
       end), { silent = true })
 
       map("n", "<Leader>ji", function()
