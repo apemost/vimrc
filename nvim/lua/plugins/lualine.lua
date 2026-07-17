@@ -75,6 +75,7 @@ return {
           lualine_a = {
             {
               "buffers",
+              icons_enabled = false,
               show_filename_only = true,
               mode = 2, -- show buffer index + name
               buffers_color = {
