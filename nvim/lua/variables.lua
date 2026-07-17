@@ -10,6 +10,7 @@ local defaults = {
   custom_disabled_plugins = {},
   custom_completion_plugin = "",
   custom_lint_plugin = "",
+  custom_statusline_plugin = "lualine",
   custom_search_engine = "https://www.google.com/search?q=%s",
   custom_error_symbol = "×",
   custom_warning_symbol = "¤",

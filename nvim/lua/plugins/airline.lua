@@ -1,3 +1,8 @@
+-- Disabled unless vim.g.custom_statusline_plugin == "airline".
+if vim.g.custom_statusline_plugin ~= "airline" then
+  return {}
+end
+
 local helpers = require("helpers")
 
 local function lower_string(value, fallback)
