@@ -9,6 +9,7 @@ let NERDTreeIgnore = get(g:, 'NERDTreeIgnore', [
       \ '__pycache__',
       \ 'node_modules',
       \ ])
+let NERDTreeShowHidden = get(g:, 'NERDTreeShowHidden', 1)
 let NERDTreeMapJumpNextSibling = get(g:, 'NERDTreeMapJumpNextSibling', '<C-n>')
 let NERDTreeMapJumpPrevSibling = get(g:, 'NERDTreeMapJumpPrevSibling', '<C-p>')
 let NERDTreeCaseSensitiveSort = get(g:, 'NERDTreeCaseSensitiveSort', 1)

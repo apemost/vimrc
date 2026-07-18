@@ -56,6 +56,7 @@ return {
           update_root = false,
         },
         filters = {
+          git_ignored = false,
           custom = {
             "^\\.DS_Store$",
             "^\\.git$",
