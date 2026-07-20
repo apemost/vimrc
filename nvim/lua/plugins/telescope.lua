@@ -247,6 +247,10 @@ return {
         builtin.find_files({
           cwd = search_root(),
           hidden = true,
+          file_ignore_patterns = {
+            "^%.git[/\\]",
+            "[/\\]%.git[/\\]",
+          },
         })
       end), { silent = true })
 
