@@ -54,6 +54,7 @@ local function grep_picker(builtin, opts)
     cwd = opts.cwd,
   }, opts.search ~= nil and {
     search = opts.search,
+    use_regex = opts.use_regex,
   } or {})
 
   if opts.ignore_case then
@@ -74,6 +75,7 @@ local function grep_command_runner(builtin, opts)
       cwd = opts.cwd(),
       search = command_opts.args ~= "" and command_opts.args or nil,
       ignore_case = opts.ignore_case,
+      use_regex = opts.use_regex,
     })
   end
 end
@@ -190,6 +192,7 @@ return {
       vim.api.nvim_create_user_command("Rg", grep_command_runner(builtin, {
         cwd = search_root,
         ignore_case = true,
+        use_regex = true,
       }), { nargs = "*", force = true })
 
       vim.api.nvim_create_user_command("LocalFiles", function()
@@ -405,6 +408,7 @@ return {
             cwd = search_root(),
             search = input,
             ignore_case = true,
+            use_regex = true,
           })
         end)
       end, { silent = true })
