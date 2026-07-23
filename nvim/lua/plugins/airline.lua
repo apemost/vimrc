@@ -1,3 +1,8 @@
+--*********************************************************************
+-- https://github.com/vim-airline/vim-airline
+-- https://github.com/vim-airline/vim-airline-themes
+--*********************************************************************
+
 -- Disabled unless vim.g.custom_statusline_plugin == "airline".
 if vim.g.custom_statusline_plugin ~= "airline" then
   return {}

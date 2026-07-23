@@ -1,3 +1,8 @@
+--*********************************************************************
+-- https://github.com/nvim-tree/nvim-tree.lua
+-- https://github.com/nvim-tree/nvim-web-devicons
+--*********************************************************************
+
 local helpers = require("helpers")
 
 local function tree_on_attach(bufnr)

@@ -1,3 +1,8 @@
+--*********************************************************************
+-- https://github.com/nvim-lualine/lualine.nvim
+-- https://github.com/nvim-tree/nvim-web-devicons
+--*********************************************************************
+
 -- Disabled unless vim.g.custom_statusline_plugin == "lualine".
 if vim.g.custom_statusline_plugin ~= "lualine" then
   return {}

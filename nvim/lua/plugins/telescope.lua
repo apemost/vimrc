@@ -1,3 +1,9 @@
+--*********************************************************************
+-- https://github.com/nvim-telescope/telescope.nvim
+-- https://github.com/nvim-lua/plenary.nvim
+-- https://github.com/nvim-tree/nvim-web-devicons
+--*********************************************************************
+
 local helpers = require("helpers")
 
 local function current_git_root()

@@ -1,3 +1,8 @@
+--*********************************************************************
+-- https://github.com/neovim/nvim-lspconfig
+-- https://github.com/saghen/blink.cmp
+--*********************************************************************
+
 -- Configures native Neovim LSP.
 local function make_capabilities()
   local capabilities = vim.lsp.protocol.make_client_capabilities()

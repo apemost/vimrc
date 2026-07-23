@@ -1,3 +1,7 @@
+--*********************************************************************
+-- https://github.com/stevearc/conform.nvim
+--*********************************************************************
+
 -- Lightweight formatter dispatcher (Neovim-only counterpart to the legacy
 -- vim/plugins/neoformat.vim, which binds <Leader>= to :Neoformat).
 -- Uses the same <Leader>= key in normal and visual mode.

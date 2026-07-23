@@ -1,3 +1,7 @@
+--*********************************************************************
+-- https://github.com/nvim-mini/mini.comment
+--*********************************************************************
+
 -- nvim-mini/mini.comment: NERDCommenter-style mappings with flush-left comments.
 local function current_range()
   local first = vim.api.nvim_win_get_cursor(0)[1]

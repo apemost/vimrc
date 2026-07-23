@@ -1,3 +1,7 @@
+--*********************************************************************
+-- https://github.com/tpope/vim-repeat
+--*********************************************************************
+
 -- tpope/vim-repeat: lets `.` repeat plugin maps (surround, fugitive, ...).
 -- Pure vimscript, no setup; load eagerly so dot-repeat works from startup.
 return {
