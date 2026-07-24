@@ -16,7 +16,7 @@ Plug 'junegunn/fzf.vim'
 
 command! -bang LocalFiles
       \ call fzf#vim#files(
-      \   systemlist('git rev-parse --show-toplevel')[0] . '/.local',
+      \   getcwd() . '/.local',
       \   <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   <bang>0)
 command! -bang -nargs=* GG

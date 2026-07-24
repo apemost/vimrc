@@ -87,16 +87,10 @@ local function grep_command_runner(builtin, opts)
 end
 
 local function local_files_picker(builtin)
-  local git_root = current_git_root()
-
-  if git_root == nil then
-    vim.notify("Local files are only available inside a git repository.", vim.log.levels.WARN)
-    return
-  end
-
   builtin.find_files({
-    cwd = helpers.join_paths(git_root, ".local"),
+    cwd = helpers.join_paths(vim.fn.getcwd(), ".local"),
     hidden = true,
+    prompt_title = "Find Local Files",
   })
 end
 
