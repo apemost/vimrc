@@ -35,7 +35,16 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter").install(ensure_installed)
+      -- tree-sitter-cli is required to build parsers; skip installation
+      -- with a visible warning when it is missing.
+      if vim.fn.executable("tree-sitter") == 1 then
+        require("nvim-treesitter").install(ensure_installed)
+      else
+        vim.notify(
+          "tree-sitter-cli not found; skipping parser installation",
+          vim.log.levels.WARN
+        )
+      end
 
       -- Highlighting is not enabled automatically; start it whenever a
       -- parser is available for the buffer's filetype.
