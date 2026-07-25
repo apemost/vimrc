@@ -9,6 +9,7 @@ local ensure_installed = {
   "c",
   "cpp",
   "css",
+  "dart",
   "go",
   "html",
   "java",
