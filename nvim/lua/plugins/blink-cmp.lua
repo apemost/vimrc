@@ -26,6 +26,14 @@ return {
       keymap = {
         preset = "default",
       },
+      cmdline = {
+        keymap = {
+          -- The 'cmdline' preset only maps <C-n>/<C-p>/<Left>/<Right>;
+          -- also allow <Down>/<Up> to move the selection.
+          ["<Down>"] = { "select_next", "fallback" },
+          ["<Up>"] = { "select_prev", "fallback" },
+        },
+      },
       appearance = {
         nerd_font_variant = "mono",
       },
