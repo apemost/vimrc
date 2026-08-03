@@ -25,13 +25,11 @@ local function tree_on_attach(bufnr)
 end
 
 local function close_tree_if_last_window()
-  if vim.fn.winnr("$") ~= 1 then
-    return
-  end
-
-  if helpers.is_file_tree_buffer() then
-    vim.cmd("quit")
-  end
+  vim.schedule(function()
+    if vim.fn.winnr("$") == 1 and helpers.is_file_tree_buffer() then
+      vim.cmd("quit")
+    end
+  end)
 end
 
 return {
@@ -72,7 +70,7 @@ return {
         },
       })
 
-      vim.api.nvim_create_autocmd("BufEnter", {
+      vim.api.nvim_create_autocmd("WinClosed", {
         group = group,
         callback = close_tree_if_last_window,
       })
