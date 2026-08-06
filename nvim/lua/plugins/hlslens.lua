@@ -24,8 +24,8 @@ return {
     },
     config = function()
       require("hlslens").setup({
-        -- Clear lens when cursor moves out of the matched instance range,
-        -- approximating is.vim's auto-nohlsearch behavior.
+        -- Clear the lens once the cursor moves out of the matched instance
+        -- range, so search highlighting settles after leaving a match.
         calm_down = true,
       })
     end,
