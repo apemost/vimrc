@@ -87,6 +87,9 @@
 
       "space y f": "workspace::CopyPath",
       "space y n": "workspace::CopyRelativePath",
+
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward",
     },
   },
   {
@@ -96,6 +99,9 @@
       "space c space": "editor::ToggleComments",
       "space c c": "editor::ToggleComments",
       "space c u": "editor::ToggleComments",
+
+      "z": "vim::PushSneak",
+      "shift-z": "vim::PushSneakBackward",
     },
   },
   {
