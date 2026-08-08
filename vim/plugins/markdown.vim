@@ -1,12 +1,13 @@
 "*********************************************************************
-" https://github.com/plasticboy/vim-markdown
+" https://github.com/preservim/vim-markdown
 "*********************************************************************
 
 let g:vim_markdown_folding_disabled = get(g:, 'vim_markdown_folding_disabled', 1)
 let g:vim_markdown_toc_autofit = get(g:, 'vim_markdown_toc_autofit', 1)
 let g:vim_markdown_new_list_item_indent = get(g:, 'vim_markdown_new_list_item_indent', 2)
 
-Plug 'plasticboy/vim-markdown'
+Plug 'preservim/vim-markdown'
+Plug 'apemost/vim-markdown-follow'
 
 nnoremap <Leader>at :TableFormat<CR>
 

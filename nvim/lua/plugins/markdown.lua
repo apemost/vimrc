@@ -1,5 +1,6 @@
 --*********************************************************************
 -- https://github.com/iamcco/markdown-preview.nvim
+-- https://github.com/apemost/vim-markdown-follow
 --*********************************************************************
 
 local helpers = require("helpers")
@@ -44,5 +45,9 @@ return {
     config = function()
       vim.keymap.set("n", "<Leader>mp", "<Cmd>MarkdownPreview<CR>", { silent = true })
     end,
+  },
+  {
+    "apemost/vim-markdown-follow",
+    ft = { "markdown" },
   },
 }
