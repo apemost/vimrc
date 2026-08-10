@@ -35,7 +35,6 @@ local function set_lsp_keymaps(event)
     })
   end
 
-  map("<Leader>jc", vim.lsp.buf.definition, "LSP: go to include target", "textDocument/definition")
   map("<Leader>jd", vim.lsp.buf.declaration, "LSP: go to declaration", "textDocument/declaration")
   map("<LocalLeader>K", vim.lsp.buf.hover, "LSP: show documentation", "textDocument/hover")
   map("<LocalLeader>k", vim.lsp.buf.hover, "LSP: show symbol type", "textDocument/hover")
