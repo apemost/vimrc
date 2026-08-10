@@ -82,12 +82,12 @@ return {
       })
 
       for _, server in ipairs({
+        "basedpyright",
         "bashls",
         "clangd",
         "gopls",
         "jdtls",
         "lua_ls",
-        "pyright",
         "rust_analyzer",
         "ts_ls",
         "vimls",
