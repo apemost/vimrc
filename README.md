@@ -12,7 +12,7 @@ A simple but powerful vim configuration, continually used and tweaked since 2017
 ## Trying with Docker
 
 ```bash
-docker run -it --rm apemost/dotfiles vim
+docker run -it --rm ghcr.io/apemost/dotfiles vim
 ```
 
 ## Installation
