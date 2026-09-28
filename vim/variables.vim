@@ -4,8 +4,16 @@ let g:custom_localleader =
       \ get(g:, 'custom_localleader', ',')
 let g:custom_background =
       \ get(g:, 'custom_background', 'dark')
-let g:custom_colorscheme =
-      \ get(g:, 'custom_colorscheme', 'molokai')
+if !exists('g:custom_colorscheme')
+  let s:colorscheme_paths = &runtimepath
+  " vim-plug adds plugin directories to runtimepath later during startup.
+  if index(get(g:, 'custom_disabled_plugins', []), 'gruvbox', 0, 1) < 0
+    let s:plug_home = get(g:, 'plug_home', split(&runtimepath, ',')[0] . '/plugged')
+    let s:colorscheme_paths .= ',' . escape(s:plug_home . '/gruvbox', ',')
+  endif
+  let g:custom_colorscheme = empty(globpath(s:colorscheme_paths, 'colors/gruvbox.vim', 1))
+        \ ? 'molokai' : 'gruvbox'
+endif
 let g:custom_colorcolumn =
       \ get(g:, 'custom_colorcolumn', 0)
 let g:custom_guifont =

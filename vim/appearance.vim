@@ -2,6 +2,16 @@
 " Appearance
 "*********************************************************************
 
+" Initialize terminal colors before loading the colorscheme.
+if !has('gui_running')
+  if &term == 'xterm' || &term == 'screen'
+    set t_Co=256
+  endif
+  if has('termguicolors')
+    set termguicolors
+  endif
+endif
+
 " Enable syntax
 syntax enable
 
@@ -17,13 +27,6 @@ execute 'colorscheme ' . g:custom_colorscheme
 if has('gui_running')
   execute 'source' fnamemodify(expand('<sfile>'), ':h') . '/gui.vim'
 else
-  " Enable 256 colors
-  if &term == 'xterm' || &term == 'screen'
-    set t_Co=256
-  endif
-  if (has('termguicolors'))
-    set termguicolors
-  endif
   " Make comments italic
   if empty($SSH_TTY) && empty($SUDO_USER)
     let &t_ZH="\e[3m"

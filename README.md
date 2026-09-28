@@ -57,6 +57,9 @@ to `~/.vimrc.preload`, and [vimrc.afterload](vimrc.afterload) to `~/.vimrc.after
 
 ### Changing the default color scheme
 
+Vim defaults to `gruvbox` when it is available, otherwise `molokai`.
+Setting `g:custom_colorscheme` overrides this default.
+
 Edit `~/.vimrc.preload`:
 
 ```vim
