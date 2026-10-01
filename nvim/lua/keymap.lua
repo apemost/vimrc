@@ -24,6 +24,7 @@ end
 map("n", "Y", "y$")
 map("n", "]b", "<Cmd>bnext<CR>", { silent = true })
 map("n", "[b", "<Cmd>bprevious<CR>", { silent = true })
+map("n", "<Leader>dd", vim.diagnostic.open_float, { silent = true, desc = "Show diagnostic details" })
 
 map("i", "<C-a>", "<Home>")
 map("i", "<C-e>", "<End>")

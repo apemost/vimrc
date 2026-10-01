@@ -83,5 +83,18 @@ if v:version >= 801
 
   Plug 'iamcco/markdown-preview.nvim', {'do': {-> mkdp#util#install()}}
 
-  nnoremap <Leader>mp :MarkdownPreview<CR>
+  " Warns about the deprecated mapping and starts Markdown preview.
+  function! s:deprecated_markdown_preview() abort
+    echohl WarningMsg
+    echomsg '<Leader>mp is deprecated; use <LocalLeader>p instead.'
+    echohl None
+    MarkdownPreview
+  endfunction
+
+  augroup MarkdownPreviewKeymaps
+    autocmd!
+    autocmd FileType markdown nnoremap <buffer> <silent> <LocalLeader>p :MarkdownPreview<CR>
+  augroup END
+
+  nnoremap <silent> <Leader>mp :call <SID>deprecated_markdown_preview()<CR>
 endif

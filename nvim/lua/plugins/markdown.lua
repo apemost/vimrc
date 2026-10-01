@@ -10,6 +10,24 @@ return {
     "iamcco/markdown-preview.nvim",
     ft = { "markdown" },
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    keys = {
+      {
+        "<LocalLeader>p",
+        "<Cmd>MarkdownPreview<CR>",
+        ft = { "markdown" },
+        silent = true,
+        desc = "Markdown preview",
+      },
+      {
+        "<Leader>mp",
+        function()
+          vim.notify("<Leader>mp is deprecated; use <LocalLeader>p instead.", vim.log.levels.WARN)
+          vim.cmd("MarkdownPreview")
+        end,
+        silent = true,
+        desc = "Markdown preview (deprecated)",
+      },
+    },
     build = function()
       require("lazy").load({ plugins = { "markdown-preview.nvim" } })
       vim.fn["mkdp#util#install"]()
@@ -41,9 +59,6 @@ return {
           sequence_diagrams = {},
         }
       end
-    end,
-    config = function()
-      vim.keymap.set("n", "<Leader>mp", "<Cmd>MarkdownPreview<CR>", { silent = true })
     end,
   },
   {
