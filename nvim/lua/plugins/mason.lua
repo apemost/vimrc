@@ -19,7 +19,16 @@ return {
       "neovim/nvim-lspconfig",
     },
     opts = {
-      ensure_installed = { "basedpyright", "bashls", "lua_ls", "ts_ls", "vimls" },
+      ensure_installed = {
+        "basedpyright",
+        "bashls",
+        "clangd",
+        "gopls",
+        "jdtls",
+        "lua_ls",
+        "ts_ls",
+        "vimls",
+      },
       automatic_enable = false, -- keep enabling in lsp.lua's manual loop
     },
   },
