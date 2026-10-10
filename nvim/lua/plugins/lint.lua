@@ -32,8 +32,20 @@ return {
     "mfussenegger/nvim-lint",
     event = { "BufReadPost", "BufWritePost" },
     keys = {
-      { "<C-k>", function() goto_diagnostic(-1) end, desc = "Previous diagnostic" },
-      { "<C-j>", function() goto_diagnostic(1) end, desc = "Next diagnostic" },
+      {
+        "<C-k>",
+        function()
+          goto_diagnostic(-1)
+        end,
+        desc = "Previous diagnostic",
+      },
+      {
+        "<C-j>",
+        function()
+          goto_diagnostic(1)
+        end,
+        desc = "Next diagnostic",
+      },
     },
     config = function()
       require("lint").linters_by_ft = {

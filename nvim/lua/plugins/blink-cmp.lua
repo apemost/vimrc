@@ -37,14 +37,18 @@ return {
         ["<Tab>"] = {
           "snippet_forward",
           function(cmp)
-            if has_words_before() then return cmp.insert_next() end
+            if has_words_before() then
+              return cmp.insert_next()
+            end
           end,
           "fallback",
         },
         ["<S-Tab>"] = {
           "snippet_backward",
           function(cmp)
-            if has_words_before() then return cmp.insert_prev() end
+            if has_words_before() then
+              return cmp.insert_prev()
+            end
           end,
           "fallback",
         },

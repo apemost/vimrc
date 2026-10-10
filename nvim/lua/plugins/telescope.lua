@@ -8,7 +8,8 @@ local helpers = require("helpers")
 
 local function current_git_root()
   local buffer_path = vim.api.nvim_buf_get_name(0)
-  local search_dir = buffer_path ~= "" and vim.fn.fnamemodify(buffer_path, ":p:h") or vim.fn.getcwd()
+  local search_dir = buffer_path ~= "" and vim.fn.fnamemodify(buffer_path, ":p:h")
+    or vim.fn.getcwd()
   local lines = vim.fn.systemlist({ "git", "-C", search_dir, "rev-parse", "--show-toplevel" })
 
   if vim.v.shell_error ~= 0 or not lines[1] or lines[1] == "" then
@@ -121,32 +122,34 @@ local function open_windows_picker(pickers, finders, conf, actions, action_state
     })
   end
 
-  pickers.new({}, {
-    prompt_title = "Windows",
-    finder = finders.new_table({
-      results = windows,
-      entry_maker = function(entry)
-        return {
-          value = entry,
-          display = entry.display,
-          ordinal = entry.ordinal,
-        }
+  pickers
+    .new({}, {
+      prompt_title = "Windows",
+      finder = finders.new_table({
+        results = windows,
+        entry_maker = function(entry)
+          return {
+            value = entry,
+            display = entry.display,
+            ordinal = entry.ordinal,
+          }
+        end,
+      }),
+      sorter = conf.generic_sorter({}),
+      attach_mappings = function(prompt_bufnr)
+        actions.select_default:replace(function()
+          local selection = action_state.get_selected_entry()
+          actions.close(prompt_bufnr)
+
+          if selection and selection.value then
+            vim.api.nvim_set_current_win(selection.value.winid)
+          end
+        end)
+
+        return true
       end,
-    }),
-    sorter = conf.generic_sorter({}),
-    attach_mappings = function(prompt_bufnr)
-      actions.select_default:replace(function()
-        local selection = action_state.get_selected_entry()
-        actions.close(prompt_bufnr)
-
-        if selection and selection.value then
-          vim.api.nvim_set_current_win(selection.value.winid)
-        end
-      end)
-
-      return true
-    end,
-  }):find()
+    })
+    :find()
 end
 
 return {
@@ -169,31 +172,51 @@ return {
 
       telescope.setup({})
 
-      vim.api.nvim_create_user_command("GG", grep_command_runner(builtin, {
-        cwd = current_git_root,
-        ignore_case = false,
-      }), { nargs = "*", force = true })
+      vim.api.nvim_create_user_command(
+        "GG",
+        grep_command_runner(builtin, {
+          cwd = current_git_root,
+          ignore_case = false,
+        }),
+        { nargs = "*", force = true }
+      )
 
-      vim.api.nvim_create_user_command("RG", grep_command_runner(builtin, {
-        cwd = search_root,
-        ignore_case = false,
-      }), { nargs = "*", force = true })
+      vim.api.nvim_create_user_command(
+        "RG",
+        grep_command_runner(builtin, {
+          cwd = search_root,
+          ignore_case = false,
+        }),
+        { nargs = "*", force = true }
+      )
 
-      vim.api.nvim_create_user_command("Ag", grep_command_runner(builtin, {
-        cwd = search_root,
-        ignore_case = false,
-      }), { nargs = "*", force = true })
+      vim.api.nvim_create_user_command(
+        "Ag",
+        grep_command_runner(builtin, {
+          cwd = search_root,
+          ignore_case = false,
+        }),
+        { nargs = "*", force = true }
+      )
 
-      vim.api.nvim_create_user_command("Gg", grep_command_runner(builtin, {
-        cwd = current_git_root,
-        ignore_case = true,
-      }), { nargs = "*", force = true })
+      vim.api.nvim_create_user_command(
+        "Gg",
+        grep_command_runner(builtin, {
+          cwd = current_git_root,
+          ignore_case = true,
+        }),
+        { nargs = "*", force = true }
+      )
 
-      vim.api.nvim_create_user_command("Rg", grep_command_runner(builtin, {
-        cwd = search_root,
-        ignore_case = true,
-        use_regex = true,
-      }), { nargs = "*", force = true })
+      vim.api.nvim_create_user_command(
+        "Rg",
+        grep_command_runner(builtin, {
+          cwd = search_root,
+          ignore_case = true,
+          use_regex = true,
+        }),
+        { nargs = "*", force = true }
+      )
 
       vim.api.nvim_create_user_command("LocalFiles", function()
         local_files_picker(builtin)
@@ -203,16 +226,26 @@ return {
         builtin.keymaps()
       end, { silent = true })
 
-      map("n", "<Leader>bb", run_from_normal_window(function()
-        builtin.buffers({
-          sort_mru = true,
-          ignore_current_buffer = true,
-        })
-      end), { silent = true })
+      map(
+        "n",
+        "<Leader>bb",
+        run_from_normal_window(function()
+          builtin.buffers({
+            sort_mru = true,
+            ignore_current_buffer = true,
+          })
+        end),
+        { silent = true }
+      )
 
-      map("n", "<Leader>bh", run_from_normal_window(function()
-        builtin.git_bcommits()
-      end), { silent = true })
+      map(
+        "n",
+        "<Leader>bh",
+        run_from_normal_window(function()
+          builtin.git_bcommits()
+        end),
+        { silent = true }
+      )
 
       map("x", "<Leader>bh", function()
         builtin.git_bcommits_range()
@@ -246,16 +279,21 @@ return {
         builtin.commands()
       end, { silent = true })
 
-      map("n", "<Leader>ff", run_from_normal_window(function()
-        builtin.find_files({
-          cwd = search_root(),
-          hidden = true,
-          file_ignore_patterns = {
-            "^%.git[/\\]",
-            "[/\\]%.git[/\\]",
-          },
-        })
-      end), { silent = true })
+      map(
+        "n",
+        "<Leader>ff",
+        run_from_normal_window(function()
+          builtin.find_files({
+            cwd = search_root(),
+            hidden = true,
+            file_ignore_patterns = {
+              "^%.git[/\\]",
+              "[/\\]%.git[/\\]",
+            },
+          })
+        end),
+        { silent = true }
+      )
 
       map("n", "<Leader>fg", function()
         grep_picker(builtin, {
@@ -273,13 +311,23 @@ return {
         })
       end, { silent = true })
 
-      map("n", "<Leader>fh", run_from_normal_window(function()
-        builtin.oldfiles()
-      end), { silent = true })
+      map(
+        "n",
+        "<Leader>fh",
+        run_from_normal_window(function()
+          builtin.oldfiles()
+        end),
+        { silent = true }
+      )
 
-      map("n", "<Leader>fl", run_from_normal_window(function()
-        local_files_picker(builtin)
-      end), { silent = true })
+      map(
+        "n",
+        "<Leader>fl",
+        run_from_normal_window(function()
+          local_files_picker(builtin)
+        end),
+        { silent = true }
+      )
 
       map("n", "<Leader>ji", function()
         builtin.lsp_implementations()
@@ -317,16 +365,21 @@ return {
         })
       end, { silent = true })
 
-      map("n", "<Leader>fs", run_from_normal_window(function()
-        local git_root = current_git_root()
+      map(
+        "n",
+        "<Leader>fs",
+        run_from_normal_window(function()
+          local git_root = current_git_root()
 
-        if git_root == nil then
-          vim.notify("Git status is only available inside a git repository.", vim.log.levels.WARN)
-          return
-        end
+          if git_root == nil then
+            vim.notify("Git status is only available inside a git repository.", vim.log.levels.WARN)
+            return
+          end
 
-        builtin.git_status({ cwd = git_root })
-      end), { silent = true })
+          builtin.git_status({ cwd = git_root })
+        end),
+        { silent = true }
+      )
 
       map("n", "<Leader>fw", function()
         open_windows_picker(pickers, finders, conf, actions, action_state)
@@ -334,22 +387,27 @@ return {
 
       map("n", "<Leader>fz", ":Telescope ")
 
-      map("n", "<Leader>gg", run_from_normal_window(function()
-        local git_root = current_git_root()
+      map(
+        "n",
+        "<Leader>gg",
+        run_from_normal_window(function()
+          local git_root = current_git_root()
 
-        if git_root == nil then
-          builtin.find_files({
-            cwd = vim.fn.getcwd(),
-            hidden = true,
+          if git_root == nil then
+            builtin.find_files({
+              cwd = vim.fn.getcwd(),
+              hidden = true,
+            })
+            return
+          end
+
+          builtin.git_files({
+            cwd = git_root,
+            show_untracked = true,
           })
-          return
-        end
-
-        builtin.git_files({
-          cwd = git_root,
-          show_untracked = true,
-        })
-      end), { silent = true })
+        end),
+        { silent = true }
+      )
 
       map("n", "<Leader>gh", function()
         local git_root = current_git_root()

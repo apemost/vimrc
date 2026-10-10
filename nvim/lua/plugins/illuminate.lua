@@ -31,7 +31,11 @@ return {
         return
       end
       local function apply_link()
-        for _, group in ipairs({ "IlluminatedWordText", "IlluminatedWordRead", "IlluminatedWordWrite" }) do
+        for _, group in ipairs({
+          "IlluminatedWordText",
+          "IlluminatedWordRead",
+          "IlluminatedWordWrite",
+        }) do
           vim.api.nvim_set_hl(0, group, { link = link })
         end
       end

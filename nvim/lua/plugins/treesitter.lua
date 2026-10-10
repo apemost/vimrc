@@ -41,10 +41,7 @@ return {
       if vim.fn.executable("tree-sitter") == 1 then
         require("nvim-treesitter").install(ensure_installed)
       else
-        vim.notify(
-          "tree-sitter-cli not found; skipping parser installation",
-          vim.log.levels.WARN
-        )
+        vim.notify("tree-sitter-cli not found; skipping parser installation", vim.log.levels.WARN)
       end
 
       -- Highlighting is not enabled automatically; start it whenever a

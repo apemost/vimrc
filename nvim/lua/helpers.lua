@@ -98,7 +98,7 @@ function M.is_gui()
 end
 
 function M.url_encode(value)
-  return vim.uri_encode((value or ""):gsub('[\"\n]', " "))
+  return vim.uri_encode((value or ""):gsub('["\n]', " "))
 end
 
 -- Return whether the target buffer is backed by a file tree window.
@@ -107,9 +107,7 @@ function M.is_file_tree_buffer(bufnr)
   local filetype = vim.bo[buffer].filetype
   local name = vim.api.nvim_buf_get_name(buffer)
 
-  return filetype == "NvimTree"
-    or name:find("NERD_tree") ~= nil
-    or name:find("NvimTree_") ~= nil
+  return filetype == "NvimTree" or name:find("NERD_tree") ~= nil or name:find("NvimTree_") ~= nil
 end
 
 return M

@@ -17,7 +17,12 @@ end
 -- Over SSH without X11, Wayland, or tmux, copy through the terminal via OSC 52.
 -- Paste returns the last copy instead of querying the terminal, because
 -- OSC 52 reads are often blocked and each query can wait up to 10 seconds.
-if vim.env.SSH_CONNECTION and not vim.env.DISPLAY and not vim.env.WAYLAND_DISPLAY and not vim.env.TMUX then
+if
+  vim.env.SSH_CONNECTION
+  and not vim.env.DISPLAY
+  and not vim.env.WAYLAND_DISPLAY
+  and not vim.env.TMUX
+then
   local osc52 = require("vim.ui.clipboard.osc52")
   local last = {}
   local function copy(reg)

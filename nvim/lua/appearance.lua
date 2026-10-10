@@ -44,7 +44,7 @@ if helpers.has_option("macligatures") and helpers.is_mac() then
   vim.o.macligatures = true
 end
 
-if (helpers.is_gui() or (vim.env.SSH_TTY == nil and vim.env.SUDO_USER == nil)) then
+if helpers.is_gui() or (vim.env.SSH_TTY == nil and vim.env.SUDO_USER == nil) then
   vim.cmd("highlight Comment gui=italic cterm=italic")
 end
 
