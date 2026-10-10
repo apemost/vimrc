@@ -14,6 +14,31 @@ if helpers.has_option("secure") then
   opt.secure = true
 end
 
+-- Over SSH without X11, Wayland, or tmux, copy through the terminal via OSC 52.
+-- Paste returns the last copy instead of querying the terminal, because
+-- OSC 52 reads are often blocked and each query can wait up to 10 seconds.
+if vim.env.SSH_CONNECTION and not vim.env.DISPLAY and not vim.env.WAYLAND_DISPLAY and not vim.env.TMUX then
+  local osc52 = require("vim.ui.clipboard.osc52")
+  local last = {}
+  local function copy(reg)
+    local send = osc52.copy(reg)
+    return function(lines, regtype)
+      last[reg] = { lines, regtype }
+      send(lines)
+    end
+  end
+  local function paste(reg)
+    return function()
+      return last[reg] or {}
+    end
+  end
+  vim.g.clipboard = {
+    name = "OSC 52 (copy only)",
+    copy = { ["+"] = copy("+"), ["*"] = copy("*") },
+    paste = { ["+"] = paste("+"), ["*"] = paste("*") },
+  }
+end
+
 if vim.fn.has("clipboard") == 1 then
   if vim.fn.has("unnamedplus") == 1 then
     opt.clipboard = "unnamed,unnamedplus"
