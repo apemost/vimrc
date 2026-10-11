@@ -93,6 +93,7 @@ end
 return {
   {
     "nvim-mini/mini.comment",
+    enabled = vim.fn.has("nvim-0.10") == 1,
     version = false,
     event = "VeryLazy",
     opts = {

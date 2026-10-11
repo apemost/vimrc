@@ -5,6 +5,7 @@
 return {
   {
     "ellisonleao/gruvbox.nvim",
+    enabled = vim.fn.has("nvim-0.8") == 1,
     lazy = false,
     priority = 1000,
     init = function()

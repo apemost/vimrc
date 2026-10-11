@@ -35,6 +35,7 @@ end
 return {
   {
     "nvim-tree/nvim-tree.lua",
+    enabled = vim.fn.has("nvim-0.10") == 1,
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },

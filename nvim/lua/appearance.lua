@@ -14,11 +14,11 @@ if not helpers.is_gui() and vim.g.custom_colorscheme == "molokai" then
 end
 
 local function apply_colorscheme(name)
-  return pcall(vim.cmd.colorscheme, name)
+  return pcall(vim.cmd, "colorscheme " .. vim.fn.fnameescape(name))
 end
 
 local requested_colorscheme = vim.g.custom_colorscheme
-local fallback_colorscheme = "habamax"
+local fallback_colorscheme = "default"
 
 if not apply_colorscheme(requested_colorscheme) then
   if requested_colorscheme ~= fallback_colorscheme then
@@ -31,9 +31,7 @@ if not apply_colorscheme(requested_colorscheme) then
     )
   end
 
-  if not apply_colorscheme(fallback_colorscheme) then
-    apply_colorscheme("default")
-  end
+  apply_colorscheme(fallback_colorscheme)
 end
 
 if helpers.is_gui() and helpers.has_option("guifont") then

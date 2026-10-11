@@ -43,15 +43,11 @@ end
 return {
   {
     "neovim/nvim-lspconfig",
+    enabled = vim.fn.has("nvim-0.11.3") == 1,
     dependencies = {
       "saghen/blink.cmp",
     },
     config = function()
-      if not (vim.lsp and vim.lsp.config and vim.lsp.enable) then
-        vim.notify("nvim-lspconfig requires Neovim 0.11 or newer.", vim.log.levels.WARN)
-        return
-      end
-
       vim.lsp.config("*", {
         capabilities = make_capabilities(),
       })

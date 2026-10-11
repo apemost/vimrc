@@ -7,6 +7,7 @@
 return {
   {
     "stevearc/conform.nvim",
+    enabled = vim.fn.has("nvim-0.10") == 1,
     cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {

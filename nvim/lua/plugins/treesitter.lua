@@ -33,6 +33,7 @@ local ensure_installed = {
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    enabled = vim.fn.has("nvim-0.12") == 1,
     lazy = false,
     build = ":TSUpdate",
     config = function()

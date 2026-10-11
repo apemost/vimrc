@@ -155,6 +155,7 @@ end
 return {
   {
     "nvim-telescope/telescope.nvim",
+    enabled = vim.fn.has("nvim-0.11.7") == 1,
     lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",

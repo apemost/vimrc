@@ -5,6 +5,7 @@
 return {
   {
     "kylechui/nvim-surround",
+    enabled = vim.fn.has("nvim-0.8") == 1,
     version = "^3.0.0",
     event = "VeryLazy",
     config = function()

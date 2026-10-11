@@ -30,6 +30,7 @@ end
 return {
   {
     "mfussenegger/nvim-lint",
+    enabled = vim.fn.has("nvim-0.9.5") == 1,
     event = { "BufReadPost", "BufWritePost" },
     keys = {
       {

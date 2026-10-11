@@ -5,6 +5,7 @@
 return {
   {
     "nvim-mini/mini.bufremove",
+    enabled = vim.fn.has("nvim-0.10") == 1,
     version = false,
     keys = {
       {

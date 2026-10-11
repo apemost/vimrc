@@ -18,7 +18,8 @@ end
 -- Paste returns the last copy instead of querying the terminal, because
 -- OSC 52 reads are often blocked and each query can wait up to 10 seconds.
 if
-  vim.env.SSH_CONNECTION
+  vim.fn.has("nvim-0.10") == 1
+  and vim.env.SSH_CONNECTION
   and not vim.env.DISPLAY
   and not vim.env.WAYLAND_DISPLAY
   and not vim.env.TMUX
@@ -77,16 +78,7 @@ opt.fileencoding = "utf-8"
 opt.fileencodings = { "utf-8", "ucs-bom", "gb18030", "gbk", "gb2312", "cp936", "default", "latin1" }
 opt.fileformats = { "unix", "dos", "mac" }
 
-local state_dir = vim.fn.stdpath("state")
-local backup_dir = helpers.ensure_dir(helpers.join_paths(state_dir, "backup"))
-local swap_dir = helpers.ensure_dir(helpers.join_paths(state_dir, "swap"))
-local undo_dir = helpers.ensure_dir(helpers.join_paths(state_dir, "undo"))
-
-opt.backupdir = { backup_dir }
-opt.directory = { swap_dir }
-
-if helpers.has_option("undodir") then
-  opt.undodir = undo_dir
+if helpers.has_option("undofile") then
   opt.undofile = true
 end
 

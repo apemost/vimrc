@@ -2,7 +2,7 @@ local defaults = {
   custom_leader = " ",
   custom_localleader = ",",
   custom_background = "dark",
-  custom_colorscheme = "gruvbox",
+  custom_colorscheme = vim.fn.has("nvim-0.8") == 1 and "gruvbox" or "default",
   custom_colorcolumn = 0,
   custom_guifont = "Hack:h13,Monaco:h13",
   custom_powerline_fonts = 1,

@@ -13,6 +13,7 @@ end
 return {
   {
     "saghen/blink.cmp",
+    enabled = vim.fn.has("nvim-0.10") == 1,
     version = "1.*",
     dependencies = {
       "rafamadriz/friendly-snippets",

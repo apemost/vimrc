@@ -8,12 +8,14 @@
 return {
   {
     "mason-org/mason.nvim",
+    enabled = vim.fn.has("nvim-0.10") == 1,
     build = ":MasonUpdate",
     lazy = false, -- run setup() at startup so its bin/ is on PATH before any LSP spawns
     opts = {},
   },
   {
     "mason-org/mason-lspconfig.nvim",
+    enabled = vim.fn.has("nvim-0.11.3") == 1,
     dependencies = {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",

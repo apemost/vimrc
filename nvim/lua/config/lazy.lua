@@ -1,4 +1,8 @@
-local helpers = require("helpers")
+-- lazy.nvim requires Neovim 0.8; older versions keep only the base configuration.
+if vim.fn.has("nvim-0.8") == 0 then
+  return
+end
+
 local fs = vim.uv or vim.loop
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

@@ -8,6 +8,7 @@
 return {
   {
     "stevearc/aerial.nvim",
+    enabled = vim.fn.has("nvim-0.11") == 1,
     opts = {},
     cmd = { "AerialToggle", "AerialOpen", "AerialClose" },
     keys = {
