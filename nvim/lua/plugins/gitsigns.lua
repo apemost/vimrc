@@ -5,7 +5,7 @@
 return {
   {
     "lewis6991/gitsigns.nvim",
-    enabled = vim.fn.has("nvim-0.9") == 1,
+    enabled = vim.fn.has("nvim-0.11") == 1,
     event = { "BufReadPre", "BufNewFile" },
     opts = {
       current_line_blame = false,
