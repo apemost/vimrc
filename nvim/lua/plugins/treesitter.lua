@@ -43,9 +43,7 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      local parser_dir = vim.fn.stdpath("data")
-        .. "/treesitter-"
-        .. require("config.compat").profile
+      local parser_dir = vim.fn.stdpath("data") .. "/site"
       vim.fn.mkdir(parser_dir, "p")
       vim.opt.rtp:prepend(parser_dir)
       if vim.fn.has("nvim-0.12") == 0 then
