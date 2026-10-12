@@ -2,10 +2,14 @@
 -- https://github.com/ellisonleao/gruvbox.nvim
 --*********************************************************************
 
+local helpers = require("helpers")
+
 return {
   {
     "ellisonleao/gruvbox.nvim",
-    enabled = vim.fn.has("nvim-0.8") == 1,
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "154eb5ff5b96d0641307113fa385eaf0d36d9796" },
+    }),
     lazy = false,
     priority = 1000,
     init = function()

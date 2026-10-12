@@ -155,10 +155,19 @@ end
 return {
   {
     "nvim-telescope/telescope.nvim",
-    enabled = vim.fn.has("nvim-0.11.7") == 1,
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11", "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+      { "0.11.7", "e69b434b968a33815e2f02a5c7bd7b8dd4c7d4b2" },
+    }),
     lazy = false,
     dependencies = {
-      "nvim-lua/plenary.nvim",
+      {
+        "nvim-lua/plenary.nvim",
+        commit = helpers.get_plugin_commit_before_nvim({
+          { "0.11", "50012918b2fc8357b87cff2a7f7f0446e47da174" },
+          { "0.11.3", "74b06c6c75e4eeb3108ec01852001636d85a932b" },
+        }),
+      },
       "nvim-tree/nvim-web-devicons",
     },
     config = function()

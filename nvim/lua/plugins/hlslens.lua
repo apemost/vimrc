@@ -2,9 +2,14 @@
 -- https://github.com/kevinhwang91/nvim-hlslens
 --*********************************************************************
 
+local helpers = require("helpers")
+
 return {
   {
     "kevinhwang91/nvim-hlslens",
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "be2d7b2be01860b5445a007ff2bc72b29896db6b" },
+    }),
     event = "CmdlineEnter",
     keys = {
       {

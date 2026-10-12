@@ -34,6 +34,9 @@ end
 return {
   {
     "nvim-lualine/lualine.nvim",
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "221ce6b2d999187044529f49da6554a92f740a96" },
+    }),
     lazy = false,
     dependencies = {
       "nvim-tree/nvim-web-devicons",

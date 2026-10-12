@@ -2,6 +2,8 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter
 --*********************************************************************
 
+local helpers = require("helpers")
+
 -- Parsers for common languages, installed on startup (no-op if already
 -- installed).
 local ensure_installed = {
@@ -33,10 +35,29 @@ local ensure_installed = {
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    enabled = vim.fn.has("nvim-0.12") == 1,
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.10", "0f9f09275f5fdfcc2b1f4021ddca44282cf47a6b" },
+      { "0.12", "cf12346a3414fa1b06af75c79faebe7f76df080a" },
+    }),
+    branch = vim.fn.has("nvim-0.12") == 1 and "main" or nil,
     lazy = false,
     build = ":TSUpdate",
     config = function()
+      local parser_dir = vim.fn.stdpath("data")
+        .. "/treesitter-"
+        .. require("config.compat").profile
+      vim.fn.mkdir(parser_dir, "p")
+      vim.opt.rtp:prepend(parser_dir)
+      if vim.fn.has("nvim-0.12") == 0 then
+        require("nvim-treesitter.configs").setup({
+          parser_install_dir = parser_dir,
+          ensure_installed = ensure_installed,
+          highlight = { enable = true },
+        })
+        return
+      end
+
+      require("nvim-treesitter").setup({ install_dir = parser_dir })
       -- tree-sitter-cli is required to build parsers; skip installation
       -- with a visible warning when it is missing.
       if vim.fn.executable("tree-sitter") == 1 then

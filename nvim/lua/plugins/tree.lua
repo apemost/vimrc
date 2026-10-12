@@ -35,7 +35,10 @@ end
 return {
   {
     "nvim-tree/nvim-tree.lua",
-    enabled = vim.fn.has("nvim-0.10") == 1,
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.10", "2bc725a3ebc23f0172fb0ab4d1134b81bcc13812" },
+      { "0.11.3", "b2aadda94b107480c48e548d6db51c6840b7b33c" },
+    }),
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },

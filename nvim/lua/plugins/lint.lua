@@ -2,6 +2,8 @@
 -- https://github.com/mfussenegger/nvim-lint
 --*********************************************************************
 
+local helpers = require("helpers")
+
 -- Runs external linters on save and reports through the built-in diagnostic
 -- system; formatting stays with conform.nvim.
 
@@ -16,21 +18,20 @@ local function goto_diagnostic(count)
   end
 end
 
--- ignore_errors keeps linters whose binary is missing silent; the filter
--- skips minified files.
+-- Skip minified files and keep missing linter executables silent.
 local function try_lint()
-  require("lint").try_lint(nil, {
-    ignore_errors = true,
-    filter = function()
-      return vim.fn.expand("%"):match("%.min%.[jc]ss?$") == nil
-    end,
-  })
+  if not vim.fn.expand("%"):match("%.min%.[jc]ss?$") then
+    require("lint").try_lint(nil, { ignore_errors = true })
+  end
 end
 
 return {
   {
     "mfussenegger/nvim-lint",
-    enabled = vim.fn.has("nvim-0.9.5") == 1,
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.10", "3ffa176628fe49e74f47992757016b7371a9b86b" },
+      { "0.11.3", "a219b2c9e5b4765e5c845aba119dad55806fcaf1" },
+    }),
     event = { "BufReadPost", "BufWritePost" },
     keys = {
       {
@@ -66,16 +67,26 @@ return {
 
       -- Sign symbols follow g:custom_error_symbol / g:custom_warning_symbol;
       -- INFO and HINT fall back to the warning symbol.
-      vim.diagnostic.config({
-        signs = {
-          text = {
-            [vim.diagnostic.severity.ERROR] = vim.g.custom_error_symbol,
-            [vim.diagnostic.severity.WARN] = vim.g.custom_warning_symbol,
-            [vim.diagnostic.severity.INFO] = vim.g.custom_warning_symbol,
-            [vim.diagnostic.severity.HINT] = vim.g.custom_warning_symbol,
+      if vim.fn.has("nvim-0.10") == 1 then
+        vim.diagnostic.config({
+          signs = {
+            text = {
+              [vim.diagnostic.severity.ERROR] = vim.g.custom_error_symbol,
+              [vim.diagnostic.severity.WARN] = vim.g.custom_warning_symbol,
+              [vim.diagnostic.severity.INFO] = vim.g.custom_warning_symbol,
+              [vim.diagnostic.severity.HINT] = vim.g.custom_warning_symbol,
+            },
           },
-        },
-      })
+        })
+      else
+        for _, name in ipairs({ "Error", "Warn", "Info", "Hint" }) do
+          local group = "DiagnosticSign" .. name
+          vim.fn.sign_define(group, {
+            text = name == "Error" and vim.g.custom_error_symbol or vim.g.custom_warning_symbol,
+            texthl = group,
+          })
+        end
+      end
 
       vim.api.nvim_create_autocmd("BufWritePost", { callback = try_lint })
     end,

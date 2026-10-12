@@ -2,10 +2,16 @@
 -- https://github.com/lewis6991/gitsigns.nvim
 --*********************************************************************
 
+local helpers = require("helpers")
+
 return {
   {
     "lewis6991/gitsigns.nvim",
-    enabled = vim.fn.has("nvim-0.11") == 1,
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.10", "907f7ac79b2c359320b392fc8c209214a1a79a65" },
+      { "0.11", "31d6fb2d618bca1482b9f274751ead5f03461408" },
+      { "0.11.3", "a462f416e2ce4744531c6256252dee99a7d34a83" },
+    }),
     event = { "BufReadPre", "BufNewFile" },
     opts = {
       current_line_blame = false,
@@ -20,15 +26,19 @@ return {
         map("n", "]h", function()
           if vim.wo.diff then
             vim.cmd.normal({ "]c", bang = true })
-          else
+          elseif gs.nav_hunk then
             gs.nav_hunk("next")
+          else
+            gs.next_hunk()
           end
         end, "Next git hunk")
         map("n", "[h", function()
           if vim.wo.diff then
             vim.cmd.normal({ "[c", bang = true })
-          else
+          elseif gs.nav_hunk then
             gs.nav_hunk("prev")
+          else
+            gs.prev_hunk()
           end
         end, "Prev git hunk")
 

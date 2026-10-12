@@ -7,6 +7,9 @@ local helpers = require("helpers")
 return {
   {
     "tpope/vim-fugitive",
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0" },
+    }),
     config = function()
       local map = vim.keymap.set
 

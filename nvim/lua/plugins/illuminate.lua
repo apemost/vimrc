@@ -2,10 +2,15 @@
 -- https://github.com/RRethy/vim-illuminate
 --*********************************************************************
 
+local helpers = require("helpers")
+
 -- Configures cursor-word references with LSP semantics and a regex fallback.
 return {
   {
     "RRethy/vim-illuminate",
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "91313e598ca62e110bc71535c49069b66b9883c9" },
+    }),
     init = function()
       -- Group the cursor-word references link to. Colorschemes often override the
       -- Lua engine's IlluminatedWord* groups into strong LSP reference colors;

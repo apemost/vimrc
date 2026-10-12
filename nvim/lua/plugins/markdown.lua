@@ -8,6 +8,9 @@ local helpers = require("helpers")
 return {
   {
     "iamcco/markdown-preview.nvim",
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
+    }),
     ft = { "markdown" },
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     keys = {
@@ -63,6 +66,9 @@ return {
   },
   {
     "apemost/vim-markdown-follow",
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "00bf7f71be076b8b27eb06dd4c17e29548458b4c" },
+    }),
     ft = { "markdown" },
   },
 }

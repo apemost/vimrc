@@ -26,6 +26,16 @@ function M.has_option(name)
   return vim.fn.exists("+" .. name) == 1
 end
 
+-- Select the first commit for Neovim below its version limit.
+-- Rules are { version, commit } pairs in ascending order; nil allows updates.
+function M.get_plugin_commit_before_nvim(rules)
+  for _, rule in ipairs(rules) do
+    if vim.fn.has("nvim-" .. rule[1]) == 0 then
+      return rule[2]
+    end
+  end
+end
+
 function M.ensure_dir(path)
   if vim.fn.isdirectory(path) == 0 then
     vim.fn.mkdir(path, "p")

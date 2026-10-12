@@ -2,6 +2,8 @@
 -- https://github.com/nvim-mini/mini.comment
 --*********************************************************************
 
+local helpers = require("helpers")
+
 -- nvim-mini/mini.comment: NERDCommenter-style mappings with flush-left comments.
 local function current_range()
   local first = vim.api.nvim_win_get_cursor(0)[1]
@@ -93,7 +95,10 @@ end
 return {
   {
     "nvim-mini/mini.comment",
-    enabled = vim.fn.has("nvim-0.10") == 1,
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.10", "0cdeee4c712077f948b05f15cb522844407b9cf1" },
+      { "0.11.3", "27a29d6b949b9497f80a0a03421e89fed71d8c37" },
+    }),
     version = false,
     event = "VeryLazy",
     opts = {

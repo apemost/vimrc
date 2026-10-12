@@ -3,6 +3,8 @@
 -- https://github.com/rafamadriz/friendly-snippets
 --*********************************************************************
 
+local helpers = require("helpers")
+
 -- Only trigger/cycle completion when a keyword character precedes the cursor,
 -- so Tab can still fall back to a literal tab (e.g. indentation on empty lines).
 local function has_words_before()
@@ -13,10 +15,14 @@ end
 return {
   {
     "saghen/blink.cmp",
+    commit = helpers.get_plugin_commit_before_nvim({
+      { "0.11.3", "78336bc89ee5365633bcf754d93df01678b5c08f" },
+    }),
     enabled = vim.fn.has("nvim-0.10") == 1,
-    version = "1.*",
+    version = vim.fn.has("nvim-0.11.3") == 1 and "1.*" or false,
     dependencies = {
       "rafamadriz/friendly-snippets",
+      "houtsnip/vim-emacscommandline",
     },
     opts = {
       -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)

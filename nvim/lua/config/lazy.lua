@@ -30,10 +30,12 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+local compat = require("config.compat")
+
 require("lazy").setup({
-  spec = {
-    { import = "plugins" },
-  },
+  spec = { { import = "plugins" } },
+  root = vim.fn.stdpath("data") .. "/lazy-nvim-" .. compat.profile,
+  lockfile = vim.fn.stdpath("config") .. "/lazy-lock-" .. compat.profile .. ".json",
   install = {
     missing = true,
     colorscheme = { "gruvbox" },
