@@ -43,10 +43,10 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      local parser_dir = vim.fn.stdpath("data") .. "/site"
-      vim.fn.mkdir(parser_dir, "p")
-      vim.opt.rtp:prepend(parser_dir)
       if vim.fn.has("nvim-0.12") == 0 then
+        local parser_dir = vim.fn.stdpath("data") .. "/site"
+        vim.fn.mkdir(parser_dir, "p")
+        vim.opt.rtp:prepend(parser_dir)
         require("nvim-treesitter.configs").setup({
           parser_install_dir = parser_dir,
           ensure_installed = ensure_installed,
@@ -55,7 +55,6 @@ return {
         return
       end
 
-      require("nvim-treesitter").setup({ install_dir = parser_dir })
       -- tree-sitter-cli is required to build parsers; skip installation
       -- with a visible warning when it is missing.
       if vim.fn.executable("tree-sitter") == 1 then
