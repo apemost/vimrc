@@ -39,7 +39,8 @@ return {
       { "0.10", "0f9f09275f5fdfcc2b1f4021ddca44282cf47a6b" },
       { "0.12", "cf12346a3414fa1b06af75c79faebe7f76df080a" },
     }),
-    branch = vim.fn.has("nvim-0.12") == 1 and "main" or nil,
+    -- The legacy configs API lives on master, not the upstream default branch.
+    branch = vim.fn.has("nvim-0.12") == 1 and "main" or "master",
     lazy = false,
     build = ":TSUpdate",
     config = function()
