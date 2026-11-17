@@ -125,6 +125,7 @@ nmap <Leader>yn <Action>(CopyReference)
 
 nmap ,K <Action>(QuickJavaDoc)
 nmap ,k <Action>(ExpressionTypeInfo)
+nmap ,p <Action>(TextEditorWithPreview.Layout.EditorAndPreview)
 
 nnoremap <Leader>nj :NERDTreeFind<CR>
 nnoremap <Leader>nn :NERDTreeFocus<CR>

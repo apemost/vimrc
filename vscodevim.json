@@ -237,6 +237,10 @@
     {
       "before": ["<leader>", "y", "n"],
       "commands": ["copyRelativeFilePath"]
+    },
+    {
+      "before": [",", "p"],
+      "commands": ["markdown.showPreview"]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [

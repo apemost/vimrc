@@ -118,7 +118,7 @@
   {
     "context": "Editor && extension == md && vim_mode == normal && !VimWaiting",
     "bindings": {
-      "space m p": "markdown::OpenPreview",
+      ", p": "markdown::OpenPreview",
     },
   },
 ]
