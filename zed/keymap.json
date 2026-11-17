@@ -88,6 +88,8 @@
       "space y f": "workspace::CopyPath",
       "space y n": "workspace::CopyRelativePath",
 
+      ", shift-k": "editor::Hover",
+
       "s": "vim::PushSneak",
       "shift-s": "vim::PushSneakBackward",
     },

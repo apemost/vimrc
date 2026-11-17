@@ -239,6 +239,10 @@
       "commands": ["copyRelativeFilePath"]
     },
     {
+      "before": [",", "K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
       "before": [",", "p"],
       "commands": ["markdown.showPreview"]
     }
