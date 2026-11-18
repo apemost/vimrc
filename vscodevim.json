@@ -6,6 +6,7 @@
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?「【（；，。、：）】」",
   "explorer.excludeGitIgnore": false,
   "files.exclude": {
+    "**/.idea": true,
     "**/.pnpm-store": true,
     "**/.venv": true,
     "**/__pycache__": true,
