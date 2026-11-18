@@ -87,14 +87,6 @@ local function grep_command_runner(builtin, opts)
   end
 end
 
-local function local_files_picker(builtin)
-  builtin.find_files({
-    cwd = helpers.join_paths(vim.fn.getcwd(), ".local"),
-    hidden = true,
-    prompt_title = "Find Local Files",
-  })
-end
-
 local function prompt_for_query(prompt, callback)
   vim.ui.input({ prompt = prompt }, function(input)
     if input == nil then
@@ -228,10 +220,6 @@ return {
         { nargs = "*", force = true }
       )
 
-      vim.api.nvim_create_user_command("LocalFiles", function()
-        local_files_picker(builtin)
-      end, { bang = true, force = true })
-
       map({ "n", "x", "o" }, "<Leader><Tab>", function()
         builtin.keymaps()
       end, { silent = true })
@@ -326,15 +314,6 @@ return {
         "<Leader>fh",
         run_from_normal_window(function()
           builtin.oldfiles()
-        end),
-        { silent = true }
-      )
-
-      map(
-        "n",
-        "<Leader>fl",
-        run_from_normal_window(function()
-          local_files_picker(builtin)
         end),
         { silent = true }
       )

@@ -4,6 +4,9 @@
 # Thumbnail cache files
 Thumbs.db
 
+# Local files
+.local/
+
 # Other
 .nvimlog
 nvim.log
