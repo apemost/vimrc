@@ -23,6 +23,31 @@ local function search_root()
   return current_git_root() or vim.fn.getcwd()
 end
 
+local excluded_dirs = { ".git", ".pnpm-store", ".venv", "__pycache__", "node_modules" }
+
+local function file_list_command(excluded, include_ignored)
+  if vim.fn.executable("rg") == 1 then
+    local cmd = { "rg", "--files" }
+    if include_ignored then
+      table.insert(cmd, "--no-ignore")
+    end
+    for _, dir in ipairs(excluded) do
+      vim.list_extend(cmd, { "-g", "!" .. dir })
+    end
+    return cmd
+  end
+
+  if vim.fn.has("unix") == 1 then
+    local cmd = { "find", "." }
+    for _, dir in ipairs(excluded) do
+      vim.list_extend(cmd, { "-name", dir, "-prune", "-o" })
+    end
+    return vim.list_extend(cmd, { "-type", "f", "-print" })
+  end
+
+  return { "where", "/r", ".", "*" }
+end
+
 local function run_from_normal_window(callback)
   return function()
     if helpers.is_file_tree_buffer() then
@@ -281,13 +306,17 @@ return {
         "n",
         "<Leader>ff",
         run_from_normal_window(function()
+          local ignore_patterns = {}
+          for _, dir in ipairs(excluded_dirs) do
+            local pattern = vim.pesc(dir) .. "[/\\]"
+            table.insert(ignore_patterns, "^" .. pattern)
+            table.insert(ignore_patterns, "[/\\]" .. pattern)
+          end
           builtin.find_files({
             cwd = search_root(),
+            find_command = file_list_command(excluded_dirs, true),
             hidden = true,
-            file_ignore_patterns = {
-              "^%.git[/\\]",
-              "[/\\]%.git[/\\]",
-            },
+            file_ignore_patterns = ignore_patterns,
           })
         end),
         { silent = true }
@@ -385,6 +414,7 @@ return {
           if git_root == nil then
             builtin.find_files({
               cwd = vim.fn.getcwd(),
+              find_command = file_list_command({ ".git" }, false),
               hidden = true,
             })
             return

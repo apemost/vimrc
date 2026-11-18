@@ -5,9 +5,11 @@
 let NERDTreeIgnore = get(g:, 'NERDTreeIgnore', [
       \ '\.DS_Store$',
       \ '\.git$',
+      \ '^\.pnpm-store$',
+      \ '^\.venv$',
       \ '\.pyc$',
-      \ '__pycache__',
-      \ 'node_modules',
+      \ '^__pycache__$',
+      \ '^node_modules$',
       \ ])
 let NERDTreeShowHidden = get(g:, 'NERDTreeShowHidden', 1)
 let NERDTreeMapJumpNextSibling = get(g:, 'NERDTreeMapJumpNextSibling', '<C-n>')

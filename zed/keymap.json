@@ -61,14 +61,14 @@
       "space c c": "editor::ToggleComments",
       "space c u": "editor::ToggleComments",
 
-      "space f f": "file_finder::Toggle",
+      "space f f": ["file_finder::Toggle", { "include_ignored": true }],
       "space f s": "git_panel::Toggle",
 
       "space g b": "git::Blame",
       "space g c": "git::Commit",
       "space g d": "git::Diff",
       "space g f": "git::Fetch",
-      "space g g": "file_finder::Toggle",
+      "space g g": ["file_finder::Toggle", { "include_ignored": false }],
       "space g s": "git_panel::Toggle",
 
       "space j d": "editor::GoToDeclaration",

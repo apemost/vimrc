@@ -67,6 +67,8 @@ return {
           custom = {
             "^\\.DS_Store$",
             "^\\.git$",
+            "^\\.pnpm-store$",
+            "^\\.venv$",
             "\\.pyc$",
             "^__pycache__$",
             "^node_modules$",

@@ -14,6 +14,24 @@ let g:fzf_commits_log_options =
 
 Plug 'junegunn/fzf.vim'
 
+function! s:find_all_files() abort
+  let excluded = ['.git', '.pnpm-store', '.venv', '__pycache__', 'node_modules']
+  if executable('rg')
+    let source = 'rg --files --hidden --no-ignore'
+    for name in excluded
+      let source .= ' -g ' . shellescape('!' . name)
+    endfor
+  elseif has('unix')
+    let source = 'find . -name ' . join(excluded, ' -prune -o -name ') . ' -prune -o -type f -print'
+  else
+    let source = 'git ls-files --cached --others -- .'
+    for name in excluded
+      let source .= ' ' . shellescape(':(exclude,glob)**/' . name . '/**')
+    endfor
+  endif
+  call fzf#vim#files('', fzf#vim#with_preview({'source': source}))
+endfunction
+
 command! -bang -nargs=* GG
       \ call fzf#vim#grep(
       \   'git grep --line-number --color=always ' . <q-args>, 0,
@@ -57,7 +75,7 @@ nnoremap <Leader>f: :History:<CR>
 nnoremap <Leader>fa :Ag<Space><C-r><C-w><CR>
 vnoremap <Leader>fa "gy:Ag<Space><C-r>g<CR>
 nnoremap <Leader>fc :Commands<CR>
-nnoremap <expr> <Leader>ff (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":Files\<CR>"
+nnoremap <expr> <Leader>ff (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":call <SID>find_all_files()\<CR>"
 nnoremap <Leader>fg :Gg<Space><C-r><C-w><CR>
 vnoremap <Leader>fg "gy:Gg<Space><C-r>g<CR>
 nnoremap <expr> <Leader>fh (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":History\<CR>"
@@ -69,7 +87,7 @@ nnoremap <Leader>fu :Snippets<CR>
 nnoremap <Leader>fw :Windows<CR>
 nnoremap <expr> <Leader>fz (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":FZF\<Space>"
 
-nnoremap <expr> <Leader>gg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles\<CR>"
+nnoremap <expr> <Leader>gg (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GFiles --cached --others --exclude-standard\<CR>"
 nnoremap <Leader>gh :Commits<CR>
 
 nnoremap <expr> <Leader>sG (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>" : '') . ":GG\<Space>"

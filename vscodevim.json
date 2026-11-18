@@ -4,7 +4,9 @@
   "editor.tabSize": 2,
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?「【（；，。、：）】」",
+  "explorer.excludeGitIgnore": false,
   "files.exclude": {
+    "**/.pnpm-store": true,
     "**/.venv": true,
     "**/__pycache__": true,
     "**/node_modules": true
@@ -16,9 +18,9 @@
   "notebook.lineNumbers": "on",
   "notebook.output.scrolling": true,
   "search.useIgnoreFiles": true,
-  "search.useParentIgnoreFiles": true,
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.wordSeparators": " ()[]{}',\"`─‘’“”|「【（；，。、：）】」",
+  "workbench.list.defaultFindMode": "filter",
   "vim.incsearch": true,
   "vim.leader": " ",
   "vim.smartRelativeLine": true,
@@ -146,7 +148,7 @@
     },
     {
       "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["workbench.explorer.fileView.focus", "list.find"]
     },
     {
       "before": ["<leader>", "f", "s"],

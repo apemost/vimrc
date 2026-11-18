@@ -1,3 +1,9 @@
 {
-  "file_scan_inclusions": ["...", ".local", ".local/**"]
+  "file_scan_exclusions": ["...", "**/.pnpm-store", "**/.venv", "**/__pycache__", "**/node_modules"],
+  "file_finder": {
+    "include_ignored": "all"
+  },
+  "search": {
+    "include_ignored": false
+  }
 }
