@@ -5,9 +5,11 @@
 let NERDTreeIgnore = get(g:, 'NERDTreeIgnore', [
       \ '\.DS_Store$',
       \ '\.git$',
-      \ '^\.pnpm-store$',
-      \ '^\.venv$',
       \ '\.pyc$',
+      \ '^\.pnpm-store$',
+      \ '^\.pytest_cache$',
+      \ '^\.ruff_cache$',
+      \ '^\.venv$',
       \ '^__pycache__$',
       \ '^node_modules$',
       \ ])

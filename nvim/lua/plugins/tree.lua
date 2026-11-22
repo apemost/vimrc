@@ -65,11 +65,13 @@ return {
         filters = {
           git_ignored = false,
           custom = {
+            "\\.pyc$",
             "^\\.DS_Store$",
             "^\\.git$",
             "^\\.pnpm-store$",
+            "^\\.pytest_cache$",
+            "^\\.ruff_cache$",
             "^\\.venv$",
-            "\\.pyc$",
             "^__pycache__$",
             "^node_modules$",
           },

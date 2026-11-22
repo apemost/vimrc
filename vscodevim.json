@@ -6,8 +6,11 @@
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?「【（；，。、：）】」",
   "explorer.excludeGitIgnore": false,
   "files.exclude": {
+    "**/*.pyc": true,
     "**/.idea": true,
     "**/.pnpm-store": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
     "**/.venv": true,
     "**/__pycache__": true,
     "**/node_modules": true

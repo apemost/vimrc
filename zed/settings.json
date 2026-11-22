@@ -1,5 +1,14 @@
 {
-  "file_scan_exclusions": ["...", "**/.pnpm-store", "**/.venv", "**/__pycache__", "**/node_modules"],
+  "file_scan_exclusions": [
+    "...",
+    "**/*.pyc",
+    "**/.pnpm-store",
+    "**/.pytest_cache",
+    "**/.ruff_cache",
+    "**/.venv",
+    "**/__pycache__",
+    "**/node_modules"
+  ],
   "file_finder": {
     "include_ignored": "all"
   },
