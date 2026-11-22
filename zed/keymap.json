@@ -25,12 +25,10 @@
     },
   },
   {
-    "context": "Editor && vim_mode == normal && !VimWaiting",
+    "context": "(Editor && vim_mode == normal && !VimWaiting) || MarkdownPreview",
     "bindings": {
       "ctrl-o": "pane::GoBack",
       "ctrl-i": "pane::GoForward",
-      "ctrl-k": "editor::GoToPreviousDiagnostic",
-      "ctrl-j": "editor::GoToDiagnostic",
 
       "[ b": "pane::ActivatePreviousItem",
       "] b": "pane::ActivateNextItem",
@@ -49,7 +47,6 @@
       "space -": "pane::ActivatePreviousItem",
       "space +": "pane::ActivateNextItem",
       "space :": "command_palette::Toggle",
-      "space =": "editor::Format",
 
       "space b b": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
@@ -57,19 +54,35 @@
       "space b o": "pane::CloseOtherItems",
       "space b w": "pane::CloseActiveItem",
 
-      "space c space": "editor::ToggleComments",
-      "space c c": "editor::ToggleComments",
-      "space c u": "editor::ToggleComments",
-
       "space f f": ["file_finder::Toggle", { "include_ignored": true }],
       "space f s": "git_panel::Toggle",
 
-      "space g b": "git::Blame",
-      "space g c": "git::Commit",
       "space g d": "git::Diff",
       "space g f": "git::Fetch",
       "space g g": ["file_finder::Toggle", { "include_ignored": false }],
       "space g s": "git_panel::Toggle",
+
+      "space n n": "project_panel::ToggleFocus",
+      "space t n": "workspace::ToggleLeftDock",
+
+      "space s a": "workspace::NewSearch",
+      "space s g": "workspace::NewSearch",
+      "space s r": "workspace::NewSearch",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting",
+    "bindings": {
+      "ctrl-k": "editor::GoToPreviousDiagnostic",
+      "ctrl-j": "editor::GoToDiagnostic",
+
+      "space =": "editor::Format",
+      "space c space": "editor::ToggleComments",
+      "space c c": "editor::ToggleComments",
+      "space c u": "editor::ToggleComments",
+
+      "space g b": "git::Blame",
+      "space g c": "git::Commit",
 
       "space j d": "editor::GoToDeclaration",
       "space j i": "editor::GoToImplementation",
@@ -78,12 +91,6 @@
       "space j t": "editor::GoToTypeDefinition",
 
       "space n j": "pane::RevealInProjectPanel",
-      "space n n": "project_panel::ToggleFocus",
-      "space t n": "workspace::ToggleLeftDock",
-
-      "space s a": "workspace::NewSearch",
-      "space s g": "workspace::NewSearch",
-      "space s r": "workspace::NewSearch",
 
       "space y f": "workspace::CopyPath",
       "space y n": "workspace::CopyRelativePath",
