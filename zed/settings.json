@@ -14,5 +14,13 @@
   },
   "search": {
     "include_ignored": false
-  }
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim": {
+    "toggle_relative_line_numbers": false
+  },
+  "vim_mode": true
 }
